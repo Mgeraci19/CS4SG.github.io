@@ -6,7 +6,7 @@ The official website for UB's Computer Science for Social Good.
 <ul><li>Prakshal Jain</li>
 <li>Hope Kara</li>
 <h3>Link to the Website:</h3>
-<a href = "https://cs4sg.github.io/" target = "_blank">https://cs4sg.github.io/</a>
+<a href = "https://cs4sg.github.io/" target="_blank">https://cs4sg.github.io/</a>
 <br>
 <i>For website related concerns, you can reach out to: <a href="mailto:cse-webmaster@buffalo.edu">cse-webmaster@buffalo.edu</a></i>
 </ul>
