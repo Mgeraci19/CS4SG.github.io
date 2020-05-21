@@ -12,11 +12,11 @@ The official website for UB's Computer Science for Social Good.
 </ul>
   
 <h3>Set-up Guide</h3>
-This website is inherited from Squadfree Template by bootstrap.
-More Info:
-Template Name: Squadfree
-Template URL: <a href = "https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/">https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/</a>
-Author: BootstrapMade.com
-License:  <a href = "https://bootstrapmade.com/license/">https://bootstrapmade.com/license/</a>
+This website is inherited from Squadfree Template by bootstrap.<br>
+More Info:<br>
+Template Name: Squadfree<br>
+Template URL: <a href = "https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/">https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/</a><br>
+Author: BootstrapMade.com<br>
+License:  <a href = "https://bootstrapmade.com/license/">https://bootstrapmade.com/license/</a><br>
 </body>
 </html>
