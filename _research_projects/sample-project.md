@@ -1,5 +1,5 @@
 ---
-layout: default2
+layout: default
 title: Sample Project
 description: This file was written in markdown.
 icon: <i class='bx bxs-message-alt-check' ></i>
