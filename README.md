@@ -29,5 +29,6 @@ License:  <a href = "https://bootstrapmade.com/license/" target = "_blank">https
 <!-- -------------------------Adding New Content------------------------>
 <li>Adding new content:
 </li></ul>
+A sample layout page for the website is provided here: <a href = "https://github.com/CS4SG/CS4SG.github.io/blob/master/sample_page.html">https://github.com/CS4SG/CS4SG.github.io/blob/master/sample_page.html</a>
 </body>
 </html>
