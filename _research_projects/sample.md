@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Bias in NLP
-description: UB receives $800,000 NSF/Amazon grant to improve AI fairness in foster care
-icon: <i class='bx bxs-network-chart' ></i>
+title: FAI
+description: <ul><li>Details</li><li>People</li><li>Values and Ethics Statement</li></ul>
+icon: <i class='bx bxs-home-heart' ></i>
 ---
 
-# UB receives $800,000 NSF/Amazon grant to improve AI fairness in foster care
-Some text
+Page content goes here.
