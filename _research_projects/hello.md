@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Prakshal
-description: Sample Page
-icon: <i class='bx bxs-home-heart' ></i>
+title: Bias in NLP
+description: UB receives $800,000 NSF/Amazon grant to improve AI fairness in foster care
+icon: <i class='bx bxs-network-chart' ></i>
 ---
 
-Page content goes here.
+# UB receives $800,000 NSF/Amazon grant to improve AI fairness in foster care
+Some text
