@@ -53,7 +53,7 @@ The official website for UB's Computer Science for Social Good.
     -Write your desired description after `description: `.\
     -Optional: Include an icon from [BoxIcons](https://boxicons.com/).
         Click the "Font" option for your chosen icon to get it in the appropriate format.\
-        ![BoxIcon Example](assets/img/boxicon_example.jpg)
+        <img src="assets/img/boxicon_example.jpg" alt="BoxIcon Example" width="500">
 3. Write the contents of the project (which will appear as its own page when the name link is clicked) BELOW the front matter.
 4. Save the page with a filename ending in .html or .md.
 5. Upload your file inside the \_research_projects folder.
@@ -70,7 +70,8 @@ This website is inherited from Squadfree Template by bootstrap.<br>
 Template Name: Squadfree<br>
 Template URL: <a href = "https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/" target = "_blank">https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/</a><br>
 Author: BootstrapMade.com<br>
-License:  <a href = "https://bootstrapmade.com/license/" target = "_blank">https://bootstrapmade.com/license/</a><br><br>
+
+<b>License: </b><a href = "https://bootstrapmade.com/license/" target = "_blank">https://bootstrapmade.com/license/</a><br>
 
 <h4><b>Content Information</b><br></h4>
 <ul>
