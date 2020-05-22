@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sample Page
-description: <ul><li>Details</li><li>People</li><li>Values and Ethics Statement</li></ul>
+description: Hello World!
 icon: <i class='bx bxs-home-heart' ></i>
 ---
 
