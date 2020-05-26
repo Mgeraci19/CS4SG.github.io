@@ -64,13 +64,19 @@
 
 <body>
 
+  
+
 <!-- --------All content below this comment------- -->
   
   <div id = "after_submission">
+    
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Research Details Form</h2>
+        </div>
+
     <div>
-        <center><h1>Research Details</h1>
         <!--Add few elements to the form-->
-        <h2>Research Flashcard</h2></center>
+        <center><h3><b>Research Flashcard</b></h3></center>
         <div>
             <select id="layout">
                 <option selected value="">-- Choose page layout --</option>
@@ -88,10 +94,10 @@
         </div>
         <div>
             <input type="text" id="icon" placeholder="Enter Icon information" />
-            <br>You can find icons at: <a href = "https://boxicons.com/">https://boxicons.com/</a>. Just copy and paste the icon information from the website. Example: <b>bx bxs-network-chart</b>
+            <br><font color="red">*</font>You can find icons at: <a href = "https://boxicons.com/">https://boxicons.com/</a>. Just copy and paste the icon information from the website. Example: <b>bx bxs-network-chart</b>
         </div>
-        <center>
-        <h2>Research Paper</h2>
+        <center><br>
+        <h3><b>Research Paper</b></h3>
         </center>
         <div>
             <input type="text" id="subheading" placeholder="Enter a brief Subheading" />
@@ -99,11 +105,11 @@
         <div>
             <textarea id="msg" name="msg" placeholder="Enter Research paper details..." style="height:100px"></textarea>
         </div>
-        
+        <center>
         <div>
             <input type="button" id="bt" value="Generate MD File" onclick="saveFile(); after_submission()" />
         </div>
-      
+        </center>
     </div>
   </div>
 <script>
@@ -131,7 +137,7 @@
         
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.md';	   // The file to save the data.
+        const sFileName = topic+'.md';	   // The file to save the data.
 
         let newLink = document.createElement("a");
         newLink.download = sFileName;
