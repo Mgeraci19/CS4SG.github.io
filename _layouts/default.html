@@ -8,7 +8,7 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Generate Research Page</title>
+  <title>CS4SG@UB | {{ page.title }}</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -19,40 +19,15 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{ "assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
+  <link href="{{ "assets/vendor/icofont/icofont.min.css" | relative_url }}"rel="stylesheet">
+  <link href="{{ "assets/vendor/boxicons/css/boxicons.min.css" | relative_url }}" rel="stylesheet">
+  <link href="{{ "assets/vendor/venobox/venobox.css" | relative_url }}" rel="stylesheet">
+  <link href="{{ "assets/vendor/owl.carousel/assets/owl.carousel.min.css" | relative_url }}" rel="stylesheet">
+  <link href="{{ "assets/vendor/aos/aos.css" | relative_url }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <style>
-            * {
-            box-sizing: border-box;
-        }
-    	div {
-            padding: 10px;
-            background-color: transparent;
-            overflow: hidden;
-        }
-    	input[type=text], textarea, select {
-            font: 17px Calibri;
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type=button]{ 
-            font: 17px Calibri;
-            width: auto;
-            float: center;
-            cursor: pointer;
-            padding: 7px;
-        }
-  </style>
+  <link href= "{{ "assets/css/style.css" | relative_url }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Squadfree - v2.0.0
@@ -62,8 +37,7 @@
   ======================================================== -->
 </head>
 
-<body>
-
+<body style="padding-top:80px">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -72,7 +46,7 @@
       <div class="logo mr-auto">
         <!-- <h1 class="text-light"><a href="index.html"><span>Foster</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/logo2.png" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="{{ "assets/img/logo2.png" | relative_url }}" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -92,122 +66,106 @@
 
     </div>
   </header><!-- End Header -->
-
-<br>
-
-
-
-<!-- --------All content below this comment------- -->
   
-  <div id = "after_submission">
-    
+  <br>
+  <br>
+  <div class="container">
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-          <h2>Research Details Form</h2>
+          <h2>{{ page.title }}</h2>
         </div>
-
-    <div>
-        <!--Add few elements to the form-->
-        <center><h3><b>Research Flashcard</b></h3></center>
-        <div>
-            <select id="layout">
-                <option selected value="">-- Choose page layout --</option>
-                <option value="default">default</option>
-                <!-- <option value="layout2">2</option>
-                <option value="layout3">3</option> -->
-            </select>
-        </div>
-
-        <div>
-            <input type="text" id="topic" placeholder="Enter Topic" />
-        </div>
-        <div>
-            <input type="text" id="description" placeholder="Enter a brief description" />
-        </div>
-        <div>
-            <input type="text" id="icon" placeholder="Enter Icon information" />
-            <br><font color="red">*</font>You can find icons at: <a href = "https://boxicons.com/">https://boxicons.com/</a>. Just copy and paste the icon information from the website. Example: <b>bx bxs-network-chart</b>
-        </div>
-        <center><br>
-        <h3><b>Research Paper</b></h3>
-        </center>
-        <div>
-            <input type="text" id="subheading" placeholder="Enter a brief Subheading" />
-        </div>
-        <div>
-            <textarea id="msg" name="msg" placeholder="Enter Research paper details..." style="height:100px"></textarea>
-        </div>
-        <center>
-        <div>
-            <input type="button" id="bt" value="Generate MD File" onclick="saveFile(); after_submission()" />
-        </div>
-        </center>
-    </div>
+        {{ content | markdownify }}
   </div>
-<script>
-    let saveFile = () => {
-    	
-        // Get the data from each element on the form.
-    	const topic = document.getElementById('topic').value;
-        const description = document.getElementById('description').value;
-        const icon = document.getElementById('icon').value;
-        const layout = document.getElementById('layout').value;
-        const msg = document.getElementById('msg').value;
-        const subheading = document.getElementById('subheading').value;
-        
-        // This variable stores all the data.
-        let data = 
-            "---"+"\n"+
-            "layout: "+layout+"\n"+
-            "title: "+topic+"\n"+
-            "description: "+description+"\n"+
-            "icon: <i class='"+icon+"' ></i>"+"\n"+
-            "---"+"\n\n"+
-            "# "+subheading+"\n"+msg
+  <br>
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
 
+          <!-- <div class="col-lg-4 col-md-6">
+            <div class="footer-info" data-aos="fade-up" data-aos-delay="50">
+              <h3>University at Buffalo Department of Computer Science and Engineering</h3>
+              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div> -->
 
-        
-        // Convert the text to BLOB.
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = topic+'.md';	   // The file to save the data.
+          <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="150">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">Education</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Research</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#testimonials">Speakers Series</a></li>
+            </ul>
+          </div>
 
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
+          <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="250">
+            <h4></h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">People</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#news">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Join Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
 
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
+          <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up" data-aos-delay="350">
+            <h4>Our Mailing List</h4>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
 
-        newLink.click(); 
-    }
+          </div>
 
-    function after_submission(){
-      document.getElementById("after_submission").innerHTML = "<center><table width='80%'><h2>Thank you for submitting your research paper.</h2><br><br> To add it to the CS4SG Research Section, just upload the file to the <b>_research_projects<b> folder. Here is the link for the folder <br><a href = 'https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects' target='_blank'>https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects</a></table></center>"
-    }
-</script>
+        </div>
+      </div>
+    </div>
 
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>University at Buffalo</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
-
-<!-- -------All content above this comment--------- -->
-
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="{{ "assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/jquery.easing/jquery.easing.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/php-email-form/validate.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/waypoints/jquery.waypoints.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/counterup/counterup.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/isotope-layout/isotope.pkgd.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/venobox/venobox.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/owl.carousel/owl.carousel.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/vendor/aos/aos.js" | relative_url }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ "assets/js/main.js" | relative_url }}"></script>
+
 
 </body>
 
