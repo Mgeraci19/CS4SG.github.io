@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  /**padding-top: 80px;**/
 }
 
 a {
@@ -561,6 +562,9 @@ section {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+  width: 250px;
+  height: 275px;
+  margin-bottom: 30px;
 }
 
 .services .icon-box::before {
@@ -615,6 +619,16 @@ section {
 .services .icon-box:hover .icon i {
   color: #fff;
 }
+
+.services #textbox {
+  height: 7.5em;
+  width: 200px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
 
 /*--------------------------------------------------------------
 # Counts
