@@ -19,8 +19,10 @@ title: Research
                                 <p class="description">{{ research_project.description | markdownify }}</p>
                     </div>
                 </div>
-            {% endfor %}     
+            {% endfor %}
         </div>
+        <br>
+        <a href="research_form.html" style="display: block; width: 100%; text-align: right">Add a Research Project</a>
       </div>
     </section><!-- End Research Section -->
 
