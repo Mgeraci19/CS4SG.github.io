@@ -339,8 +339,6 @@
         textChangeEvent = editor.on('text-change', function (delta, oldDelta, source) {
           var html = editorElem.querySelector('.ql-editor').innerHTML
           localStorage.setItem("saved_research_html", editorElem.querySelector('.ql-editor').innerHTML);
-          var s = document.getElementById("ifr")
-          localStorage.setItem("hei", s.scrollHeight);
           var text = editor.getText()
           var content = editor.getContents()
 
