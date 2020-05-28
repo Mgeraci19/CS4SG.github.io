@@ -53,6 +53,14 @@
             padding: 7px;
         }
   </style>
+  
+  
+  <style>
+    iframe{
+        width: 100%;
+        border: 2px solid #ccc;
+    }
+</style>
 
   <!-- =======================================================
   * Template Name: Squadfree - v2.0.0
@@ -147,7 +155,7 @@
       
       
 <!-- ------------Include Text Editor---------- -->
-<iframe src="edit.html" width="100%" onload="this.height=this.contentWindow.document.body.scrollHeight;" height="200px"></iframe>
+<iframe src="edit.html" id="myIframe"></iframe>
 <!-- ------------End Text Editor---------- -->      
       
       
@@ -215,11 +223,17 @@
     }
 </script>
   
-<script type="text/javascript">
-  function resizeIframe(iframe) {
-    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  }
-</script>
+  
+  
+    <script>
+    // Selecting the iframe element
+    var iframe = document.getElementById("myIframe");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+    </script>
 
 
 
