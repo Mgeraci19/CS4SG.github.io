@@ -117,6 +117,7 @@
 
 
         <pre style="display:none;"><code id="sendable">{{title}}</code></pre>
+        <div id="ifr">
         <ng-quill-editor bounds="self" ng-model="title" placeholder="'Enter text here'" on-editor-created="editorCreated(editor)" on-content-changed="contentChanged(
           editor,
           html,
@@ -126,6 +127,7 @@
           oldDelta,
           source
         )" on-selection-changed="selectionChanged(editor, range, oldRange, source)" on-focus="onFocus(editor, source)" on-blur="onBlur(editor, source)" preserve-whitespace="true" track-changes="all"></ng-quill-editor>
+        </div>
 
       <!-- <h3>Custom font sizes</h3>
       <ng-quill-editor ng-model="title" custom-options="customOptions" modules="customModules"></ng-quill-editor> -->
