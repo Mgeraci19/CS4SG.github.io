@@ -311,7 +311,7 @@
         const description = document.getElementById('description').value;
         const icon = document.getElementById('icon').value;
         const layout = document.getElementById('layout').value;
-        const msg = document.getElementById('msg').value;
+        const msg = String(localStorage.getItem("saved_research_html"));
         const subheading = document.getElementById('subheading').value;
         
         // This variable stores all the data.
