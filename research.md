@@ -19,8 +19,6 @@ title: Research
                 </div>
             {% endfor %}
         </div>
-        <br>
-        <a href="research_form.html" style="display: block; width: 100%; text-align: right">Add a Research Project</a>
 
 </body>
 
