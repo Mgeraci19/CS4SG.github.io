@@ -139,35 +139,17 @@
         <h3><b>Research Paper</b></h3>
         </center>
         <div>
-            <input type="text" id="subheading" placeholder="Enter a brief Subheading" />
+
+        <div>
+            <select id="layout" onchange="location = this.value;">
+                <option selected value="">-- Select a Method --</option>
+                <option value="javascript:create()">Create on this Platform</option>
+                <option value="javascript:up()">Upload PDF/DOCX</option>
+                <!-- <option value="layout3">3</option> -->
+            </select>
         </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-<!-- ------------Include Text Editor---------- -->
-<iframe src="edit.html" style="border:0px; width:100vw; min-height:50vh;"></iframe>
-<!-- ------------End Text Editor---------- -->      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+        <div id="method"></div>     
       
         <center>
         <div>
@@ -220,6 +202,14 @@
 
     function after_submission(){
       document.getElementById("after_submission").innerHTML = "<br><br><center><table width='80%'><h2>Thank you for submitting your research paper.</h2><br><br> To add it to the CS4SG Research Section, just upload the file to the <b>_research_projects<b> folder. Here is the link for the folder <br><a href = 'https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects' target='_blank'>https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects</a></table></center>"
+    }
+
+    function create(){
+      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><iframe src="edit.html" style="border:0px; width:100vw; min-height:50vh;"></iframe></div>'
+    }
+
+    function up(){
+      document.getElementById("method").innerHTML = "COMING SOON!"
     }
 </script>
 
