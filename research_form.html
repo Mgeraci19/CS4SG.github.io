@@ -166,8 +166,16 @@
         const description = document.getElementById('description').value;
         const icon = document.getElementById('icon').value;
         const layout = document.getElementById('layout').value;
-        const msg = String(localStorage.getItem("saved_research_html"));
         const subheading = document.getElementById('subheading').value;
+        var msg = ''
+
+        if(document.getElementById('saved_research_html') != null){
+          msg = String(localStorage.getItem("saved_research_html"));
+        }
+
+        if(document.getElementById('research_doc') != null){
+          msg = "<a href = "+String(document.getElementById('research_doc').value)+">Here is the link to the paper</a>"
+        }
         
         // This variable stores all the data.
         let data = 
@@ -205,11 +213,11 @@
     }
 
     function create(){
-      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><iframe src="edit.html" style="border:0px; width:98%; min-height:50vh;"></iframe></div>'
+      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><iframe src="edit.html" style="border:0px; width:100%; min-height:50vh;"></iframe></div>'
     }
 
     function up(){
-      document.getElementById("method").innerHTML = "COMING SOON!"
+      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><input type="text" id="research_doc" placeholder="Enter link to the research paper" /></div>'
     }
 </script>
 
