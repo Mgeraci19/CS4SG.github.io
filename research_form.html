@@ -229,6 +229,7 @@
     }
   
     function check(){
+      console.log(document.getElementById("research_doc").value)
       $.get(document.getElementById("research_doc").value).done(function () {
         document.getElementById("status").innerHTML="Website working correctly! You can proceed!";
       }).fail(function () {
