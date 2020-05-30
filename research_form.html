@@ -230,13 +230,40 @@
   
     function check(){
       console.log(document.getElementById("research_doc").value)
-      $.get(document.getElementById("research_doc").value).done(function () {
-        document.getElementById("status").innerHTML="Website working correctly! You can proceed!";
-      }).fail(function () {
-         document.getElementById("status").innerHTML="<font color='red'>Website not working! Please re-enter the link.</font>";
-         document.getElementById("research_doc").value= "";
-      });
+      
+      
+      
+              
+        
+        var MrChecker = new XMLHttpRequest(),
+            CheckThisUrl = document.getElementById("research_doc").value;
+
+        // Opens the file and specifies the method (get)
+        // Asynchronous is true
+        MrChecker.open('get', CheckThisUrl, true);
+
+        //check each time the ready state changes
+        //to see if the object is ready
+        MrChecker.onreadystatechange = checkReadyState;
+
+        function checkReadyState() {
+
+            if (MrChecker.readyState === 4) {
+
+                //check to see whether request for the file failed or succeeded
+                if ((MrChecker.status == 200) || (MrChecker.status == 0)) {
+                  document.getElementById("status").innerHTML="Website working correctly! You can proceed!";
+                }
+                else {
+                 document.getElementById("status").innerHTML="<font color='red'>Website not working! Please re-enter the link.</font>";
+                 document.getElementById("research_doc").value= "";
+                return;
+                }
+            }
+        }
+        MrChecker.send(null);
     }
+
 </script>
 
 
