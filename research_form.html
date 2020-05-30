@@ -133,13 +133,13 @@
         </div>
 
         <div>
-            <input type="text" id="topic" placeholder="Enter Topic" />
+            <input type="text" id="topic" placeholder="Enter Topic" required="required"/>
         </div>
         <div>
-            <input type="text" id="description" placeholder="Enter a brief description" />
+            <input type="text" id="description" placeholder="Enter a brief description" required="required" />
         </div>
         <div>
-            <input type="text" id="icon" placeholder="Enter Icon information" />
+            <input type="text" id="icon" placeholder="Enter Icon information" required="required" />
             <br><font color="red">*</font>You can find icons at: <a href = "https://boxicons.com/">https://boxicons.com/</a>. Just copy and paste the icon information from the website. Example: <b>bx bxs-network-chart</b>
         </div>
         <center><br>
@@ -160,7 +160,7 @@
       
         <center>
         <div>
-            <input type="button" id="bt" value="Generate MD File" onclick="saveFile(); after_submission()" />
+            <input type="submit" id="bt" value="Generate MD File" onclick="saveFile(); after_submission()" />
         </div>
         </center>
     </div>
@@ -221,11 +221,11 @@
     }
 
     function create(){
-      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><iframe src="edit.html" style="border:0px; width:100%; min-height:50vh;"></iframe></div>'
+      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading"  required="required"/></div><div><iframe src="edit.html" style="border:0px; width:100%; min-height:50vh;"></iframe></div>'
     }
 
     function up(){
-      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><input type="url" id="research_doc" placeholder="Link to external research website/ paper." onchange="check()"/></div><div id="status"></div>'
+      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading"  required="required"/></div><div><input type="url" id="research_doc" placeholder="Link to external research website/ paper." onchange="check()"  required="required"/></div><div id="status"></div>'
     }
   
     function check(){
