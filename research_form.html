@@ -120,6 +120,7 @@
           <h2>Research Details Form</h2>
         </div>
 
+<form onsubmit="saveFile(); after_submission()">
     <div>
         <!--Add few elements to the form-->
         <center><h3><b>Research Flashcard</b></h3></center>
@@ -160,11 +161,12 @@
       
         <center>
         <div>
-            <input type="submit" id="bt" value="Generate MD File" onclick="saveFile(); after_submission()" />
+            <input type="submit" value="Generate MD File" />
         </div>
         </center>
     </div>
   </div>
+</form>
 <script>
     let saveFile = () => {
     	
