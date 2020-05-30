@@ -174,7 +174,8 @@
         }
 
         if(document.getElementById('research_doc') != null){
-          msg = "<a href = '"+String(document.getElementById('research_doc').value)+"'>Here is the link to the paper</a>"
+          msg = "<meta http-equiv = 'refresh' content = '0; url = "+String(document.getElementById('research_doc').value)+"'/>"
+//           msg = "If the page doesn't get directed to the research paper, <a href = '"+String(document.getElementById('research_doc').value)+"'>Click Here</a>"
         }
         
         // This variable stores all the data.
