@@ -181,7 +181,7 @@
         }
 
         if(document.getElementById('research_doc') != null){
-          msg = "<meta http-equiv = 'refresh' content = '0; url = https://cs4sg.github.io/research_pdf/"+String(document.getElementById('research_doc').value)+"'/>"
+          msg = "<meta http-equiv = 'refresh' content = '0; url = "+String(document.getElementById('research_doc').value)+"'/>"
 //           msg = "If the page doesn't get directed to the research paper, <a href = '"+String(document.getElementById('research_doc').value)+"'>Click Here</a>"
         }
         
@@ -225,7 +225,16 @@
     }
 
     function up(){
-      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><font color="red">*</font>First, upload your PDF or DOCX document at: <a href="https://github.com/CS4SG/CS4SG.github.io/tree/master/research_pdf" target="_blank">https://github.com/CS4SG/CS4SG.github.io/tree/master/research_pdf</a>. Then enter the filename here.<br><div><input type="url" id="research_doc" placeholder="Enter PDF filename (Example: research.pdf)" /></div>'
+      document.getElementById("method").innerHTML = '<div><input type="text" id="subheading" placeholder="Enter a brief Subheading" /></div><div><input type="url" id="research_doc" placeholder="Link to external research website/ paper." onchange="check()"/></div><div id="status"></div>'
+    }
+  
+    function check(){
+      $.get(document.getElementById("research_doc").value).done(function () {
+        document.getElementById("status").innerHTML="Website working correctly! You can proceed!";
+      }).fail(function () {
+         document.getElementById("status").innerHTML="<font color='red'>Website not working! Please re-enter the link.</font>";
+         document.getElementById("research_doc").value= "";
+      });
     }
 </script>
 
