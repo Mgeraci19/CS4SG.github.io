@@ -122,8 +122,6 @@
         <center><br>
         <h3><b>Research Publication</b></h3>
         </center>
-
-<form onsubmit="saveFile(); after_submission()">  
       
 
       <div><input type="text" id="topic" placeholder="Enter Topic" required="required"/></div>
@@ -145,12 +143,11 @@
 
         <center>
         <div>
-            <input type="submit" value="Generate MD File" />
+            <input type="button" value="Generate MD File" onclick="saveFile(); after_submission()"/>
         </div>
         </center>
     </div>
   </div>
-</form>
 <script>
     let saveFile = () => {
     	
