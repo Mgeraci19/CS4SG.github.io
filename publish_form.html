@@ -162,16 +162,8 @@
         const dates = document.getElementById("dts").value
         const abstract = document.getElementById("abstract").value
         const links = document.getElementById("links").value
-        var msg = ''
-
-        if(document.getElementById('saved_research_html') != null){
-          msg = String(localStorage.getItem("saved_research_html"));
-        }
-
-        if(document.getElementById('research_doc') != null){
-          msg = "<meta http-equiv = 'refresh' content = '0; url = "+String(document.getElementById('research_doc').value)+"'/>"
-//           msg = "If the page doesn't get directed to the research paper, <a href = '"+String(document.getElementById('research_doc').value)+"'>Click Here</a>"
-        }
+        var msg = String(localStorage.getItem("saved_research_html"));
+      console.log(msg)
         
         // This variable stores all the data.
         let data = 
