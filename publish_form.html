@@ -52,7 +52,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        input[type=button]{ 
+        input[type=button], button{ 
             font: 17px Calibri;
             width: auto;
             float: center;
@@ -134,7 +134,8 @@
       
       <div><input type="date" id="dts" placeholder="Enter date" /></div>
 
-      <div><input type="text" id="links" placeholder="Enter links" /></div>
+      <div><input type="text" id="links" placeholder="Enter links" /><button onclick="save_link()">Add another link</button></div>
+      <ul id="link_status"><LH>Added Links:</LH></ul><font color="red">*</font>Click on a link to remove it.
       
       <div><textarea id="abstract" placeholder="Enter abstract"></textarea></div>
       
@@ -149,6 +150,7 @@
     </div>
   </div>
 <script>
+  var link_str = ""
     let saveFile = () => {
     	
         // Get the data from each element on the form.
@@ -158,7 +160,9 @@
         const publishers = document.getElementById("publishers").value
         const dates = document.getElementById("dts").value
         const abstract = document.getElementById("abstract").value
-        const links = document.getElementById("links").value
+
+        save_link()
+        const links = link_str.slice(2)
         var msg = String(localStorage.getItem("saved_research_html"));
       console.log(msg)
         
@@ -199,6 +203,16 @@
       document.getElementById("after_submission").innerHTML = "<br><br><center><table width='80%'><h2>Thank you for submitting your research paper.</h2><br><br> To add it to the CS4SG Research Section, just upload the file to the <b>_research_projects<b> folder. Here is the link for the folder <br><a href = 'https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects' target='_blank'>https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects</a></table></center>"
     }
 
+    function save_link(){
+      s = document.getElementById("links").value;
+      link_str = link_str.concat(", "+s);
+      var node = document.createElement("LI");
+      node.onclick = function() {this.parentNode.removeChild(this);};
+      var textnode = document.createTextNode(s);
+      node.appendChild(textnode);
+      document.getElementById("link_status").appendChild(node);
+      document.getElementById("links").value = "";
+    }
 </script>
 
 
