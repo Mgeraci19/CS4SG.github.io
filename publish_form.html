@@ -250,13 +250,17 @@
 
     function save_link(){
       s = document.getElementById("links").value;
-      link_str = link_str.concat(", "+s);
-      var node = document.createElement("LI");
-      node.onclick = function() {this.parentNode.removeChild(this);};
-      var textnode = document.createTextNode(s);
-      node.appendChild(textnode);
-      document.getElementById("link_status").appendChild(node);
-      document.getElementById("links").value = "";
+      if(s == ""){
+      }
+      else{
+        link_str = link_str.concat(", "+s);
+        var node = document.createElement("LI");
+        node.onclick = function() {this.parentNode.removeChild(this);};
+        var textnode = document.createTextNode(s);
+        node.appendChild(textnode);
+        document.getElementById("link_status").appendChild(node);
+        document.getElementById("links").value = "";
+      }
     }
 
 
