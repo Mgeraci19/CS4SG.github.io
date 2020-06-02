@@ -68,6 +68,46 @@
         border: 2px solid #ccc;
     }
 </style>
+  
+  
+<style>
+  label {
+  padding: 4px 6px;
+  line-height: 190%;
+  outline-style: none;
+  transition: all .6s;
+  }
+
+  .hiddenCB div {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hiddenCB input[type="checkbox"],
+  .hiddenCB input[type="radio"] {
+    display: none;
+
+  }
+
+  .hiddenCB label {
+
+    cursor: pointer;
+  }
+
+  .hiddenCB input[type="checkbox"]+label:hover{
+    background: #67b0d1;
+  }
+
+  .hiddenCB input[type="checkbox"]:checked+label {
+    background: #67b0d1;
+  }
+
+  .hiddenCB input[type="checkbox"]:checked+label:hover{
+    background: #67b0d1;
+  }
+</style>
 
   <!-- =======================================================
   * Template Name: Squadfree - v2.0.0
@@ -138,7 +178,7 @@
       <ul id="link_status"><LH>Added Links:</LH></ul><font color="red">*</font>Click on a link to remove it.
       
     <br><br>
-      <label>Choose project tags</label><div id="tagged"></div>
+      <label>Choose project tags</label><div id="tagged" class="hiddenCB"></div>
       <div><textarea id="abstract" placeholder="Enter abstract"></textarea></div>
       
       <div><iframe src="edit.html" style="border:0px; width:100%; min-height:50vh;"></iframe></div>
