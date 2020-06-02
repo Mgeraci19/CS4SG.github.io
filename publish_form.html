@@ -138,6 +138,7 @@
       <ul id="link_status"><LH>Added Links:</LH></ul><font color="red">*</font>Click on a link to remove it.
       
     <br><br>
+      <label>Choose project tags</label><div id="tagged"></div>
       <div><textarea id="abstract" placeholder="Enter abstract"></textarea></div>
       
       <div><iframe src="edit.html" style="border:0px; width:100%; min-height:50vh;"></iframe></div>
@@ -161,11 +162,10 @@
         const publishers = document.getElementById("publishers").value
         const dates = document.getElementById("dts").value
         const abstract = document.getElementById("abstract").value
-
+        const tagged = checked.toString();
         save_link()
         const links = link_str.slice(2)
         var msg = String(localStorage.getItem("saved_research_html"));
-      console.log(msg)
         
         // This variable stores all the data.
         let data = 
@@ -177,6 +177,7 @@
             "publishers: "+publishers+"\n"+
             "date: "+dates+"\n"+
             "links: "+links+"\n"+
+            "tagged_projects: "+tagged+"\n"+
             "abstract: "+abstract.replace(/\n/g, '<br />')+"\n"+"---"+"\n\n"+msg
 
 
@@ -213,6 +214,39 @@
       node.appendChild(textnode);
       document.getElementById("link_status").appendChild(node);
       document.getElementById("links").value = "";
+    }
+
+
+    // tagged projects javascript
+    var arr = ["a","b","c"];
+
+    var checked = []
+
+    var i=0;
+    function add(ids){     
+            i++;  
+            var node = document.createElement('div');        
+            node.innerHTML = '<input type="checkbox" id="' + ids + '" onChange="valueChange(this)" name="check' + i + '"><label for="' + ids + '">'+ ids +'</label>';       
+            document.getElementById('tagged').appendChild(node);    
+    }
+
+    for (e of arr) {
+      add(e)
+    }
+
+    function remove(array, element) {
+      const index = array.indexOf(element);
+      array.splice(index, 1);
+    }
+
+    function valueChange(item){
+      if(checked.includes(item.id)){
+        remove(checked,item)
+      }
+      else{
+        checked.push(String(item.id))
+      }
+      console.log(checked)
     }
 </script>
 
