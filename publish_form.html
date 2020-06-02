@@ -266,7 +266,7 @@
     function add(ids){     
             i++;  
             var node = document.createElement('div');        
-            node.innerHTML = '<input type="checkbox" id="' + ids + '" onChange="valueChange(this)" name="check' + i + '"><label for="' + ids + '">'+ ids +'</label>';       
+            node.innerHTML = '<input type="checkbox" id="' + ids + '" onChange="valueChange(this)" name="check' + i + '"><label for="' + ids + '">'+ ids +'</label>&nbsp; &nbsp;';       
             document.getElementById('tagged').appendChild(node);    
     }
 
