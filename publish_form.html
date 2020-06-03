@@ -180,7 +180,7 @@
       
     <br><br>
     <div style="padding: 12px; font: 17px Calibri; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
-      <center><b>Choose Tags<b></center><div id="tagged" class="hiddenCB"></div><input type="text" placeholder="Enter a new Tag" id="new_tag" style="width:50%">&nbsp; &nbsp;<input type="button" onclick="add_tag();" value="Add Tag">
+      <center><b>Choose Tags<b></center><div id="tagged" class="hiddenCB"></div><input type="button" onclick="add_tag();" value="Add this Topic as Tag">
     </div><br><br>
     
       <div><textarea id="abstract" placeholder="Enter abstract"></textarea></div>
@@ -243,6 +243,10 @@
         }
 
         newLink.click(); 
+
+    var save_to_json = arr.toString();
+    // Save Json file here
+
     }
 
     function after_submission(){
@@ -302,12 +306,11 @@
     }
 
     function add_tag(){
-      s2 = String(document.getElementById("new_tag").value)
+      s2 = String(document.getElementById('topic').value)
       if(arr.includes(s2)){
       }
       else{
         arr.push(s2);
-        document.getElementById("new_tag").value = "";
         add(s2)
       }
     }
