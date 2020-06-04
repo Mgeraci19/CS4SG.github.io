@@ -19,7 +19,7 @@ title: Research
                     <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
                 </div>
             </div>
-     <div style="display:none;">
+
             <!-- create string with all titles -->
             {% capture title_string %}{{ title_string | append: research_project.title }}{% endcapture %}
             {% if forloop.last == false %}
@@ -27,8 +27,7 @@ title: Research
             {% endif %}
             <!-- -------------------------------->
         {% endfor %}
-        <h3>{{ title_string }}</h3>
-      </div>
+        <h3 style="display:none;">{{ title_string }}</h3>
     </div>
     <script>
         var title_string = "{{ title_string }}";
