@@ -270,10 +270,10 @@
 
 
     // tagged projects javascript
-    $.getJSON("tags.json", function (data){
-      localStorage.setItem("tagger", data);
-    });
-    var t = localStorage.getItem("tagger")
+//     $.getJSON("tags.json", function (data){
+//       localStorage.setItem("tagger", data);
+//     });
+    var t = localStorage.getItem("title_string")
     var arr = t.split(",")
 
     var checked = []
