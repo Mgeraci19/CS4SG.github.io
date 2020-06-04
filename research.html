@@ -1,0 +1,38 @@
+---
+layout: default
+title: Research
+---
+
+<html lang="en">
+
+<body>
+
+ <!-- ======= Research Section ======= -->
+    {% assign title_string = "" %}
+    <div class="row">
+        {% for research_project in site.research_projects %}
+            <!-- create boxes to display on research page -->
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up">
+                <div class="icon">{{ research_project.icon }}</div>
+                    <h4 class="title"><a href="{{ research_project.url }}">{{ research_project.title }}</a></h4>
+                    <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
+                </div>
+            </div>
+            <!-- create string with all titles -->
+            {% capture title_string %}{{ title_string | append: research_project.title }}{% endcapture %}
+            {% if forloop.last == false %}
+                {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+            {% endif %}
+            <!-- -------------------------------->
+        {% endfor %}
+        <h3>{{ title_string }}</h3>
+    </div>
+    <script>
+        var title_string = "{{ title_string }}";
+        localStorage.setItem("title_string", title_string);
+    </script>
+
+</body>
+
+</html>
