@@ -67,7 +67,6 @@
     iframe{
         width: 100%;
         border: 2px solid #ccc;
-        float: center;
     }
 </style>
   
@@ -134,15 +133,15 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="\">Home</a></li>
-          <li><a href="\#about">Education</a></li>
-          <li><a href="\#services">Research</a></li>
-          <li><a href="\#testimonials">Speakers</a></li>
-          <li><a href="\#team">People</a></li>
-          <li><a href="\#news">About</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="/#about">Education</a></li>
+          <li><a href="\research.html">Research</a></li>
+          <li><a href="/#testimonials">Speakers</a></li>
+          <li><a href="/#team">People</a></li>
+          <li><a href="/#news">About</a></li>
 
 
-          <li><a href="\#contact">Join us</a></li>
+          <li><a href="#contact">Join us</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -256,7 +255,7 @@
     }
 
     function after_submission(){
-      document.getElementById("after_submission").innerHTML = "<br><br><center><table width='80%'><h2>Thank you for submitting your research paper.</h2><br><br> To add it to the CS4SG Research Section, just upload the file to the <b>_publications<b> folder. Here is the link for the folder <br><a href = 'https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects' target='_blank'>https://github.com/CS4SG/CS4SG.github.io/tree/master/_publications</a></table></center>"
+      document.getElementById("after_submission").innerHTML = "<br><br><center><table width='80%'><h2>Thank you for submitting your research paper.</h2><br><br> To add it to the CS4SG Research Section, just upload the file to the <b>_research_projects<b> folder. Here is the link for the folder <br><a href = 'https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects' target='_blank'>https://github.com/CS4SG/CS4SG.github.io/tree/master/_research_projects</a></table></center>"
     }
 
     function save_link(){
