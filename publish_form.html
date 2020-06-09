@@ -166,11 +166,9 @@
       
       <iframe src="https://cs4sg.github.io/research.html" style="display:none;"></iframe>
 
-      <div><input type="text" id="topic" placeholder="Enter Topic" required="required"/></div>
+      <div><input type="text" id="topic" placeholder="Enter Title" required="required"/></div>
       
       <div><input type="text" id="authors" placeholder="Enter Authors" /></div>
-      
-      <div><input type="text" id="affiliations" placeholder="Enter affiliations" /></div>
       
       <div><input type="text" id="publishers" placeholder="Enter publishers"  /></div>
       
@@ -211,7 +209,6 @@
         // Get the data from each element on the form.
     	const topic = document.getElementById('topic').value;
         const authors = document.getElementById("authors").value
-        const affiliations = document.getElementById("affiliations").value
         const publishers = document.getElementById("publishers").value
         const dates = document.getElementById("dts").value
         const abstract = document.getElementById("abstract").value
@@ -226,7 +223,6 @@
             "layout: publication"+"\n"+
             "title: "+topic+"\n"+
             "authors: "+authors+"\n"+
-            "affiliations: "+affiliations+"\n"+
             "publishers: "+publishers+"\n"+
             "date: "+dates+"\n"+
             "links: "+links+"\n"+
