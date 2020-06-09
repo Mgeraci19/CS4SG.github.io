@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: research_project
 title: Artificial Intelligence and its Role in Near Future
 description: The term intelligence refers to the ability to acquire and apply different skills and knowledge to solve a given problem.
 icon: <i class='bx bxs-network-chart' ></i>
