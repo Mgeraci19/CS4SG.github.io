@@ -6,7 +6,7 @@
 
 function convert_HTML_To_PDF() {
 	var doc = new jsPDF();
-	var elementHTML = $('body').html();
+	var elementHTML = $('#contne').html();
 	var specialElementHandlers = {
 		'#elementH': function (element, renderer) {
 			return true;
