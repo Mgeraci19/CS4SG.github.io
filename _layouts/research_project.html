@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<html>
+
+<h6>People</h6>
+
+<hr>
+
+<!---------------------------->
+
+<h6>Education</h6>
+
+<hr>
+
+<!---------------------------->
+
+<h6>Publications</h6>
+
+<!--{% capture title_hyphenated %}{{ page.title | replace: " ", "-" }}{% endcapture %}-->
+
+<ul>
+{% for pub in site.publications %}
+    {% if pub.tagged_projects contains page.title %}
+        <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<!---------------------------->
+
+{{ content | markdownify }}
+
+</html>

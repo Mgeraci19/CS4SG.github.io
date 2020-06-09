@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<p>Author: {{ page.authors }}</p>
+<hr>
+
+<!---------------------------->
+
+<p>Published in: {{ page.publishers }}</p>
+<hr>
+
+<!---------------------------->
+
+<p>Date: {{ page.date | date: '%B %d, %Y' }}</p>
+<hr>
+
+<!---------------------------->
+
+{% capture link_string %}{{ page.links }}{% endcapture %}
+
+{% assign link_array = link_string | split: "," %}
+
+<p>Links:<p>
+
+<ul>
+{% for link in link_array %}
+    <li><a href="{{ link }}">Here</a></li>
+{% endfor %}
+</ul>
+
+<!--<p>Link: {{ page.links }}</p>-->
+<hr>
+
+<!---------------------------->
+
+{% assign tag_array = page.tagged_projects | split: "," %}
+
+<p>Tagged Projects: </p>
+
+<ul>
+{% for tag in tag_array %}
+    {% for project in site.research_projects %}
+        {% if tag == project.title %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<!---------------------------->
+
+<p>Abstract:<br>
+{{ page.abstract }}</p>
+<hr>
+
+<!---------------------------->
+
+<p>{{ content | markdownify }}</p>
+<hr>
+
+<!---------------------------->
+
+<script src="assets/js/pdf_gen.js"></script><script src="assets/js/pdf_gen2.js"></script>
+
+<div id="elementH"></div>
+<input type="button" onclick="convert_HTML_To_PDF()" value="Download Paper as PDF">
