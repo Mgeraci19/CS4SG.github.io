@@ -18,5 +18,5 @@ function convert_HTML_To_PDF() {
     });
 	
 	// Save the PDF
-	doc.save('sample-document.pdf');
+	doc.save(String(document.getElementById("publish_title").value)+'.pdf');
 }
