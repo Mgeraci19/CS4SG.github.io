@@ -4,3 +4,5 @@ title: "" # the name of your site, e.g. ACME Corp.
 collections:
     research_projects:
         output: true
+    publications:
+        output: true
