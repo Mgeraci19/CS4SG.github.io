@@ -125,15 +125,6 @@
         <!--Add few elements to the form-->
         <center><h3><b>Research Flashcard</b></h3></center>
         <div>
-            <select id="layout">
-                <option selected value="">-- Choose page layout --</option>
-                <option value="default">default</option>
-                <!-- <option value="layout2">2</option>
-                <option value="layout3">3</option> -->
-            </select>
-        </div>
-
-        <div>
             <input type="text" id="topic" placeholder="Enter Topic" required="required"/>
         </div>
         <div>
@@ -174,7 +165,6 @@
     	const topic = document.getElementById('topic').value;
         const description = document.getElementById('description').value;
         const icon = document.getElementById('icon').value;
-        const layout = document.getElementById('layout').value;
         const subheading = document.getElementById('subheading').value;
         var msg = ''
 
@@ -190,7 +180,7 @@
         // This variable stores all the data.
         let data = 
             "---"+"\n"+
-            "layout: "+layout+"\n"+
+            "layout: default"+"\n"+
             "title: "+topic+"\n"+
             "description: "+description+"\n"+
             "icon: <i class='"+icon+"' ></i>"+"\n"+
