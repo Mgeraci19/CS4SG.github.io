@@ -20,14 +20,14 @@ layout: default
 <ul>
 {% for fund in site.funding %}
     {% if fund.tagged_projects contains page.title %}
-        <li><a href="{{ fund.org_link }}">{{ fund.title }}</a></li>
+        <li><a href="{{ fund.org_link }}">{{ fund.organization }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
 <hr>
     
 <!---------------------------->
-
+    
 <h6>Publications</h6>
 
 <!--{% capture title_hyphenated %}{{ page.title | replace: " ", "-" }}{% endcapture %}-->
@@ -35,7 +35,7 @@ layout: default
 <ul>
 {% for pub in site.publications %}
     {% if pub.tagged_projects contains page.title %}
-        <li><a href="{{ pub.org_link }}" target="_blank">{{ pub.organization }}</a></li>
+        <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
