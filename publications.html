@@ -1,3 +1,7 @@
 <body>
-    <h1>Sample Text</h1>
+<ul>
+{% for pub in site.publications %}
+    <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+{% endfor %}
+</ul>
 </body>
