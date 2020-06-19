@@ -1,0 +1,9 @@
+---
+layout: default
+title: Publication
+---
+<ul>
+{% for pub in site.publications %}
+    <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+{% endfor %}
+</ul>
