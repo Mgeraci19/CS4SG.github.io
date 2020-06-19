@@ -17,7 +17,13 @@ layout: default
 <!---------------------------->
 
 <h6>Funding</h6>
-
+<ul>
+{% for fund in site.funding %}
+    {% if fund.tagged_projects contains page.title %}
+        <li><a href="{{ fund. }}">{{ fund.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
 <hr>
     
 <!---------------------------->
@@ -29,7 +35,7 @@ layout: default
 <ul>
 {% for pub in site.publications %}
     {% if pub.tagged_projects contains page.title %}
-        <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+        <li><a href="{{ pub.org_link }}" target="_blank">{{ pub.organization }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
