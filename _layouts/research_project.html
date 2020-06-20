@@ -20,7 +20,7 @@ layout: default
 <ul>
 {% for fund in site.funding %}
     {% if fund.tagged_projects contains page.title %}
-        <li><a href="{{ fund.org_link }}">{{ fund.organization }}</a></li>
+        <li><a href="{{ fund.org_link }}">{{ fund.organization }}</a>: US${{ fund.grants }}</li>
     {% endif %}
 {% endfor %}
 </ul>
