@@ -4,6 +4,18 @@ title: Publications
 ---
 <ol>
 {% for pub in site.publications %}
-    <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+    <li>
+        
+        <h4><b><a href="{{ pub.url }}">{{ pub.title }}</a></b></h4>
+        <ul>
+            <li>
+                Authors: {{ pub.authors }}
+            </li>
+            <li>
+                Abstract: {{  pub.abstract }}
+            </li>
+        </ul>
+    </li>
+    <hr />
 {% endfor %}
 </ol>
