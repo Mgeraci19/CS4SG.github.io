@@ -8,3 +8,5 @@ collections:
         output: true
     funding:
         output: true
+    people_faculty:
+        output: true
