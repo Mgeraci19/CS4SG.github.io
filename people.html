@@ -2,23 +2,25 @@
 layout: default
 title: People
 ---
+<section id="team" class="team">
+  <div class="container">
 
-<style>
-  #subhead {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-    margin: 10px 0 20px; 
-  } 
+    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+      <style>
+        #subhead {
+          width: 100%; 
+          text-align: center; 
+          border-bottom: 1px solid #000; 
+          line-height: 0.1em;
+          margin: 10px 0 20px; 
+        } 
 
-  #subhead span { 
-      background:#fff; 
-      padding:0 10px; 
-  }
-</style>
-
-<h3 id="subhead"><span><strong>Faculty</strong></span></h3>
+        #subhead span { 
+            background:#fff; 
+            padding:0 10px; 
+        }
+      </style>
+    </div>
 
 <div class="row">
 {% for peop in site.people_faculty %}
@@ -35,17 +37,4 @@ title: People
   </div>
 </div>
 {% endfor %}
-
-
-<!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-<!-- Template Main CSS File -->
-<link href="assets/css/style.css" rel="stylesheet">
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+</div>
