@@ -5,7 +5,7 @@ title: People
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="assets/js/cropper.js"></script>
 <script>
-    recrop("img-fluid", 600, 600);
+    recrop("team_picture", 600, 600);
 </script>
 <section id="team" class="team">
   <div class="container">
@@ -34,7 +34,7 @@ title: People
 {% for peop in site.people_faculty %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
-    <div class="pic"><img src="{{ peop.image }}" class="img-fluid" alt=""></div>
+    <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
     <div class="member-info">
       <h4><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h4>
       <span>{{ peop.designation }}</span><br>
