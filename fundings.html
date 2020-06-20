@@ -5,13 +5,13 @@ title: Publications
 <ol>
 {% for fund in site.funding %}
     <li>
-      <h3>{{ fund.organization }}</h3>
+      <b>{{ fund.organization }}</b>
     <ul>
     <li>
-      Grant: {{  fund.grants }}
+      Grant: ${{  fund.grants }}
     </li>
     <li>
-    Organization's Website: <a href="{{ fund.org_link }}">Link to {{ fund.organization }} website.</a>
+    Organization's Website: <a href="{{ fund.org_link }}" target="_blank">Link to {{ fund.organization }} website <i class="icofont-external-link"></i></a>
     </li>
     </ul>
     </li>
