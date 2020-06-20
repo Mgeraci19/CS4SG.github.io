@@ -4,6 +4,39 @@ title: People
 ---
 <html lang="en">
 <body>
-Hello World!
+
+<style>
+  #subhead {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+  } 
+
+  #subhead span { 
+      background:#fff; 
+      padding:0 10px; 
+  }
+</style>
+
+<h3 id="subhead"><span><strong>Faculty</strong></span></h3>
+
+<div class="row">
+{% for peop in site.people_faculty %}
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="{{ peop.image }}" class="img-fluid" alt=""></div>
+    <div class="member-info">
+      <h4><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h4>
+      <span>{{ peop.designation }}</span><br>
+      <div class="social">
+        {{ peop.social }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
 </body>
 </html>
