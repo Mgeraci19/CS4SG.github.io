@@ -1,0 +1,19 @@
+---
+layout: default
+title: Publications
+---
+<ol>
+{% for fund in site.funding %}
+    <li>
+      <h3>{{ fund.organization }}</h3>
+    <ul>
+    <li>
+      Grant: {{  fund.grants }}
+    </li>
+    <li>
+    Organization's Website: <a href="{{ fund.org_link }}">Link to {{ fund.organization }} website.</a>
+    </li>
+    </ul>
+    </li>
+{% endfor %}
+</ol>
