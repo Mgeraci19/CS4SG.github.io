@@ -6,3 +6,5 @@ collections:
         output: true
     publications:
         output: true
+    funding:
+        output: true
