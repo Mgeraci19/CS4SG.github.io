@@ -29,7 +29,7 @@ title: People
     </div>
 
 <div class="row">
-
+{% assign title_string = "" %}
 <!-- -------------Faculty Section--------------- -->
 {% for peop in site.people_faculty %}
   <div class="col-lg-4 col-md-6">
@@ -44,6 +44,14 @@ title: People
     </div>
   </div>
 </div>
+
+<!-- create string with all titles -->
+{% capture title_string %}{{ title_string | append: peop.title }}{% endcapture %}
+{% if forloop.last == false %}
+    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+{% endif %}
+<!-- -------------------------------->
+
 {% endfor %}
 <br/><br/>
 
@@ -56,3 +64,9 @@ title: People
 
   </div>
 </section>
+<h3>{{ title_string }}</h3>
+
+<script>
+    var title_string = "{{ title_string }}";
+    localStorage.setItem("people_string", title_string);
+</script>
