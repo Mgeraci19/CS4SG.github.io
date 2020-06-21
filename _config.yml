@@ -10,3 +10,5 @@ collections:
         output: true
     people_faculty:
         output: true
+    people_students:
+        output: true
