@@ -57,14 +57,33 @@ title: People
 
 <!-- -------------Students Section--------------- -->
 <h3 id="subhead"><span><strong>Students</strong></span></h3>
+    {% for stu in site.people_students %}
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="150">
+              <div class="member-info">
+                <h4><a href="" style="text-decoration:none; color:black;" target="_blank">{{ stu.name }}</a></h4>
+                <span>{{ stu.designation }}</span><br>
+                <div class="social">
+                    {{ stu.social }}<br/>{{ stu.status }}
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- create string with all titles -->
+    {% capture title_string %}{{ title_string | append: peop.title }}{% endcapture %}
+    {% if forloop.last == false %}
+        {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+    {% endif %}
+    <!-- -------------------------------->
 
-
+    {% endfor %}
+<br/><br/>
   
-    </div>
+</div>
 
   </div>
 </section>
-<h3 style="display:none;">{{ title_string }}</h3>
+<h3>{{ title_string }}</h3>
 
 <script>
     var title_string = "{{ title_string }}";
