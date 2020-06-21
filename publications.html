@@ -2,6 +2,7 @@
 layout: default
 title: Publications
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <ol>
 {% for pub in site.publications %}
     <li>
@@ -12,10 +13,14 @@ title: Publications
                 Authors: {{ pub.authors }}
             </li>
             <li>
-                Abstract: {{  pub.abstract }}
+                Abstract: <div id="desc">{{  pub.abstract }}</div>
             </li>
         </ul>
     </li>
     <hr />
 {% endfor %}
 </ol>
+<script>
+var myDiv = $('#desc');
+myDiv.text(myDiv.text().substring(0,250)+'...')
+</script>
