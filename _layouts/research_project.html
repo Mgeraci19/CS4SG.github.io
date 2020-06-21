@@ -5,7 +5,12 @@ layout: default
 <html>
 
 <h6>People</h6>
-{{ page.authors }}
+{% assign author = page.authors | split: "," %}
+<ul>
+{% for aut in author %}
+    <li>{{ aut }}</li>
+{% endfor %}
+</ul>
 <hr>
 
 <!---------------------------->
