@@ -55,6 +55,8 @@ title: People
 {% endfor %}
 <br/><br/>
 
+{% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+    
 <!-- -------------Students Section--------------- -->
 <h3 id="subhead"><span><strong>Students</strong></span></h3>
     {% for stu in site.people_students %}
