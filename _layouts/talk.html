@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<h6>Date</h6>
+{{ page.date | date: '%B %d, %Y' }}
+
+{% assign tag_proj = page.tagged_projects | split: "," %}
+
+<hr/>
+
+<h6>Related Projects</h6>
+<ul>
+{% for tag in tag_proj %}
+  {% for project in site.research_projects %}
+          {% if tag == project.title %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+
+<hr/>
+
+{% assign tag_people = page.authors | split: "," %}
+<h6>Related People</h6>
+<ul>
+{% for tag in tag_people %}
+  <li>{{ project.title }}</li>
+{% endfor %}
+</ul>
+
+<hr/>
+
+{{ content | markdownify }}
