@@ -1,0 +1,52 @@
+---
+layout: default
+title: Talks
+---
+
+<style>
+	#talks_content{
+      padding: 9px;
+      font: 17px Calibri;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      align:center;
+      text-align:center;
+      word-wrap: break-word;
+      margin: 20px 0;
+    }
+    
+#menu{
+    list-style: none;
+}
+#menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+#menu li:first-child{
+    border-left: none;
+}
+</style>
+
+<center>
+{% for talk in site.talks %}
+
+<div id="talks_content">
+<h3>{{ talk.title }}</h3>
+<div style="text-align:left;"><i class="icofont-ui-calendar"></i> {{ talk.date }}</div>
+<div style="text-align:left;">Related Projects: 
+{% assign tag_array = talk.tagged_projects | split: "," %}
+<ul id="menu">
+{% for tag in tag_array %}
+  {% for project in site.research_projects %}
+          {% if tag == project.title %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+</div>
+</div>
+{% endfor %}
+</center>
