@@ -1,7 +1,7 @@
 ---
 title: Latest changes in ML
 authors: Atri rudra,Huei Yen “winnie” chen,Kenneth joseph,Shawn Jhonson
-date: 2020-06-17 at 13:04
+date: 2020-06-17T13:04
 tagged_projects: Bias in NLP,FAI
 
 ---
