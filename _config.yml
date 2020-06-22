@@ -12,3 +12,5 @@ collections:
         output: true
     people_students:
         output: true
+    talks:
+        output: true
