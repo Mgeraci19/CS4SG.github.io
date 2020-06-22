@@ -11,13 +11,13 @@ layout: default
     <li>{{ aut }}</li>
 {% endfor %}
 </ul>
-<hr>
+<hr/>
 
 <!---------------------------->
 
 <h6>Education</h6>
 
-<hr>
+<hr/>
 
 <!---------------------------->
 
@@ -29,7 +29,7 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
-<hr>
+<hr/>
     
 <!---------------------------->
     
@@ -44,13 +44,25 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
-
-<hr>
-
+<hr/>
+    
+<!---------------------------->
+    
+<h6>Related Talks</h6>
+<ul>
+{% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.title %}
+        <li><a href="{{ talk.url }}">{{ talk.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+    
 <!---------------------------->
 
-<h6>Coding Resources</h6>
-
+<h6>Code Resources</h6>
+<hr/>
+    
 <!---------------------------->
 
 {{ content | markdownify }}
