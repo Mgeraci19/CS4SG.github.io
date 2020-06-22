@@ -33,7 +33,7 @@ title: Talks
 {% for talk in site.talks %}
 
 <div id="talks_content">
-<h3><a href="{{ talk.url }}">{{ talk.title }}</a></h3>
+<h3>{{ talk.title }}</a></h3>
 <div style="text-align:left;">
 <ul>
 <li>
@@ -52,6 +52,8 @@ title: Talks
 </li>
 </ul>
 </div>
+<br/>
+<div style="text-align:right;"><a href="{{ talk.url }}">Learn More <i class="bx bx-chevron-right"></i></a></div>
 </div>
 {% endfor %}
 </center>
