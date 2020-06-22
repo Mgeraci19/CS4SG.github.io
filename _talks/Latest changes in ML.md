@@ -1,4 +1,5 @@
 ---
+layout: talk
 title: Latest changes in ML
 authors: Atri rudra,Huei Yen “winnie” chen,Kenneth joseph,Shawn Jhonson
 date: 2020-06-17T13:04
