@@ -37,7 +37,7 @@ title: Talks
 <div style="text-align:left;">
 <ul>
 <li>
-<i class="icofont-ui-calendar"></i> {{ talk.date }}</li>
+<i class="icofont-ui-calendar"></i> {{ talk.date | date_to_string }}</li>
 <li><b>Related Projects:</b>
 {% assign tag_array = talk.tagged_projects | split: "," %}
 <ul id="menu">
