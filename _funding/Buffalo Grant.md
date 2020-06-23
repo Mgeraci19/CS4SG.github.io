@@ -1,6 +1,6 @@
 ---
 grant_title: Buffalo Grant
-layout: default
+layout: funds
 organization: University at Buffalo
 org_link: http://www.buffalo.edu/
 grants: 23000
