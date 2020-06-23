@@ -17,7 +17,7 @@ title: Fundings
     Organization's Website: <a href="{{ fund.org_link }}" target="_blank">Link to {{ fund.organization }} website <i class="icofont-external-link"></i></a>
     </li>
     <li>
-      Granted Status: <div id="sts"></div>
+      Granted Status: <div id="{{ fund.grant_title }}"></div>
     </li>
     <li>
     {% assign tag_array = fund.tagged_projects | split: "," %}
@@ -42,11 +42,11 @@ title: Fundings
   mydate=new Date(String({{  fund.duration | date: "%m-%d-%Y"  }}));
   if(date < mydate)
   {
-    document.getElementById("sts").innerHTML = "Current"
+    document.getElementById("{{ fund.grant_title }}").innerHTML = "Current"
   }
   else
   {
-    document.getElementById("sts").innerHTML = "Past"
+    document.getElementById("{{ fund.grant_title }}").innerHTML = "Past"
   }
 </script>
     
