@@ -40,7 +40,7 @@ title: Fundings
   var date = new Date();
 
   mydate=new Date({{  fund.duration }});
-
+    console.log(mydate)
   if(date < mydate)
   {
     document.getElementById("sts").innerHTML = "Current"
