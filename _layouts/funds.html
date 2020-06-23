@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<h6><b>Funding organization</b></h6>
+{{ page.organization }}
+<hr/>
+
+<h6><b>Organization's website</b><h6>
+<a href="{{ page.org_link }}" target="_blank">Link to {{ page.organization }} website <i class="icofont-external-link"></i></a>
+<hr/>
+
+<h6><b>Grant amount</b></h6>
+${{  page.grants }}
+<hr/>
+
+{% assign tag_proj = page.tagged_projects | split: "," %}
+<h6><b>Funded projects</b></h6>
+<ul>
+{% for tag in tag_proj %}
+  {% for project in site.research_projects %}
+          {% if tag == project.title %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
+<hr/>
+
+<b>Grant valid until</b> {{ page.duration | date: '%B %d, %Y' }}
+<hr/>
+
+{{ content | markdownify }}
