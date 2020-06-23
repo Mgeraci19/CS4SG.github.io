@@ -5,32 +5,16 @@ title: Fundings
 <ol>
 {% for fund in site.funding %}
     <li>
-      <b>{{ fund.grant_title }}</b>
+      <a href="{{ fund.url }}"><b>{{ fund.grant_title }}</b></a>
     <ul>
     <li>
-        <b>Funding Organization: </b>{{ fund.organization }}
+        <b>Funding organization: </b>{{ fund.organization }}
     </li>
     <li>
-      <b>Grant: </b>${{  fund.grants }}
-    </li>
-    <li>
-    <b>Organization's Website: </b><a href="{{ fund.org_link }}" target="_blank">Link to {{ fund.organization }} website <i class="icofont-external-link"></i></a>
+      <b>Grant amount: </b>${{  fund.grants }}
     </li>
     <li>
       <b>Grant Status: </b><div id="{{ fund.grant_title }}"></div>
-    </li>
-    <li>
-    {% assign tag_array = fund.tagged_projects | split: "," %}
-    <b>Funded Projects: </b>
-        <ul style="list-style-type: '- ';">
-            {% for tag in tag_array %}
-                {% for project in site.research_projects %}
-                    {% if tag == project.title %}
-                        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-        </ul>
     </li>
     </ul>
     </li>
