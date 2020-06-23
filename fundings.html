@@ -5,13 +5,19 @@ title: Fundings
 <ol>
 {% for fund in site.funding %}
     <li>
-      <b>{{ fund.organization }}</b>
+      <b>{{ fund.grant_title }}</b>
     <ul>
+    <li>
+        Funding Organization: {{ fund.organization }}
+    </li>
     <li>
       Grant: ${{  fund.grants }}
     </li>
     <li>
     Organization's Website: <a href="{{ fund.org_link }}" target="_blank">Link to {{ fund.organization }} website <i class="icofont-external-link"></i></a>
+    </li>
+    <li>
+      Date until granted: {{  fund.duration }}
     </li>
     <li>
     {% assign tag_array = fund.tagged_projects | split: "," %}
