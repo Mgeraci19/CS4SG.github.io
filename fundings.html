@@ -38,8 +38,9 @@ title: Fundings
 
 <script>
   var date = new Date();
-
-  mydate=new Date(String({{  fund.duration | date: "%m-%d-%Y"  }}));
+  const d = String({{  fund.duration | date: "%m-%d-%Y"  }})
+  console.log(d)
+  mydate=new Date(d);
   if(date < mydate)
   {
     document.getElementById("{{ fund.grant_title }}").innerHTML = "Current"
