@@ -27,78 +27,8 @@ title: Talks
 #menu li:first-child{
     border-left: none;
 }
-	
-
-.container {
-  max-width: 95%;
-  margin: 0rem;
-  padding: 0 2rem;
-}
-
-.tabs {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0;
-  border: 1px solid #efefef;
-}
-
-.tabs li {
-  text-align: center;
-  background-color: #fcfcfc;
-  padding: 1rem;
-  cursor: pointer;
-  transition: background-color 0.45s ease-in-out;
-}
-
-.tabs li.active {
-  background-color: #eee;
-}
-
-.tabs li > a {
-  text-decoration: none;
-  color: #0f0f0f;
-}
-
-.tabs-content {
-  border: 0px solid #eee;
-  border-top: 0;
-}
-
-.tabs-panel {
-  padding: 2rem 1rem;
-  display: none;
-}
-
-.tabs-panel.active {
-  display: block;
-}
-
-@media (max-width: 480px) {
-  .tabs {
-    grid-template-columns: 1fr;
-  }
-}
-
 </style>
 
-
-
-<div class="container">
-  <ul class="tabs">
-    <li class="active" data-target="panel-1">
-      Current Grants
-    </li>
-    <li data-target="panel-2">
-      Past Grants
-    </li>
-  </ul>
-  <div class="tabs-content">
-    <div class="tabs-panel active" id="panel-1">
-      <p>
-        
-	      
 <center>
 {% for talk in site.talks %}
 
@@ -125,38 +55,4 @@ title: Talks
 <div style="text-align:right;"><a href="{{ talk.url }}">Learn More <i class="bx bx-chevron-right"></i></a></div>
 </div>
 {% endfor %}
-</center>      
-      </p>
-    </div>
-    <div class="tabs-panel" id="panel-2">
-      <p>
-        
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
-<script>
-const [tabs, tabsPanels] = [
-	Array.from(document.querySelectorAll(".tabs li")),
-	Array.from(document.querySelectorAll(".tabs-panel"))
-];
-
-tabs.forEach((tab) => {
-	tab.addEventListener("click", () => {
-		const target = document.querySelector(`#${tab.dataset.target}`);
-		removeActiveClass([tabs, tabsPanels]);
-		tab.classList.add("active");
-		target.classList.add("active");
-	});
-});
-
-const removeActiveClass = (el) => {
-	el.forEach((item) => {
-		item.find((e) => e.classList.contains("active")).classList.remove("active");
-	});
-};
-
-</script>
+</center>
