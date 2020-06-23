@@ -1,6 +1,6 @@
 ---
 grant_title: Best Organization Award
-layout: default
+layout: funds
 organization: Org xyz
 org_link: https://engineering.buffalo.edu/computer-science-engineering.html
 grants: 12000
