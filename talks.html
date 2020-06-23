@@ -29,6 +29,22 @@ title: Talks
 }
 </style>
 
+
+
+<div class="container">
+  <ul class="tabs">
+    <li class="active" data-target="panel-1">
+      Current Grants
+    </li>
+    <li data-target="panel-2">
+      Past Grants
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div class="tabs-panel active" id="panel-1">
+      <p>
+        
+	      
 <center>
 {% for talk in site.talks %}
 
@@ -55,4 +71,13 @@ title: Talks
 <div style="text-align:right;"><a href="{{ talk.url }}">Learn More <i class="bx bx-chevron-right"></i></a></div>
 </div>
 {% endfor %}
-</center>
+</center>      
+      </p>
+    </div>
+    <div class="tabs-panel" id="panel-2">
+      <p>
+        
+      </p>
+    </div>
+  </div>
+</div>
