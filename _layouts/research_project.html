@@ -7,8 +7,12 @@ layout: default
 <h6>People</h6>
 {% assign author = page.authors | split: "," %}
 <ul>
-{% for aut in author %}
-    <li>{{ aut }}</li>
+{% for peop in site.people %}
+{% for tag in author %}
+    {% if tag == peop.name %}
+        <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.catagory }}</label></li>
+    {% endif %}
+{% endfor %}
 {% endfor %}
 </ul>
 <hr/>
