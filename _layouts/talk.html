@@ -3,11 +3,13 @@ layout: default
 ---
 
 <b>Date:</b> {{ page.date | date: '%B %d, %Y' }}
+<hr/>
 
-{% assign tag_proj = page.tagged_projects | split: "," %}
+<b>Talk by: </b>{{ page.talk_by }}
 
 <hr/>
 
+{% assign tag_proj = page.tagged_projects | split: "," %}
 <h6><b>Related Projects</b></h6>
 <ul>
 {% for tag in tag_proj %}
