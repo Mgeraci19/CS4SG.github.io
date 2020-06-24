@@ -6,7 +6,29 @@ layout: default
 <hr/>
 
 <b>Talk by: </b>{{ page.talk_by }}
+<hr/>
 
+<h6><b>Location: </b></h6>{{ page.locus }}
+<hr/>
+
+{% capture vid_link_string %}{{ page.vid_links }}{% endcapture %}
+{% assign vid_link_array = vid_link_string | split: "," %}
+<h6><b>Video Links</b></h6>
+<ul>
+{% for link in vid_link_array %}
+    <li><a href="{{ link }}">Video Resource</a></li>
+{% endfor %}
+</ul>
+<hr/>
+
+{% capture slide_link_string %}{{ page.slide_links }}{% endcapture %}
+{% assign slide_link_array = slide_link_string | split: "," %}
+<h6><b>Slide Links</b></h6>
+<ul>
+{% for link in slide_link_array %}
+    <li><a href="{{ link }}">Slide Resource</a></li>
+{% endfor %}
+</ul>
 <hr/>
 
 {% assign tag_proj = page.tagged_projects | split: "," %}
