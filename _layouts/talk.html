@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="assets/js/cropper.js"></script>
+<script>
+    recrop("speaker_picture", 140, 140);
+</script>
 
-<b>Date:</b> {{ page.date | date: '%B %d, %Y' }}
-<hr/>
-
+<center>
+{% for peop in site.people_faculty %}
+    {% if peop.name == page.talk_by %}
+        <img src="{{ peop.image }}" class="speaker_picture" style="border-radius: 50%;"/>
+    {% endif %}
+{% endfor %}
 <b>Talk by: </b>{{ page.talk_by }}
+</center>
+    
+<b>Date:</b> {{ page.date | date: '%B %d, %Y' }}
 <hr/>
 
 <h6><b>Location: </b></h6>{{ page.locus }}
