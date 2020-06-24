@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: research_project
 title: Machine Learning
 description: Innovating Breakthrough Solutions to Simplify Lives
 authors: Huei-Yen “Winnie” Chen,Atri Rudra,Kenneth Joseph,Peter Parker
