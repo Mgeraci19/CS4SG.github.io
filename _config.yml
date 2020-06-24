@@ -8,9 +8,7 @@ collections:
         output: true
     funding:
         output: true
-    people_faculty:
-        output: true
-    people_students:
+    people:
         output: true
     talks:
         output: true
