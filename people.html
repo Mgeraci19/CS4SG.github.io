@@ -46,7 +46,7 @@ title: People
 </div>
 
 <!-- create string with all titles -->
-{% capture title_string %}{{ title_string | append: peop.title }}{% endcapture %}
+{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
 {% if forloop.last == false %}
     {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
 {% endif %}
@@ -72,7 +72,7 @@ title: People
             </div>
           </div>
         <!-- create string with all titles -->
-    {% capture title_string %}{{ title_string | append: stu.title }}{% endcapture %}
+    {% capture title_string %}{{ title_string | append: stu.name }}{% endcapture %}
     {% if forloop.last == false %}
         {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
     {% endif %}
