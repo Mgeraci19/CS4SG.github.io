@@ -88,10 +88,41 @@ title: People
 
 {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
     
-<h3 id="subhead"><span><strong>Students</strong></span></h3>
+<h3 id="subhead"><span><strong>Internal Students</strong></span></h3>
 <!-- -------------Students Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "student" %}
+    {% if peop.catagory == "internal student" %}
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
+    <div class="member-info">
+      <h4><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h4>
+      <span>{{ peop.designation }}</span><br>
+      <div class="social">
+        {{ peop.social }}<br/>{{ peop.status }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
+{% if forloop.last == false %}
+    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+{% endif %}
+<!-- -------------------------------->
+{% endif %}
+{% endfor %}
+<br/><br/>
+    
+    
+
+{% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+    
+<h3 id="subhead"><span><strong>External Students</strong></span></h3>
+<!-- -------------Students Section--------------- -->
+{% for peop in site.people %}
+    {% if peop.catagory == "external student" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
