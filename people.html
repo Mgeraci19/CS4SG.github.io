@@ -32,7 +32,7 @@ title: People
 {% assign title_string = "" %}
 <!-- -------------Internal Faculty Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "internal_faculty" %}
+    {% if peop.catagory == "internal faculty" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -61,7 +61,7 @@ title: People
 <h3 id="subhead"><span><strong>External Faculty</strong></span></h3>
 <!-- -------------External Faculty Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "external_faculty" %}
+    {% if peop.catagory == "external faculty" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
