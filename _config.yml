@@ -12,3 +12,5 @@ collections:
         output: true
     talks:
         output: true
+    code:
+        output: true
