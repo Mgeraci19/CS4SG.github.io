@@ -1,0 +1,13 @@
+---
+layout: people
+name: Jonathan Manes
+catagory: internal faculty
+designation: Assistant Clinical Professor, School of Law
+degrees: 
+courses: 
+status: 
+link: 
+image: assets/img/team/default.png
+social: <a href="https://www.linkedin.com/in/jonathan-manes-48526220/" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2111536" target="_blank"><i class="icofont-web"></i></a><a href="mailto:jmmanes@buffalo.edu" target="_blank"><i class="icofont-email"></i></a>
+---
+
