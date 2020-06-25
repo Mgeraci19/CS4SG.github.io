@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Prakshal Jain
-catagory: student
+catagory: internal student
 designation: Computer Science
 degrees: 
 courses: 
