@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Huei-Yen “Winnie” Chen
-catagory: internal_faculty
+catagory: internal faculty
 designation: Assistant Professor, Industrial and Systems Engineering
 degrees: 
 courses: 
