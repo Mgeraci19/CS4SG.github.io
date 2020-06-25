@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Atri Rudra
-catagory: internal_faculty
+catagory: internal faculty
 designation: Associate Professor, Computer Science and Engineering
 degrees: 
 courses: 
