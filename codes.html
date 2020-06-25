@@ -1,0 +1,64 @@
+---
+layout: default
+title: Codes
+---
+
+<style>
+	#codes_content{
+      padding: 9px;
+      font: 17px Calibri;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      align:center;
+      text-align:center;
+      word-wrap: break-word;
+      margin: 20px 0;
+    }
+    
+#menu{
+    list-style: none;
+}
+#menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+#menu li:first-child{
+    border-left: none;
+}
+</style>
+
+<center>
+{% for codes in site.code %}
+  <div id="codes_content">
+    <a href="{{ codes.code_link }}" target="_blank"><h3>{{ codes.code_title }}</h3></a>
+    <div style="text-align:left;">
+      <ul>
+        <li>
+          <b>Related Projects:</b>
+          {% assign proj_array = codes.tagged_projects | split: "," %}
+          <ul id="menu">
+            {% for tag in proj_array %}
+              {% for project in site.research_projects %}
+                      {% if tag == project.title %}
+                        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+                    {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </li>
+        <li>
+        {% assign peop_array = codes.code_authors | split: "," %}
+          <b>Related People:</b>
+            <ul id="menu">
+              {% for peop in peop_array %}
+                <li>{peop}</li>
+              {% endfor %}
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endfor %}
+</center>
