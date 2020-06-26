@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Kenneth Joseph
-catagory: internal faculty
+category: internal faculty
 designation: Assistant Professor, Computer Science and Engineering
 degrees: 
 courses: 
