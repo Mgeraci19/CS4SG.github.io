@@ -4,6 +4,18 @@ layout: default
 <div id="contne">
 <h1 style="display:none;"><div id="publish_title">{{ page.title }}</div></h1>
 
+<!---------------------------->
+
+<b>Published in: </b>{{ page.publishers }}
+<hr>
+
+<!---------------------------->
+
+<b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
+<hr>
+
+<!---------------------------->
+    
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -23,17 +35,7 @@ layout: default
     {% endif %}
 {% endfor %}
 <hr>
-
-<!---------------------------->
-
-<b>Published in: </b>{{ page.publishers }}
-<hr>
-
-<!---------------------------->
-
-<b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
-<hr>
-
+    
 <!---------------------------->
 
 {% capture link_string %}{{ page.links }}{% endcapture %}
