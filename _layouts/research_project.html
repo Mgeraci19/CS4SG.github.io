@@ -10,7 +10,7 @@ layout: default
 {% for peop in site.people %}
 {% for tag in author %}
     {% if tag == peop.name %}
-        <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.catagory }}</label></li>
+        <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
     {% endif %}
 {% endfor %}
 {% endfor %}
