@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<html>
-
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -78,4 +76,3 @@ layout: default
 
 {{ content | markdownify }}
 
-</html>
