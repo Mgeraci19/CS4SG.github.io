@@ -64,6 +64,8 @@ layout: default
 {% for tag in tag_people %}
     {% if tag == peop.name %}
         <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+    {% else %}
+        <li>{{ tag }}</li>
     {% endif %}
 {% endfor %}
 {% endfor %}
