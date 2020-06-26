@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Jonathan Manes
-catagory: internal faculty
+category: internal faculty
 designation: Assistant Clinical Professor, School of Law
 degrees: 
 courses: 
