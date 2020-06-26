@@ -60,8 +60,8 @@ layout: default
 {% assign tag_people = page.authors | split: "," %}
 <h6><b>Related People</b></h6>
 <ul>
-{% for peop in site.people %}
 {% for tag in tag_people %}
+{% for peop in site.people %}
     {% if tag == peop.name %}
         <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
     {% endif %}
