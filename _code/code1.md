@@ -1,7 +1,7 @@
 ---
 layout: default
 code_title: Sample Code
-code_link: https://www.w3schools.com/
+code_links: https://www.w3schools.com/,https://www.mozilla.org/en-US/exp/
 code_authors: Atri Rudra,Kenneth Joseph
 tagged_projects: FAI,Bias in NLP
 ---
