@@ -32,7 +32,7 @@ title: People
 {% assign title_string = "" %}
 <!-- -------------Internal Faculty Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "internal faculty" %}
+    {% if peop.category == "internal faculty" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -61,7 +61,7 @@ title: People
 <h3 id="subhead"><span><strong>External Faculty</strong></span></h3>
 <!-- -------------External Faculty Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "external faculty" %}
+    {% if peop.category == "external faculty" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -91,7 +91,7 @@ title: People
 <h3 id="subhead"><span><strong>Internal Students</strong></span></h3>
 <!-- -------------Students Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "internal student" %}
+    {% if peop.category == "internal student" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -122,7 +122,7 @@ title: People
 <h3 id="subhead"><span><strong>External Students</strong></span></h3>
 <!-- -------------Students Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "external student" %}
+    {% if peop.category == "external student" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -152,7 +152,7 @@ title: People
 <h3 id="subhead"><span><strong>Collaborators</strong></span></h3>
 <!-- -------------Collaborator Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.catagory == "collaborator" %}
+    {% if peop.category == "collaborator" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
