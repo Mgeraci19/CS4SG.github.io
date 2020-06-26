@@ -69,6 +69,7 @@ title: Codes
     <button type="button" class="collapsible">Learn more <i class='bx bxs-chevron-down' ></i></button>
     <div class="content">
       <ul>
+<!-- -----------------Related Projects----------------- -->
         <li>
           <b>Related Projects:</b>
           {% assign proj_array = codes.tagged_projects | split: "," %}
@@ -82,15 +83,62 @@ title: Codes
             {% endfor %}
           </ul>
         </li>
+<!-- ----------------------------------------------- -->	      
+
+	      
+<!-- -----------------Related Authors----------------- -->
         <li>
-        {% assign peop_array = codes.code_authors | split: "," %}
+        {% assign auth_array = codes.code_authors | split: "," %}
           <b>Authors:</b>
             <ul id="menu">
-              {% for peop in peop_array %}
+              {% for peop in auth_array %}
                 <li>{{ peop }}</li>
               {% endfor %}
             </ul>
         </li>
+<!-- ----------------------------------------------- -->
+	      
+
+<!-- -----------------Related Publications----------------- -->
+        <li>
+	<b>Related Publications:</b>
+	{% assign publish_array = codes.tagged_publications | split: "," %}
+	  <ul id="menu">
+	    {% for tag in publish_array %}
+	       {% for publications in site.publications %}
+		  {% if tag == publications.title %}
+		     <li><a href="{{ publications.url }}">{{ publications.title }}</a></li>
+		  {% endif %}
+	       {% endfor %}
+	    {% endfor %}
+	  </ul>
+	</li>
+<!-- ----------------------------------------------- -->
+	      
+<!-- -----------------Related People----------------- -->
+        <li>
+        {% assign people_array = codes.tagged_people | split: "," %}
+          <b>Authors:</b>
+            <ul id="menu">
+              {% for peop in people_array %}
+                <li>{{ peop }}</li>
+              {% endfor %}
+            </ul>
+        </li>
+<!-- ----------------------------------------------- -->
+	      
+	      
+	      
+<!-- -----------------Related Education----------------- -->
+	      
+<!-- ----------------------------------------------- -->
+	      
+	      
+
+<!-- -----------------Related Courses----------------- -->
+
+<!-- ----------------------------------------------- -->
+	      
       </ul>
   {{ content | markdownify }}
    </div>
