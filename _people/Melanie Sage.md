@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Melanie Sage
-catagory: internal faculty
+category: internal faculty
 designation: Assistant Professor, School of Social Work
 degrees: 
 courses: 
