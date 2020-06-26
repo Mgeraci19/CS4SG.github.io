@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Mark Shepard
-catagory: internal faculty
+category: internal faculty
 designation: Associate Professor, Architecture and Media Study
 degrees: 
 courses: 
