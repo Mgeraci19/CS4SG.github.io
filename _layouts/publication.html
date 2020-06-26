@@ -3,7 +3,25 @@ layout: default
 ---
 <div id="contne">
 <h1 style="display:none;"><div id="publish_title">{{ page.title }}</div></h1>
-<p>Author: {{ page.authors }}</p>
+
+{% assign tag_people = page.authors | split: "," %}
+{% assign all_peop = "" | split: ',' %}
+{% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.name %}
+{% endfor %}
+<h6><b>Author(s)</b></h6>
+<ul>
+{% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+{% endfor %}
 <hr>
 
 <!---------------------------->
