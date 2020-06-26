@@ -2,7 +2,7 @@
 layout: talk
 title: Latest changes in ML
 talk_by: Atri Rudra
-authors: Atri rudra,Huei Yen “winnie” chen,Kenneth joseph,Shawn Jhonson
+authors: Atri Rudra,Huei Yen “Winnie” Chen,Kenneth Joseph,Shawn Jhonson
 date: 2020-06-17T13:04
 tagged_projects: Bias in NLP,FAI
 
