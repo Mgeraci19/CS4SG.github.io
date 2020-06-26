@@ -1,7 +1,7 @@
 ---
 layout: people
 name: David Doermann
-catagory: internal faculty
+category: internal faculty
 designation: Professor, Computer Science and Engineering
 degrees: 
 courses: 
