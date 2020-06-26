@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Matthew Bolton
-catagory: internal faculty
+category: internal faculty
 designation: Assistant Professor, Industrial and Systems Engineering
 degrees: 
 courses: 
