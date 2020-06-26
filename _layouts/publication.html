@@ -26,12 +26,12 @@ layout: default
 
 <!---------------------------->
 
-<p>Published in: {{ page.publishers }}</p>
+<b>Published in: </b>{{ page.publishers }}
 <hr>
 
 <!---------------------------->
 
-<p>Date: {{ page.date | date: '%B %d, %Y' }}</p>
+<b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
 <hr>
 
 <!---------------------------->
@@ -40,23 +40,21 @@ layout: default
 
 {% assign link_array = link_string | split: "," %}
 
-<p>Links:<p>
+<h6><b>Links</b></h6>
 
 <ul>
 {% for link in link_array %}
-    <li><a href="{{ link }}">Here</a></li>
+    <li><a href="{{ link }}">Resource Link</a></li>
 {% endfor %}
 </ul>
 
-<!--<p>Link: {{ page.links }}</p>-->
 <hr>
 
 <!---------------------------->
 
 {% assign tag_array = page.tagged_projects | split: "," %}
 
-<p>Tagged Projects: </p>
-
+<h6><b>Tagged Projects</b></h6>
 <ul>
 {% for tag in tag_array %}
     {% for project in site.research_projects %}
@@ -71,8 +69,8 @@ layout: default
 
 <!---------------------------->
 
-<p>Abstract:<br>
-{{ page.abstract }}</p>
+<h6><b>Abstract</b></h6>
+{{ page.abstract }}
 <hr>
 
 <!---------------------------->
