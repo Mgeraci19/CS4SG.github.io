@@ -6,5 +6,7 @@ code_authors: Kenneth Joseph,John Smith
 tagged_projects: FAI
 tagged_people: Atri Rudra,Kenneth Joseph
 tagged_publications: Paper3,PaperA
+tagged_education: 
+tagged_courses:
 ---
 This is the second code. Just a sample.
