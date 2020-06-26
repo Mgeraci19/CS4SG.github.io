@@ -58,17 +58,22 @@ layout: default
 <hr/>
 
 {% assign tag_people = page.authors | split: "," %}
+{% assign all_peop = "" | split: ',' %}
+{% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.name %}
+{% endfor %}
 <h6><b>Related People</b></h6>
 <ul>
 {% for tag in tag_people %}
-{% for peop in site.people %}
-    {% if tag == peop.name %}
-        <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
-        {% assign tag_people = tag_people | shift %}
-    {% elsif tag != peop.name %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
         <li>{{ tag }}</li>
     {% endif %}
-{% endfor %}
 {% endfor %}
 </ul>
 
