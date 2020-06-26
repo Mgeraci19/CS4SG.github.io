@@ -29,11 +29,45 @@ title: Codes
 }
 </style>
 
+<style>
+.collapsible {
+  background-color: transparent;
+  color: #999999;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  color: #000000;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+</style>
+
 <center>
 {% for codes in site.code %}
   <div id="codes_content">
-    <a href="{{ codes.code_link }}" target="_blank"><h3>{{ codes.code_title }}</h3></a>
+    <h3>{{ codes.code_title }}</h3>
     <div style="text-align:left;">
+    {% assign codelink_array = codes.code_links | split: "," %}
+    <h6><b>Code Links</b></h6>
+    <ul>
+	  {% for lin in codelink_array %}  
+	    <li><a href="{{ lin }}">Code resource</a></li>
+    	  {% endfor %}
+    </ul>
+    <button type="button" class="collapsible">Open Collapsible</button>
+    <div class="content">
       <ul>
         <li>
           <b>Related Projects:</b>
@@ -61,5 +95,23 @@ title: Codes
     </div>
   {{ content | markdownify }}
   </div>
+  </div>
 {% endfor %}
 </center>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
