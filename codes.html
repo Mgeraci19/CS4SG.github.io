@@ -53,6 +53,12 @@ title: Codes
   background-color: transparent;
 }
 </style>
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	return hostname
+}
+</script>
 
 <center>
 {% for codes in site.code %}
@@ -64,7 +70,7 @@ title: Codes
     <h6><b>Code Links</b></h6>
     <ul>
 	  {% for lin in codelink_array %}  
-	    <li><a href="{{ lin }}" target="_blank">Code resource</a></li>
+	    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
     	  {% endfor %}
     </ul>
     <button type="button" class="collapsible">Learn more <i class='bx bxs-chevron-down' ></i></button>
