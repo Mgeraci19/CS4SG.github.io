@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
 <div id="contne">
 <h1 style="display:none;"><div id="publish_title">{{ page.title }}</div></h1>
 
@@ -50,7 +57,7 @@ layout: default
 
 <ul>
 {% for link in link_array %}
-    <li><a href="{{ link }}">Resource Link</a></li>
+    <li><a href="{{ link }}"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
 </ul>
 <hr>
