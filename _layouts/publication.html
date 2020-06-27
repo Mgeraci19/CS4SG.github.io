@@ -26,8 +26,13 @@ layout: default
 <hr>
     
 <!---------------------------->
-
-<b>Published in: </b>{{ page.publishers }}
+{% assign publishedIn = page.published_in | split: "," %}
+<h6><b>Published in</b></h6>
+<ul>
+{% for pub in publishedIn %}
+    <li>{{ pub }}</li>
+{% endfor %}
+</ul>
 <hr>
 
 <!---------------------------->
@@ -48,13 +53,38 @@ layout: default
     <li><a href="{{ link }}">Resource Link</a></li>
 {% endfor %}
 </ul>
-
 <hr>
 
 <!---------------------------->
+<h6><b>Abstract</b></h6>
+{{ page.abstract }}
+<hr/>
+    
+
+<!---------------------------->
+<h6><b>Related People</b></h6>
+{% assign people_tag = page.tagged_people | split: "," %}
+{% assign peopLis = "" | split: ',' %}
+{% for peop in site.people %}
+{% assign peopLis = peopLis | push: peop.name %}
+{% endfor %}
+<ul>
+{% for tag in people_tag %}
+    {% if peopLis contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr>
+<!---------------------------->
 
 {% assign tag_array = page.tagged_projects | split: "," %}
-
 <h6><b>Tagged Projects</b></h6>
 <ul>
 {% for tag in tag_array %}
@@ -66,12 +96,6 @@ layout: default
 {% endfor %}
 </ul>
 
-<hr>
-
-<!---------------------------->
-
-<h6><b>Abstract</b></h6>
-{{ page.abstract }}
 <hr>
 
 <!---------------------------->
