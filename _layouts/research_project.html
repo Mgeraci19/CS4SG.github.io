@@ -49,7 +49,7 @@ layout: default
 <ul>
 {% for code in site.code %}
     {% if code.tagged_projects contains page.title %}
-        <li>{{ code.code_title }}</li>
+        <li><a href="\codes.html/#{{ code.code_title }}">{{ code.code_title }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
