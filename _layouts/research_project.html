@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{{ content | markdownify }}
+<hr/>
+
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -25,13 +28,35 @@ layout: default
 
 <!---------------------------->
 
-<h6>Education</h6>
+<h6><b>Education and Courses</b></h6>
 
+<hr/>
+  
+<!---------------------------->
+<h6><b>Rlated Publications</b></h6>
+
+<ul>
+{% for pub in site.publications %}
+    {% if pub.tagged_projects contains page.title %}
+        <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
 <hr/>
 
 <!---------------------------->
+<h6>Code Resources</h6>
+<ul>
+{% for code in site.code %}
+    {% if code.tagged_projects contains page.title %}
+        <li>{{ code.code_title }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+<!---------------------------->
 
-<h6>Funding</h6>
+<h6><b>Related Funding</b></h6>
 <ul>
 {% for fund in site.funding %}
     {% if fund.tagged_projects contains page.title %}
@@ -42,22 +67,7 @@ layout: default
 <hr/>
     
 <!---------------------------->
-    
-<h6>Publications</h6>
 
-<!--{% capture title_hyphenated %}{{ page.title | replace: " ", "-" }}{% endcapture %}-->
-
-<ul>
-{% for pub in site.publications %}
-    {% if pub.tagged_projects contains page.title %}
-        <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
-    {% endif %}
-{% endfor %}
-</ul>
-<hr/>
-    
-<!---------------------------->
-    
 <h6>Related Talks</h6>
 <ul>
 {% for talk in site.talks %}
@@ -70,10 +80,11 @@ layout: default
     
 <!---------------------------->
 
-<h6>Code Resources</h6>
-<hr/>
-    
+<h6><b>Related Events</b></h6>
+
 <!---------------------------->
 
-{{ content | markdownify }}
 
+<h6><b>Related Blog Posts</b></h6>
+
+<!---------------------------->
