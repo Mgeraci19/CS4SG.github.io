@@ -6,6 +6,12 @@ layout: default
 <script>
     recrop("speaker_picture", 30, 30);
 </script>
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
 
 <center>
 {% for peop in site.people %}
@@ -28,7 +34,7 @@ layout: default
 <h6><b>Video Links</b></h6>
 <ul>
 {% for link in vid_link_array %}
-    <li><a href="{{ link }}" target="_blank">Video Resource</a></li>
+    <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
 </ul>
 <hr/>
@@ -38,7 +44,7 @@ layout: default
 <h6><b>Slide Links</b></h6>
 <ul>
 {% for link in slide_link_array %}
-    <li><a href="{{ link }}" target="_blank">Slide Resource</a></li>
+    <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
 </ul>
 <hr/>
