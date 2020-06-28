@@ -14,8 +14,6 @@ collections:
         output: true
     code:
         output: true
-    static_files:
-        output: true
 defaults:
   - scope:
       path: "assets/img"
