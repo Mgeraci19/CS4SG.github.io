@@ -14,3 +14,5 @@ collections:
         output: true
     code:
         output: true
+    static_files:
+        output: true
