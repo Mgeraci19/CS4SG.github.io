@@ -383,7 +383,7 @@ body{
             {% assign image_files = site.static_files | where: "image", true %}
             {% for file in image_files %}
 	      {% if images contains file.extname %}
-                <li data-file-icon="html" onclick="window.open('\{{ file.path }}', '_blank');"><b>{{ file.name }}</b></li>
+                <li data-file-icon="image" onclick="window.open('\{{ file.path }}', '_blank');"><b>{{ file.name }}</b></li>
 	      {% endif %}
             {% endfor %}
             </ul>
