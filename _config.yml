@@ -16,6 +16,6 @@ collections:
         output: true
 defaults:
   - scope:
-      path: "assets/img"
+      path: "assets/resources"
     values:
       image: true
