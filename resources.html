@@ -379,9 +379,12 @@ body{
         <li data-file-icon="folder"><b>Images</b>
             <ul>
             {% assign image_extensions = ".jpg,.png,.ai,.bmp,.gif,.ico,.jpeg,.ps,.psd,.svg,.tif,.tiff" %}
+	    {% assign images = image_extensions | split: "," %}
             {% assign image_files = site.static_files | where: "image", true %}
             {% for file in image_files %}
-                <li data-file-icon="html" onclick="location.href='\{{ file.path }}';"><b>{{ file.name }}</b></li>
+	      {% if images contains file.extname %}
+                <li data-file-icon="html" onclick="window.open('\{{ file.path }}', '_blank');"><b>{{ file.name }}</b></li>
+	      {% endif %}
             {% endfor %}
             </ul>
         </li>
