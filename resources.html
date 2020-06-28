@@ -388,6 +388,18 @@ body{
             {% endfor %}
             </ul>
         </li>
+        <li data-file-icon="folder"><b>Documents & Presentations</b>
+            <ul>
+            {% assign docs_extensions = ".key,.odp,.pps,.ppt,.pptx,.ods,.xls,.xlsm,.xlsx,.doc,.docx,.odt,.pdf,.rtf,.tex,.txt,.wpd" %}
+	    {% assign docs = docs_extensions | split: "," %}
+            {% assign doc_files = site.static_files | where: "image", true %}
+            {% for file in doc_files %}
+	      {% if docs contains file.extname %}
+                <li data-file-icon="html" onclick="window.open('\{{ file.path }}', '_blank');"><b>{{ file.name }}</b></li>
+	      {% endif %}
+            {% endfor %}
+            </ul>
+        </li>
     </ul>
 </div>
 </div>
