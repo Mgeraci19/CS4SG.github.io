@@ -403,10 +403,8 @@ body{
 	    
         <li data-file-icon="folder"><b>Links</b>
 	   <ul>
-	   {% assign lin = include links.md | split: "\n"  %}
-	   	{% for l in lin %}
-			<li><a href="{{ l }}">{{ l }}</a></li>
-	   	{% endfor %}
+	   {% include links.md | split: "\n"  %}
+		<li><a href="{{ l }}">{% include links.md | split: "\n"  %}</a></li>
 	   </ul>
 	</li>
     </ul>
