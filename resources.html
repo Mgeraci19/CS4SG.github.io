@@ -399,15 +399,6 @@ body{
             {% endfor %}
             </ul>
         </li>
-        <li data-file-icon="folder"><b>Links</b>
-	   <ul>
-	      {% capture my_include %}{% include links.md %}{% endcapture %}
-	      {% assign lin = my_include |  split: "," %}
-	      {% for l in lin %}
-		   <li data-file-icon="layout" onclick="window.open('{{ l }}', '_blank');" title="{{ l }}">{{ l }}</li>
-	      {% endfor %}
-	   </ul>
-	</li>
     </ul>
 </div>
 </div>
