@@ -61,9 +61,9 @@ function findHostname(url){
 
 <center>
 {% for res in site.resource_links %}
-  <div id="{{ res.resource_title }}">
+  <input type="text" value="Links: {{ res.link }} & Description: {{ res.description }}" id="{{ res.resource_title }}" style="position:absolute;left:-1000px;top:-1000px;">
     <div id="codes_content">
-      <h3>{{ res.resource_title }}<label class="icofont-ui-copy" onclick="setClipboard('Links: {{ res.link }} & Description: {{ res.description }}')" style="float:right;"></label></h3>
+      <h3>{{ res.resource_title }}<label class="icofont-ui-copy" onclick="copyFunc('{{ res.resource_title }}')" style="float:right;"></label></h3>
       <div style="text-align:left;">
         {% assign links_array = res.link | split: "," %}
         <h6><b>Resource Links</b></h6>
@@ -76,7 +76,6 @@ function findHostname(url){
         <div class="content">
           {{ res.description }}
         </div>
-      </div>
     </div>
   </div>
 {% endfor %}
@@ -99,14 +98,9 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 	
-
-function setClipboard(value) {
-    var tempInput = document.createElement("input");
-    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-    tempInput.value = value;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
+function copyFunc(id) {
+  var copyText = document.getElementById(id);
+  copyText.select();
+  document.execCommand("copy");
 }
 </script>
