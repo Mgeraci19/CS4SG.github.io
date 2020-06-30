@@ -400,6 +400,12 @@ body{
             {% endfor %}
             </ul>
         </li>
+        <li>
+	   <ul>
+	      {% capture my_include %}{% include assets/links.md %}{% endcapture %}
+	      {{ my_include | markdownify }}
+	   </ul>
+	</li>
     </ul>
 </div>
 </div>
