@@ -403,7 +403,8 @@ body{
 	    
         <li data-file-icon="folder"><b>Links</b>
 	   <ul>
-		   <li>{% markdown assets/links.md %}</li>
+		   {% assign lnks = assets/links.md | split: "\n" %}
+		   <li>{{ lnks }}</li>
 	   </ul>
 	</li>
     </ul>
