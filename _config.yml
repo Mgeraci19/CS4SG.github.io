@@ -14,6 +14,8 @@ collections:
         output: true
     code:
         output: true
+    resource_links:
+        output: true
 defaults:
   - scope:
       path: "assets/resources"
