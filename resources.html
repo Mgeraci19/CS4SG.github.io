@@ -363,7 +363,31 @@ body{
 }
 }
 </style>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
 
 <div style="border: 1px solid #ccc;">
 <div class="cm-address-bar-search" clear>
@@ -405,7 +429,7 @@ body{
 	      {% capture my_include %}{% include links.md %}{% endcapture %}
 	      {% assign lin = my_include |  split: "," %}
 	      {% for l in lin %}
-		   <li><a href="{{ l }}" target="_blank">{{ l }}</a></li>
+		   <li data-file-icon="layout"><div class="tooltip"><a href="{{ l }}" target="_blank">{{ l }}</a><span class="tooltiptext">{{ l }}</span></div></li>
 	      {% endfor %}
 	   </ul>
 	</li>
