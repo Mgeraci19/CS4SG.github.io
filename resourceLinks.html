@@ -28,6 +28,30 @@ title: Resource Links
     border-left: none;
 }
 </style>
+<style>
+.collapsible {
+  background-color: transparent;
+  color: #999999;
+  cursor: pointer;
+  padding: 3px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  color: #000000;
+  outline: none;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+</style>
 <script>
 function findHostname(url){
 	var hostname = (new URL(url)).hostname;
