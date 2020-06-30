@@ -400,10 +400,10 @@ body{
             {% endfor %}
             </ul>
         </li>
-        <li>
+        <li data-file-icon="folder"><b>Links</b>
 	   <ul>
 	      {% capture my_include %}{% include links.md %}{% endcapture %}
-	      {{ my_include | markdownify }}
+	      {{ my_include |  split: "\n" }}
 	   </ul>
 	</li>
     </ul>
