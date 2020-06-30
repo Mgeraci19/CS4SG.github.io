@@ -63,7 +63,7 @@ function findHostname(url){
 {% for res in site.resource_links %}
   <input type="text" value="Links: {{ res.link }} & Description: {{ res.description }}" id="{{ res.resource_title }}" style="position:absolute;left:-1000px;top:-1000px;">
     <div id="codes_content">
-      <h3>{{ res.resource_title }}<label class="icofont-ui-copy" onclick="copyFunc('{{ res.resource_title }}')" style="float:right;"></label></h3>
+      <h3>{{ res.resource_title }}<label class="icofont-ui-copy" onclick="copyFunc('{{ res.resource_title }}')" style="float:right; cursor: pointer;"></label></h3>
       <div style="text-align:left;">
         {% assign links_array = res.link | split: "," %}
         <h6><b>Resource Links</b></h6>
