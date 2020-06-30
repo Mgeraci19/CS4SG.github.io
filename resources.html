@@ -403,10 +403,9 @@ body{
         <li data-file-icon="folder"><b>Links</b>
 	   <ul>
 	      {% capture my_include %}{% include links.md %}{% endcapture %}
-	      {{ my_include | inspect }}
-	      {% assign lin = my_include |  split: "\n" %}
+	      {% assign lin = my_include |  split: "," %}
 	      {% for l in lin %}
-		   <li>{{ l }}</li>
+		   <li><a href="{{ l }}" target="_blank">{{ l }}</a></li>
 	      {% endfor %}
 	   </ul>
 	</li>
