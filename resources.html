@@ -403,7 +403,7 @@ body{
         <li data-file-icon="folder"><b>Links</b>
 	   <ul>
 	      {% capture my_include %}{% include links.md %}{% endcapture %}
-	      {{ assign lin = my_include |  split: "\n" }}
+	      {% assign lin = my_include |  split: "\n" %}
 	      {% for l in lin %}
 		   <li>{{ l }}</li>
 	      {% endfor %}
