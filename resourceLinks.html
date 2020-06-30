@@ -1,0 +1,77 @@
+---
+layout: default
+title: Resource Links
+---
+
+<style>
+	#codes_content{
+      padding: 9px;
+      font: 17px Calibri;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      align:center;
+      text-align:center;
+      word-wrap: break-word;
+      margin: 20px 0;
+    }
+    
+#menu{
+    list-style: none;
+}
+#menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+#menu li:first-child{
+    border-left: none;
+}
+</style>
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<center>
+{% for res in site.resource_links %}
+  <div id="{{ res.resource_title }}">
+    <div id="codes_content">
+      <h3>{{ res.resource_title }}</h3>
+      <div style="text-align:left;">
+        {% assign links_array = res.link | split: "," %}
+        <h6><b>Resource Links</b></h6>
+        <ul>
+          {% for lin in links_array %}  
+            <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+          {% endfor %}
+      </ul>
+      <button type="button" class="collapsible">Resource Details <i class='bx bxs-chevron-down' ></i></button>
+        <div class="content">
+          {{ res.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</center>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
