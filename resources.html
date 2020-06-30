@@ -403,9 +403,8 @@ body{
 	    
         <li data-file-icon="folder"><b>Links</b>
 	   <ul>
-	   {% assign lin = include links.md | split: "\n" %}
-	   <b>{{ lin }}</b>
-		<li>{% include links.md %}</li>
+		   {% include links.md  root =  root %}
+		<li>{{ include.root }}</li>
 	   </ul>
 	</li>
     </ul>
