@@ -5,7 +5,7 @@ layout: default
 {{ content | markdownify }}
 <hr/>
 
-{% assign tag_people = page.authors | split: "," %}
+{% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.name %}
@@ -28,16 +28,19 @@ layout: default
 
 <!---------------------------->
 
-<h6><b>Education and Courses</b></h6>
+{% assign tag_array = page.tagged_projects | split: "," %}
+<h6><b>Related Research Projects</b></h6>
 <ul>
-{% for education_project in site.education %}
-    {% if education_project.tagged_projects contains page.title %}
-        <li><a href="{{ education_project.url }}">{{ education_project.title }}</a></li>
-    {% endif %}
+{% for tag in tag_array %}
+    {% for project in site.research_projects %}
+        {% if tag == project.title %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% endif %}
+    {% endfor %}
 {% endfor %}
 </ul>
-<hr/>
-  
+<hr>
+
 <!---------------------------->
 <h6><b>Related Publications</b></h6>
 
@@ -60,6 +63,7 @@ layout: default
 {% endfor %}
 </ul>
 <hr/>
+
 <!---------------------------->
 
 <h6><b>Related Funding</b></h6>

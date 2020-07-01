@@ -106,7 +106,17 @@ function findHostname(url){
 <hr>
 
 <!---------------------------->
+{% assign edu_tag_array = page.tagged_education | split: "," %}
 <h6><b>Education and Courses</b></h6>
+<ul>
+{% for tag in edu_tag_array %}
+    {% for education_project in site.education %}
+        {% if tag == education_project.title %}
+            <li><a href="{{ education_project.url }}">{{ education_project.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
 <hr>
 <!---------------------------->
 
