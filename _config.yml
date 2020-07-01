@@ -4,6 +4,10 @@ title: "" # the name of your site, e.g. ACME Corp.
 collections:
     research_projects:
         output: true
+    education:
+        output: true
+    courses:
+        output: true
     publications:
         output: true
     funding:
@@ -13,6 +17,8 @@ collections:
     talks:
         output: true
     code:
+        output: true
+    posts:
         output: true
     resource_links:
         output: true
