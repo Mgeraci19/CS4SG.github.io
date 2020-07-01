@@ -1,0 +1,52 @@
+---
+layout: default
+title: Education
+---
+
+<html lang="en">
+
+<style>
+.gridObj {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: #fafafa;
+  z-index: 1;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 200px;
+  max-height: 200px;
+  margin: 30px;
+}
+</style>
+
+<body>
+
+<!-- ----------------Projects---------------- -->
+<center><h3><b>Projects</b></h3>
+<p style="padding-bottom: 8px;">Education Projects description</p> 
+</center>
+
+<div class="row">
+    <div class="d-flex flex-wrap">
+        {% for education_project in site.education %}
+            <div class="gridObj" data-aos="fade-up">
+                <h4 class="title"><a href="{{ education_project.url }}">{{ education_project.title }}</a></h4>
+                <p class="description">{{ education_project.description | markdownify }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<!-- ----------------Courses Page---------------- -->
+<center><h3><b>Courses</b></h3>
+<p style="padding-bottom: 8px;">Courses description</p>
+<a href="\courses.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See Courses <i class="bx bx-chevron-right"></i></a></center><br />
+<hr />
+
+</body>
+
+</html>
