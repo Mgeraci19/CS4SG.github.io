@@ -46,7 +46,7 @@ layout: default
 
 <ul>
 {% for pub in site.publications %}
-    {% if pub.tagged_projects contains page.title %}
+    {% if pub.tagged_education contains page.key %}
         <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
     {% endif %}
 {% endfor %}
@@ -57,7 +57,7 @@ layout: default
 <h6><b>Code Resources</b></h6>
 <ul>
 {% for code in site.code %}
-    {% if code.tagged_projects contains page.title %}
+    {% if code.tagged_education contains page.key %}
         <li><a href="\codes.html#{{ code.code_title }}">{{ code.code_title }}</a></li>
     {% endif %}
 {% endfor %}
@@ -69,7 +69,7 @@ layout: default
 <h6><b>Related Funding</b></h6>
 <ul>
 {% for fund in site.funding %}
-    {% if fund.tagged_projects contains page.title %}
+    {% if fund.tagged_education contains page.key %}
         <li><a href="{{ fund.url }}">{{ fund.organization }}</a>: US$ {{ fund.grants }}</li>
     {% endif %}
 {% endfor %}
@@ -81,7 +81,7 @@ layout: default
 <h6><b>Related Talks</b></h6>
 <ul>
 {% for talk in site.talks %}
-    {% if talk.tagged_projects contains page.title %}
+    {% if talk.tagged_education contains page.key %}
         <li><a href="{{ talk.url }}">{{ talk.title }}</a></li>
     {% endif %}
 {% endfor %}
