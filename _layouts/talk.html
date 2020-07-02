@@ -29,39 +29,27 @@ function findHostname(url){
 <h6><b>Location: </b></h6>{{ page.locus }}
 <hr/>
 
-{% capture vid_link_string %}{{ page.vid_links }}{% endcapture %}
-{% assign vid_link_array = vid_link_string | split: "," %}
-<h6><b>Video Links</b></h6>
-<ul>
-{% for link in vid_link_array %}
-    <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
-{% endfor %}
-</ul>
-<hr/>
-
-{% capture slide_link_string %}{{ page.slide_links }}{% endcapture %}
-{% assign slide_link_array = slide_link_string | split: "," %}
-<h6><b>Slide Links</b></h6>
-<ul>
-{% for link in slide_link_array %}
-    <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
+{% capture resource_link_string %}{{ page.resource_links }}{% endcapture %}
+{% assign res_link_array = resource_link_string | split: "," %}
+<h6><b>Resource Links</b></h6>
+<ul >
+{% for link in res_link_array %}
+    <li class="noBullets"><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
 </ul>
 <hr/>
 
 {% assign tag_proj = page.tagged_projects | split: "," %}
 <h6><b>Related Projects</b></h6>
-<ul>
 {% for tag in tag_proj %}
   {% for project in site.research_projects %}
           {% if tag == project.title %}
-            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+            <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
         {% endif %}
   {% endfor %}
 {% endfor %}
-</ul>
-
 <hr/>
+
 
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
@@ -69,7 +57,7 @@ function findHostname(url){
     {% assign all_peop = all_peop | push: peop.name %}
 {% endfor %}
 <h6><b>Related People</b></h6>
-<ul>
+<ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
