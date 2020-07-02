@@ -40,15 +40,18 @@ function findHostname(url){
 <hr/>
 
 {% assign tag_proj = page.tagged_projects | split: "," %}
-<h6><b>Related Projects</b></h6>
+<h6><b>Related Research Projects</b></h6>
+
+<div class="row">
 {% for tag in tag_proj %}
-  {% for project in site.research_projects %}
-          {% if tag == project.title %}
+    {% for project in site.research_projects %}
+        {% if tag == project.title %}
             <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
         {% endif %}
-  {% endfor %}
+    {% endfor %}
 {% endfor %}
-<hr/>
+</div>
+<hr>
 
 
 {% assign tag_people = page.tagged_people | split: "," %}
