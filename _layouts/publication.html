@@ -10,7 +10,7 @@ function findHostname(url){
 
 <div id="contne">
 <h1 style="display:none;"><div id="publish_title">{{ page.title }}</div></h1>
-
+<div id="speak_content">
 <h6><b>Author(s)</b></h6>
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
@@ -118,8 +118,19 @@ function findHostname(url){
 {% endfor %}
 </ul>
 <hr>
+</div>
 <!---------------------------->
 
 <script src="/assets/js/pdf_gen.js"></script><script src="/assets/js/pdf_gen2.js"></script>
+<script>
+    function speak(){
+      var msg = new SpeechSynthesisUtterance($('#speak_content').text());
+      window.speechSynthesis.speak(msg);
+    }
+    function pause(){
+        window.speechSynthesis.pause();
+        console.log("pause")
+    }
+</script>
 <div id="elementH"></div>
-<input type="button" onclick="convert_HTML_To_PDF()" value="Download Paper as PDF">
+<input type="button" onclick="convert_HTML_To_PDF()" value="Download Paper as PDF"><h4><i class="icofont-ui-volume" style="float:right; cursor: pointer; margin:5px;" onclick="speak()"></i><i class="icofont-pause" onclick="pause()" style="float:right; cursor: pointer; margin: 5px;"></i></h4>
