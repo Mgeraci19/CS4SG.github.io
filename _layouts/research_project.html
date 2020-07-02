@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<div id="speak_content">
 {{ content | markdownify }}
 <hr/>
 
@@ -94,3 +96,12 @@ layout: default
 <h6><b>Related Blog Posts</b></h6>
 <hr/>
 <!---------------------------->
+</div>
+    
+<label id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</label>
