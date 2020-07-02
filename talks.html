@@ -36,18 +36,18 @@ title: Talks
 <center><h3><a href="{{ talk.url }}">{{ talk.title }}</a></h3></center>
 <table>
 <tr>
-<td><center>
+<td style="width:50%;">
 {% for peop in site.people %}
     {% if peop.name == talk.talk_by %}
-        <img src="{{ peop.image }}"  style="border-radius: 50%; width:140px; margin-right:10px;"/>
+        <img src="{{ peop.image }}"  style="border-radius: 50%; width:100px; margin-right:60px;"/>
     {% endif %}
-{% endfor %}
-<br/><b>Speaker: </b>{{ talk.talk_by }}</center></td>
+{% endfor %}</td>
 <td>
 <div style="text-align:left; display:inline;">	
-<ul>
+<ul class="noBullets">
 <li>
 <i class="icofont-ui-calendar"></i> {{ talk.date | date: '%B %d, %Y' }}</li>
+<li><b>Speaker: </b>{{ talk.talk_by }}</li>
 <li><b>Related Projects:</b>
 {% assign tag_array = talk.tagged_projects | split: "," %}
 <ul id="menu">
