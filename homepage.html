@@ -1,0 +1,139 @@
+---
+layout: home
+---
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Welcome to CS4SG@UB</h1>
+      <h2>Computing for Social Good</h2>
+      <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+
+<!-- ======= Research Section ======= -->
+<style>
+.scrollTemplate {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: #67b0d1;
+  color:white;
+  font-weight: bold;
+  z-index: 1;
+  margin: 5px;
+  display:inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Research</h2>
+        </div>
+        <center>
+        <div style="padding-bottom: 6px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</div> 
+        <br/>
+        <div class="owl-carousel testimonials-carousel">
+            {% for research_project in site.research_projects %}
+                <div class="scrollTemplate" onclick="window.open('{{ research_project.url }}', '_self');" style="cursor: pointer;">{{ research_project.title }}</div>
+            {% endfor %}
+        </div><br/>
+        <a href="\research.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All Research Projects <i class="icofont-circled-right"></i></a>
+        </center>
+    </div>
+</section>
+
+
+
+<!-- ======= Education Section ======= -->
+<section id="educate" class="educate">
+    <div class="container">
+        <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+            <h3>Education</h3>
+            <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Addressing retention, diversity, and persistence in computing through educational approaches are targeted. Overall, the objective is developing a skilled and diverse workforce in computing for Social Good for the future.
+            </p><p><a href="https://engineering.buffalo.edu/computer-science-engineering/research/research-areas/computing-education.html" style="text-decoration:none;" target="_blank">~ Department of Computer Science and Engineering, UB</a></p><br>
+            <a href="\education.html" class="educate-btn">Learn more <i class="bx bx-chevron-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+                {% for education_project in site.education limit: 4 %}
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ education_project.url }}', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>{{ education_project.title }}</h4>
+                <p class="description">{{ education_project.description | markdownify }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            </div><!-- End .content-->
+        </div>
+        </div>
+
+    </div>
+    </section><!-- End Education Section -->
+
+
+
+
+
+<!-- ======= Events Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Events</h2>
+        Display the latest event information with the link to all events...
+      </div>
+    </div>
+</section>
+
+
+
+<!-- ======= People Section ======= -->
+
+<style>
+    .polaroid {
+      width: 210px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      display:inline-block;
+      margin: 10px;
+    }
+    
+    .container {
+      padding: 4px;
+    }
+</style>
+
+<section id="testimonials" class="testimonials section-bg" style="background-color:white;">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>People</h2>
+        </div>
+        <center>
+    <div class="owl-carousel testimonials-carousel">
+    {% for peop in site.people %}
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;"  onclick="window.open('{{ peop.link }}', '_blank');">
+        <img src="{{ peop.image }}" alt="{{ peop.name }}" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+        <div class="container">
+            <b>{{ peop.name }}</b>
+            <p>{{ peop.category }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    </div><br/>
+    <a href="\people.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All People <i class="icofont-circled-right"></i></a>
+        </center>
+    </div>
+</section>
