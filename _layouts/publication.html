@@ -7,10 +7,11 @@ function findHostname(url){
 	document.write(hostname)
 }
 </script>
-
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <div id="contne">
 <h1 style="display:none;"><div id="publish_title">{{ page.title }}</div></h1>
-
+<div id="speak_content">
 <h6><b>Author(s)</b></h6>
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
@@ -118,8 +119,15 @@ function findHostname(url){
 {% endfor %}
 </ul>
 <hr>
+</div>
 <!---------------------------->
 
 <script src="/assets/js/pdf_gen.js"></script><script src="/assets/js/pdf_gen2.js"></script>
 <div id="elementH"></div>
 <input type="button" onclick="convert_HTML_To_PDF()" value="Download Paper as PDF">
+<label id="speech_options" style="float:right;">
+    <button onclick="responsiveVoice.speak($('#speak_content').text());"><i class="icofont-play-alt-1"></i> Play</button>
+    <button onclick="responsiveVoice.resume();"><i class="icofont-play-pause"></i> Resume</button>
+    <button onclick="responsiveVoice.pause();"><i class="icofont-pause"></i> Pause</button>
+    <button onclick="responsiveVoice.cancel();"><i class="icofont-ui-close"></i> Cancel</button>
+</label>
