@@ -4,17 +4,16 @@ title: Talks
 ---
 
 <style>
-	#talks_content{
-      padding: 9px;
-      font: 17px Calibri;
-      width: 80%;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      align:center;
-      text-align:center;
-      word-wrap: break-word;
-      margin: 20px 0;
-    }
+#talks_content{
+	padding: 9px;
+	font: 17px Calibri;
+	width: 80%;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	align:center;
+	word-wrap: break-word;
+	margin: 20px 0;
+}
     
 #menu{
     list-style: none;
@@ -32,9 +31,20 @@ title: Talks
 <center>
 {% for talk in site.talks %}
 
+	
 <div id="talks_content">
 <h3><a href="{{ talk.url }}">{{ talk.title }}</a></h3>
-<div style="text-align:left;">
+<table>
+<tr>
+<td><center>
+{% for peop in site.people %}
+    {% if peop.name == talk.talk_by %}
+        <img src="{{ peop.image }}"  style="border-radius: 50%; width:140px; margin-right:10px;" class="speaker_picture"/>
+    {% endif %}
+{% endfor %}
+<br/><b>Speaker: </b>{{ talk.talk_by }}</center></td>
+<td>
+<div style="text-align:left; display:inline;">	
 <ul>
 <li>
 <i class="icofont-ui-calendar"></i> {{ talk.date | date: '%B %d, %Y' }}</li>
@@ -51,7 +61,8 @@ title: Talks
 </ul>
 </li>
 </ul>
+</div></td></table>
 </div>
-</div>
+
 {% endfor %}
 </center>
