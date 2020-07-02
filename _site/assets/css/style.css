@@ -27,6 +27,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+ul.noBullets {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tagLine {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 10px 0px 15px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -553,6 +565,25 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.scrollTemplate {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: #67b0d1;
+  color:white;
+  font-weight: bold;
+  z-index: 1;
+  width: 30%;
+  min-height: 20px;
+  max-height: 20px;
+  margin: 5px;
+  display:inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .services .icon-box {
   padding: 30px;
   position: relative;
@@ -562,8 +593,10 @@ section {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
-  width: 250px;
-  height: 275px;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 275px;
+  max-height: 275px;
   margin-bottom: 30px;
 }
 
@@ -936,7 +969,7 @@ section {
 --------------------------------------------------------------*/
 .team .member {
   text-align: center;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
   position: relative;
 }
 
