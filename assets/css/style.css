@@ -553,6 +553,25 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.scrollTemplate {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: #67b0d1;
+  color:white;
+  font-weight: bold;
+  z-index: 1;
+  width: 30%;
+  min-height: 20px;
+  max-height: 20px;
+  margin: 5px;
+  display:inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .services .icon-box {
   padding: 30px;
   position: relative;
