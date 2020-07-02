@@ -1,0 +1,70 @@
+---
+layout: default
+title: Courses
+---
+
+<style>
+    p {
+        margin: 0.25em 0em;
+    }
+</style>
+
+{% for course in site.courses %}
+
+<div>
+
+    <!-------------------- Course prefix & title --------------------------------------->
+    <h4><b>{{ course.prefix_number }} - {{ course.title }}</b></h4>
+    
+    <!-------------------- Course catalog link ----------------------------------------->
+    <p><a href="{{ course.catalog_link }}">UB Course Catalog page</a></p>
+
+    <!-------------------- Past website links ------------------------------------------>
+    {% capture link_string %}{{ course.course_webpages }}{% endcapture %}
+    {% assign link_array = link_string | split: "," %}
+            <p>See course webpages from past semesters
+                {% for link in link_array %}
+                    {% if forloop.last == true and forloop.length > 1 %}
+                        and 
+                    {% endif %}
+                    <a href="{{ link }}" target="_blank"> here</a>
+                    {% if forloop.last == true %}
+                        .
+                    {% elsif forloop.last == false and forloop.length > 2 %}
+                        , 
+                    {% endif %}
+                {% endfor %}
+            </p>
+        
+    <!-------------------- Instructors ------------------------------------------------->
+    {% assign tag_people = course.instructors | split: "," %}
+    {% assign all_peop = "" | split: ',' %}
+    {% for peop in site.people %}
+        {% assign all_peop = all_peop | push: peop.name %}
+    {% endfor %}
+    <p>Instructors: </p>
+    <ul class="noBullets">
+    {% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    
+    <!-------------------- Typical semesters ------------------------------------------>
+    <p>Typical semesters offered: {{ course.semesters }}</p>
+    
+    <!-------------------- Course description ----------------------------------------->
+    <p>{{ course.description }}</p>
+
+</div>
+
+<br>
+
+{% endfor %}
