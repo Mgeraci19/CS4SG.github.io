@@ -37,7 +37,7 @@ function findHostname(url){
 {% capture resource_link_string %}{{ page.resource_links }}{% endcapture %}
 {% assign res_link_array = resource_link_string | split: "," %}
 <h6><b>Resource Links</b></h6>
-<ul >
+<ul class="noBullets">
 {% for link in res_link_array %}
     <li class="noBullets"><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
