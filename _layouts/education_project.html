@@ -11,7 +11,7 @@ layout: default
     {% assign all_peop = all_peop | push: peop.name %}
 {% endfor %}
 <h6><b>Related People</b></h6>
-<ul>
+<ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
@@ -30,71 +30,99 @@ layout: default
 
 {% assign tag_array = page.tagged_projects | split: "," %}
 <h6><b>Related Research Projects</b></h6>
-<ul>
+
+<div class="row">
 {% for tag in tag_array %}
     {% for project in site.research_projects %}
         {% if tag == project.title %}
-            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+            <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
         {% endif %}
     {% endfor %}
 {% endfor %}
-</ul>
+</div>
+
 <hr>
 
 <!---------------------------->
 <h6><b>Related Publications</b></h6>
 
-<ul>
+<div class="row">
 {% for pub in site.publications %}
     {% if pub.tagged_education contains page.key %}
-        <li><a href="{{ pub.url }}">{{ pub.title }}</a></li>
+        <div class="tagLine"><a href="{{ pub.url }}">{{ pub.title }}</a></div>
     {% endif %}
 {% endfor %}
-</ul>
+</div>
+
 <hr/>
 
 <!---------------------------->
 <h6><b>Code Resources</b></h6>
-<ul>
+
+<div class="row">
 {% for code in site.code %}
     {% if code.tagged_education contains page.key %}
-        <li><a href="\codes.html#{{ code.code_title }}">{{ code.code_title }}</a></li>
+        <div class="tagLine"><a href="\codes.html#{{ code.code_title }}">{{ code.code_title }}</a></div>
     {% endif %}
 {% endfor %}
-</ul>
+</div>
+
 <hr/>
 
 <!---------------------------->
 
 <h6><b>Related Funding</b></h6>
-<ul>
+
+<div class="row">
 {% for fund in site.funding %}
     {% if fund.tagged_education contains page.key %}
-        <li><a href="{{ fund.url }}">{{ fund.organization }}</a>: US$ {{ fund.grants }}</li>
+        <div class="tagLine"><a href="{{ fund.url }}">{{ fund.organization }}</a>: US$ {{ fund.grants }}</div>
     {% endif %}
 {% endfor %}
-</ul>
+</div>
+
 <hr/>
     
 <!---------------------------->
 
 <h6><b>Related Talks</b></h6>
-<ul>
+
+<div class="row">
 {% for talk in site.talks %}
     {% if talk.tagged_education contains page.key %}
-        <li><a href="{{ talk.url }}">{{ talk.title }}</a></li>
+        <div class="tagLine"><a href="{{ talk.url }}">{{ talk.title }}</a></div>
     {% endif %}
 {% endfor %}
-</ul>
+</div>
+
 <hr/>
     
 <!---------------------------->
 
 <h6><b>Related Events</b></h6>
+
+<div class="row">
+{% for event in site.events %}
+    {% if event.tagged_education contains page.key %}
+        <div class="tagLine"><a href="{{ event.url }}">{{ event.title }}</a></div>
+    {% endif %}
+{% endfor %}
+</div>
+
 <hr/>
+
 <!---------------------------->
 
-
 <h6><b>Related Blog Posts</b></h6>
+
+<div class="row">
+{% for post in site.posts %}
+    {% if post.tagged_education contains page.key %}
+        <div class="tagLine"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    {% endif %}
+{% endfor %}
+</div>
+
 <hr/>
+
 <!---------------------------->
