@@ -12,7 +12,7 @@ function findHostname(url){
 	document.write(hostname)
 }
 </script>
-
+<div id="speak_content">
 <center>
 {% for peop in site.people %}
     {% if peop.name == page.talk_by %}
@@ -82,5 +82,5 @@ function findHostname(url){
 {% endfor %}
 </ul>
 <hr/>
-
+</div>
 {%- include narration.html -%}
