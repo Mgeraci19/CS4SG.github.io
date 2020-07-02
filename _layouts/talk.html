@@ -20,10 +20,10 @@ function findHostname(url){
     {% endif %}
 {% endfor %}
     <br/>
-<b>Speaker</b>{{ page.talk_by }}<br/>
+<b>Speaker: </b>{{ page.talk_by }}<br/>
 {% for peop in site.people %}
     {% if peop.name == page.talk_by %}
-	{{ peop.designation }} <i>({{ peop.category }})</i>
+	{{ peop.designation }}<br/>({{ peop.category }})
     {% endif %}
 {% endfor %}
 </center><br/><br/>
