@@ -27,7 +27,10 @@ function findHostname(url){
     {% endif %}
 {% endfor %}
 </center><br/><br/>
-    
+
+{{ content | markdownify }}
+<hr/>
+
 <b>Date:</b> {{ page.date | date: '%B %d, %Y' }}
 <hr/>
 
@@ -80,5 +83,3 @@ function findHostname(url){
 </ul>
 
 <hr/>
-
-{{ content | markdownify }}
