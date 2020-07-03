@@ -1,66 +1,48 @@
 ---
 layout: default
 ---
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="assets/js/cropper.js"></script>
 <script>
-    recrop("speaker_picture", 30, 30);
+  function findHostname(url){
+    var hostname = (new URL(url)).hostname;
+    document.write(hostname)
+  }
 </script>
-<script>
-function findHostname(url){
-	var hostname = (new URL(url)).hostname;
-	document.write(hostname)
-}
-</script>
-<div id="speak_content">
-<center>
-{% for peop in site.people %}
-    {% if peop.name == page.talk_by %}
-        <img src="{{ peop.image }}" class="speaker_picture" style="border-radius: 50%; width:140px;"/>
-    {% endif %}
-{% endfor %}
-    <br/>
-<b>Speaker: </b>{{ page.talk_by }}<br/>
-{% for peop in site.people %}
-    {% if peop.name == page.talk_by %}
-	{{ peop.designation }}<br/>({{ peop.category }})
-    {% endif %}
-{% endfor %}
-</center><br/><br/>
-
-{{ content | markdownify }}
+<b>Funding organization: </b><a href="{{ page.org_link }}" target="_blank">{{ page.organization }} <i class="icofont-external-link"></i></a>
 <hr/>
 
-<b>Date:</b> {{ page.date | date: '%B %d, %Y' }}
+<b>Grant award notice: </b><a href="{{ page.grant_notice }}" target="_blank">Click here to see {{ page.organization }} grant notice <i class="icofont-external-link"></i></a>
 <hr/>
 
-<h6><b>Location: </b></h6>{{ page.locus }}
-<hr/>
 
-{% capture resource_link_string %}{{ page.resource_links }}{% endcapture %}
-{% assign res_link_array = resource_link_string | split: "," %}
-<h6><b>Resource Links</b></h6>
+<h6><b>Press release / News</b></h6>
+{% capture news_link %}{{ page.news_links }}{% endcapture %}
+{% assign news_array = news_link | split: "," %}
 <ul class="noBullets">
-{% for link in res_link_array %}
-    <li class="noBullets"><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
-{% endfor %}
-</ul>
+  {% for link in news_array %}
+      <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
+  {% endfor %}
+  </ul>
+<hr/>
+
+
+<b>Grant amount: </b>${{  page.grants }}
 <hr/>
 
 {% assign tag_proj = page.tagged_projects | split: "," %}
-<h6><b>Related Research Projects</b></h6>
-
+<h6><b>Project(s) Title</b></h6>
 <div class="row">
 {% for tag in tag_proj %}
-    {% for project in site.research_projects %}
-        {% if tag == project.title %}
-            <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
+  {% for project in site.research_projects %}
+          {% if tag == project.title %}
+          <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
         {% endif %}
-    {% endfor %}
+  {% endfor %}
 {% endfor %}
 </div>
-<hr>
+<hr/>
 
+<b>Grant date (range): </b> {{ page.start | date: '%B %d, %Y' }} - {{ page.duration | date: '%B %d, %Y' }}
+<hr/>
 
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
@@ -73,7 +55,7 @@ function findHostname(url){
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.name %}
-                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -82,5 +64,5 @@ function findHostname(url){
 {% endfor %}
 </ul>
 <hr/>
-</div>
-{%- include narration.html -%}
+
+{{ content | markdownify }}
