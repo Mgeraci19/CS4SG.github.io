@@ -74,6 +74,18 @@ function findHostname(url){
       </ul>
       <button type="button" class="collapsible">Resource Details <i class='bx bxs-chevron-down' ></i></button>
         <div class="content">
+          <h6><b>Related Project(s)</b></h6>
+          {% assign tag_proj = res.tagged_projects | split: "," %}
+          <div class="row">
+          {% for tag in tag_proj %}
+            {% for project in site.research_projects %}
+                    {% if tag == project.title %}
+                    <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
+                  {% endif %}
+            {% endfor %}
+          {% endfor %}
+          </div>
+          <hr/>
           {{ res.description }}
         </div>
     </div>
