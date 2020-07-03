@@ -2,6 +2,13 @@
 layout: default
 ---
 
+<script>
+    function findHostname(url){
+        var hostname = (new URL(url)).hostname;
+        document.write(hostname)
+    }
+</script>
+
 <div id="speak_content">
 {{ content | markdownify }}
 <hr/>
@@ -80,6 +87,21 @@ layout: default
 {% for talk in site.talks %}
     {% if talk.tagged_projects contains page.title %}
         <li><a href="{{ talk.url }}">{{ talk.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+    
+<!---------------------------->
+
+<h6><b>Related Resources</b></h6>
+<ul class="noBullets">
+{% for res in site.resource_links %}
+    {% if res.tagged_projects contains page.title %}
+    {% assign res_links_array = res.link | split: "," %}
+        {% for lin in res_links_array %}  
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+        {% endfor %}
     {% endif %}
 {% endfor %}
 </ul>
