@@ -1,33 +1,72 @@
 ---
 layout: default
 ---
-
-<h6><b>Funding organization</b></h6>
-{{ page.organization }}
+<script>
+  function findHostname(url){
+    var hostname = (new URL(url)).hostname;
+    document.write(hostname)
+  }
+</script>
+<div id="speak_content">
+<b>Funding organization: </b><a href="{{ page.org_link }}" target="_blank">{{ page.organization }} <i class="icofont-external-link"></i></a>
 <hr/>
 
-<h6><b>Organization's website</b></h6>
-<a href="{{ page.org_link }}" target="_blank">Link to {{ page.organization }} website <i class="icofont-external-link"></i></a>
+<b>Grant award notice: </b><a href="{{ page.grant_notice }}" target="_blank">Click here to see {{ page.organization }} grant notice <i class="icofont-external-link"></i></a>
 <hr/>
 
-<h6><b>Grant amount</b></h6>
-${{  page.grants }}
+
+<h6><b>Press release / News</b></h6>
+{% capture news_link %}{{ page.news_links }}{% endcapture %}
+{% assign news_array = news_link | split: "," %}
+<ul class="noBullets">
+  {% for link in news_array %}
+      <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
+  {% endfor %}
+  </ul>
+<hr/>
+
+
+<b>Grant amount: </b>${{  page.grants }}
 <hr/>
 
 {% assign tag_proj = page.tagged_projects | split: "," %}
-<h6><b>Funded projects</b></h6>
-<ul>
+<h6><b>Project(s) Title</b></h6>
+<div class="row">
 {% for tag in tag_proj %}
   {% for project in site.research_projects %}
           {% if tag == project.title %}
-            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+          <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
         {% endif %}
   {% endfor %}
+{% endfor %}
+</div>
+<hr/>
+
+<b>Grant date (range): </b> {{ page.start | date: '%B %d, %Y' }} - {{ page.duration | date: '%B %d, %Y' }}
+<hr/>
+
+{% assign tag_people = page.tagged_people | split: "," %}
+{% assign all_peop = "" | split: ',' %}
+{% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.name %}
+{% endfor %}
+<h6><b>Related People</b></h6>
+<ul class="noBullets">
+{% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
 {% endfor %}
 </ul>
 <hr/>
 
-<h6><b>Grant valid until</b></h6> {{ page.duration | date: '%B %d, %Y' }}
-<hr/>
-
 {{ content | markdownify }}
+
+</div>
+{%- include narration.html -%}
