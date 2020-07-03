@@ -35,8 +35,12 @@ layout: default
 {% for tag in tag_array %}
     {% for project in site.research_projects %}
         {% if tag == project.title %}
-            <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
+            <div class="tagLine">
+                <a href="{{ project.url }}">{{ project.title }}</a>
+                {%- include tag_separator.html -%}
+            </div>
         {% endif %}
+        
     {% endfor %}
 {% endfor %}
 </div>
@@ -49,7 +53,10 @@ layout: default
 <div class="row">
 {% for pub in site.publications %}
     {% if pub.tagged_education contains page.key %}
-        <div class="tagLine"><a href="{{ pub.url }}">{{ pub.title }}</a></div>
+        <div class="tagLine">
+            <a href="{{ pub.url }}">{{ pub.title }}</a>
+            {%- include tag_separator.html -%}
+        </div>
     {% endif %}
 {% endfor %}
 </div>
@@ -62,7 +69,10 @@ layout: default
 <div class="row">
 {% for code in site.code %}
     {% if code.tagged_education contains page.key %}
-        <div class="tagLine"><a href="\codes.html#{{ code.code_title }}">{{ code.code_title }}</a></div>
+        <div class="tagLine">
+            <a href="\codes.html#{{ code.code_title }}">{{ code.code_title }}</a>
+            {%- include tag_separator.html -%}
+        </div>
     {% endif %}
 {% endfor %}
 </div>
@@ -76,7 +86,10 @@ layout: default
 <div class="row">
 {% for fund in site.funding %}
     {% if fund.tagged_education contains page.key %}
-        <div class="tagLine"><a href="{{ fund.url }}">{{ fund.organization }}</a>: US$ {{ fund.grants }}</div>
+        <div class="tagLine">
+            <a href="{{ fund.url }}">{{ fund.organization }}</a>: US$ {{ fund.grants }}
+            {%- include tag_separator.html -%}
+        </div>
     {% endif %}
 {% endfor %}
 </div>
@@ -90,7 +103,10 @@ layout: default
 <div class="row">
 {% for talk in site.talks %}
     {% if talk.tagged_education contains page.key %}
-        <div class="tagLine"><a href="{{ talk.url }}">{{ talk.title }}</a></div>
+        <div class="tagLine">
+            <a href="{{ talk.url }}">{{ talk.title }}</a>
+            {%- include tag_separator.html -%}
+        </div>
     {% endif %}
 {% endfor %}
 </div>
@@ -104,7 +120,10 @@ layout: default
 <div class="row">
 {% for event in site.events %}
     {% if event.tagged_education contains page.key %}
-        <div class="tagLine"><a href="{{ event.url }}">{{ event.title }}</a></div>
+        <div class="tagLine">
+            <a href="{{ event.url }}">{{ event.title }}</a>
+            {%- include tag_separator.html -%}
+        </div>
     {% endif %}
 {% endfor %}
 </div>
@@ -118,7 +137,10 @@ layout: default
 <div class="row">
 {% for post in site.posts %}
     {% if post.tagged_education contains page.key %}
-        <div class="tagLine"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        <div class="tagLine">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            {%- include tag_separator.html -%}
+        </div>
     {% endif %}
 {% endfor %}
 </div>
