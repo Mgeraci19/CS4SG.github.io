@@ -2,25 +2,64 @@
 layout: default
 title: Publications
 ---
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<ol>
+<select onchange= "location = this.value;">
+    <option selected value="">-- Select a method to search --</option>
+    <option value="javascript:javascript:decide(0)">Search by Publication Title</option>
+    <option value="javascript:decide(1)">Search by Author name</option>
+    <option value="javascript:decide(2)">Search by Date</option>
+</select>
+<div id="embed"></div>
+<hr/>
+<ol id="myUL">
 {% for pub in site.publications %}
     <li>
-        
         <h4><b><a href="{{ pub.url }}">{{ pub.title }}</a></b></h4>
-        <ul>
-            <li>
-                Authors: {{ pub.authors }}
-            </li>
-            <li>
-                Abstract: <div id="desc">{{  pub.abstract }}</div>
-            </li>
-        </ul>
+    <b>Author(s): </b><a>{{ pub.authors }}</a><br/>
+    <b>Abstract: </b><div id="desc">{{  pub.abstract }}</div>
+    <b>Date: </b><a>{{ pub.date | date: '%B %d, %Y' }}</a>
     </li>
     <hr />
 {% endfor %}
 </ol>
 <script>
+
+</script>
+
+<script>
 var myDiv = $('#desc');
 myDiv.text(myDiv.text().substring(0,250)+'...')
+</script>
+
+
+<script>
+    function myFunction(num) {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[num];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+        function decide(n){
+            var l = ["Publication Title", "Author name", "Date"]
+            document.getElementById("embed").innerHTML = '<input type="text" id="myInput" onkeyup="myFunction('+n+')" placeholder="Enter '+l[n]+'" title="Type in a name">'
+        }
 </script>
