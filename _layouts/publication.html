@@ -16,12 +16,12 @@ function findHostname(url){
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.name %}
 {% endfor %}
-<ul>
+<ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.name %}
-                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -34,7 +34,7 @@ function findHostname(url){
 <!---------------------------->
 {% assign publishedIn = page.published_in | split: "," %}
 <h6><b>Published in</b></h6>
-<ul>
+<ul class="noBullets">
 {% for pub in publishedIn %}
     <li>{{ pub }}</li>
 {% endfor %}
@@ -54,7 +54,7 @@ function findHostname(url){
 
 <h6><b>Links</b></h6>
 
-<ul>
+<ul class="noBullets">
 {% for link in link_array %}
     <li><a href="{{ link }}" target="_blank"><script>findHostname("{{ link }}")</script></a></li>
 {% endfor %}
@@ -74,12 +74,12 @@ function findHostname(url){
 {% for peop in site.people %}
 {% assign peopLis = peopLis | push: peop.name %}
 {% endfor %}
-<ul>
+<ul class="noBullets">
 {% for tag in people_tag %}
     {% if peopLis contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.name %}
-                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -91,31 +91,39 @@ function findHostname(url){
 <!---------------------------->
 
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h6><b>Tagged Projects</b></h6>
-<ul>
+<h6><b>Related Research Projects</b></h6>
+
+<div class="row">
 {% for tag in tag_array %}
     {% for project in site.research_projects %}
         {% if tag == project.title %}
-            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+            <div class="tagLine">
+                {%- include tag_separator.html -%}
+                <a href="{{ project.url }}">{{ project.title }}</a>
+            </div>
         {% endif %}
+        
     {% endfor %}
 {% endfor %}
-</ul>
+</div>
 
 <hr>
 
 <!---------------------------->
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 <h6><b>Education and Courses</b></h6>
-<ul>
+<div class="row">
 {% for tag in edu_tag_array %}
     {% for education_project in site.education %}
         {% if tag == education_project.title %}
-            <li><a href="{{ education_project.url }}">{{ education_project.title }}</a></li>
+        <div class="tagLine">
+            <a href="{{ education_project.url }}">{{ education_project.title }}</a>
+            {%- include tag_separator.html -%}
+        </div>
         {% endif %}
     {% endfor %}
 {% endfor %}
-</ul>
+</div>
 <hr>
 </div>
 <!---------------------------->
