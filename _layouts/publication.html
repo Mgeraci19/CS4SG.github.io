@@ -125,6 +125,20 @@ function findHostname(url){
 {% endfor %}
 </div>
 <hr>
+
+<h6><b>Code Resources</b></h6>
+<ul class="noBullets">
+{% for res in site.code %}
+    {% if res.tagged_publications contains page.title %}
+    {% assign res_links_array = res.code_links | split: "," %}
+        {% for lin in res_links_array %}  
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
 </div>
 <!---------------------------->
 
