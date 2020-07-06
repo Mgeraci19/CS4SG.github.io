@@ -80,7 +80,10 @@ function findHostname(url){
           {% for tag in tag_proj %}
             {% for project in site.research_projects %}
                     {% if tag == project.title %}
-                    <div class="tagLine"><a href="{{ project.url }}">{{ project.title }}</a></div>
+                    <div class="tagLine">
+			    <a href="{{ project.url }}">{{ project.title }}</a>
+			    {%- include tag_separator.html -%}
+		    </div>
                   {% endif %}
             {% endfor %}
           {% endfor %}
