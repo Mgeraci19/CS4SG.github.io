@@ -4,7 +4,7 @@
 
 
 
-function convert_HTML_To_PDF() {
+function convert_HTML_To_PDF(title) {
 	var doc = new jsPDF();
 	var elementHTML = $('#contne').html();
 	var specialElementHandlers = {
@@ -18,5 +18,5 @@ function convert_HTML_To_PDF() {
     });
 	
 	// Save the PDF
-	doc.save('published.pdf');
+	doc.save(title+'.pdf');
 }
