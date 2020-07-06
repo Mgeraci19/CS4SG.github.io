@@ -19,7 +19,7 @@ layout: default
     {% assign all_peop = all_peop | push: peop.name %}
 {% endfor %}
 <h6><b>Related People</b></h6>
-<ul>
+<ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
@@ -37,13 +37,18 @@ layout: default
 <!---------------------------->
 
 <h6><b>Education and Courses</b></h6>
-<ul>
+<div class="row">
 {% for education_project in site.education %}
-    {% if education_project.tagged_projects contains page.title %}
-        <li><a href="{{ education_project.url }}">{{ education_project.title }}</a></li>
+    {% if education_project.tagged_projects contains page.key %}
+        <div class="tagLine"><a href="{{ education_project.url }}">{{ education_project.title }}</a></div>
     {% endif %}
 {% endfor %}
-</ul>
+{% for course in site.courses %}
+    {% if course.tagged_projects contains page.key %}
+        <div class="tagLine"><a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a></div>
+    {% endif %}
+{% endfor %}  
+</div>
 <hr/>
   
 <!---------------------------->
@@ -63,7 +68,7 @@ layout: default
 <ul>
 {% for code in site.code %}
     {% if code.tagged_projects contains page.title %}
-        <li><a href="\codes.html#{{ code.code_title }}">{{ code.code_title }}</a></li>
+        <li><a href="\code.html#{{ code.code_title }}">{{ code.code_title }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
