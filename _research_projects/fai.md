@@ -3,6 +3,8 @@ layout: research_project
 title: FAI
 description: Short<!--<ul><li>Details</li><li>People</li><li>Values and Ethics Statement</li></ul>-->
 icon: <i class='bx bxs-home-heart' ></i>
+tagged_people: Melanie Sage,Varun Chandola
+key: FAI
 ---
 
 <html>
