@@ -13,7 +13,7 @@ layout: default
 {{ content | markdownify }}
 <hr/>
 
-{% assign tag_people = page.authors | split: "," %}
+{% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.name %}
