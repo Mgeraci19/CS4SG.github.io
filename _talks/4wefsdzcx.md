@@ -1,6 +1,7 @@
 ---
 layout: talk
 title: 4wefsdzcx
+category: External
 locus: dssd
 resource_links: https://www.websitepolicies.com/
 talk_by: Kenneth Joseph
