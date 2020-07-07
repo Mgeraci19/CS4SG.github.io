@@ -1,0 +1,19 @@
+---
+layout: default
+title: News and Events
+---
+<center><h3><b>News</b></h3></center>
+{% for news in site.event %}
+    {% if news.layout == "news" %}
+    <figure class="snip1208">
+        <img src="{{ news.image }}" alt="{{ news.title }}"/>
+        <figcaption>
+          <h3>{{ news.title }}</h3>
+            <div id="textbox"><p class="description">{{ content | markdownify }}</p></div>
+          <button>Read More</button>
+        </figcaption><a href="{{ news.url }}"></a>
+      </figure>
+    {% endif %}
+{% endfor %}
+
+<hr/>
