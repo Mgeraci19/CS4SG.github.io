@@ -14,13 +14,13 @@ function findHostname(url){
 {% assign tag_people = page.authors | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
-    {% assign all_peop = all_peop | push: peop.name %}
+    {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
-            {% if tag == peop.name %}
+            {% if tag == peop.key %}
                 <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
@@ -32,13 +32,8 @@ function findHostname(url){
 <hr>
     
 <!---------------------------->
-{% assign publishedIn = page.published_in | split: "," %}
-<h6><b>Published in</b></h6>
-<ul class="noBullets">
-{% for pub in publishedIn %}
-    <li>{{ pub }}</li>
-{% endfor %}
-</ul>
+
+<h6 style="display:inline"><b>Published in: </b></h6><p style="display:inline">{{ page.published_in }}</p>
 <hr>
 
 <!---------------------------->
@@ -72,13 +67,13 @@ function findHostname(url){
 {% assign people_tag = page.tagged_people | split: "," %}
 {% assign peopLis = "" | split: ',' %}
 {% for peop in site.people %}
-{% assign peopLis = peopLis | push: peop.name %}
+{% assign peopLis = peopLis | push: peop.key %}
 {% endfor %}
 <ul class="noBullets">
 {% for tag in people_tag %}
     {% if peopLis contains tag %}
         {% for peop in site.people %}
-            {% if tag == peop.name %}
+            {% if tag == peop.key %}
                 <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
@@ -93,43 +88,41 @@ function findHostname(url){
 {% assign tag_array = page.tagged_projects | split: "," %}
 <h6><b>Related Research Projects</b></h6>
 
-<div class="row">
+<ul class="menu">
 {% for tag in tag_array %}
     {% for project in site.research_projects %}
-        {% if tag == project.title %}
-            <div class="tagLine">
+        {% if tag == project.key %}
+            <li>
                 <a href="{{ project.url }}">{{ project.title }}</a>
-                {%- include tag_separator.html -%}
-            </div>
+            </li>
         {% endif %}
         
     {% endfor %}
 {% endfor %}
-</div>
+</ul>
 
 <hr>
 
 <!---------------------------->
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 <h6><b>Education and Courses</b></h6>
-<div class="row">
+<ul class="menu">
 {% for tag in edu_tag_array %}
     {% for education_project in site.education %}
-        {% if tag == education_project.title %}
-        <div class="tagLine">
+        {% if tag == education_project.key %}
+        <li>
             <a href="{{ education_project.url }}">{{ education_project.title }}</a>
-            {%- include tag_separator.html -%}
-        </div>
+        </li>
         {% endif %}
     {% endfor %}
 {% endfor %}
-</div>
+</ul>
 <hr>
 
 <h6><b>Code Resources</b></h6>
-<ul class="noBullets">
+<ul class="menu">
 {% for res in site.code %}
-    {% if res.tagged_publications contains page.title %}
+    {% if res.tagged_publications contains page.key %}
     {% assign res_links_array = res.code_links | split: "," %}
         {% for lin in res_links_array %}  
           <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>

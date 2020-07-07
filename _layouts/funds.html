@@ -34,10 +34,9 @@ layout: default
 <div class="row">
 {% for tag in tag_proj %}
   {% for project in site.research_projects %}
-          {% if tag == project.title %}
-          <div class="tagLine">
+          {% if tag == project.key %}
+          <div class="tagSpace">
             <a href="{{ project.url }}">{{ project.title }}</a>
-            {%- include tag_separator.html -%}
           </div>
         {% endif %}
   {% endfor %}
@@ -51,14 +50,14 @@ layout: default
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
-    {% assign all_peop = all_peop | push: peop.name %}
+    {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
 <h6><b>Related People</b></h6>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
-            {% if tag == peop.name %}
+            {% if tag == peop.key %}
                 <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
