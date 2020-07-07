@@ -1,5 +1,0 @@
-Missing folders (didn't upload because they were empty):
-_data
-_drafts
-_includes
-_posts
