@@ -7,17 +7,17 @@ collections:
     education:
         output: true
     courses:
-        output: true
+        output: false
     publications:
         output: true
     funding:
         output: true
     people:
-        output: true
+        output: false
     talks:
         output: true
     code:
-        output: true
+        output: false
     posts:
         output: true
     resource_links:
