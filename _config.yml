@@ -4,6 +4,8 @@ title: "" # the name of your site, e.g. ACME Corp.
 collections:
     research_projects:
         output: true
+    event:
+        output: true
     education:
         output: true
     courses:
