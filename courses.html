@@ -3,15 +3,9 @@ layout: default
 title: Courses
 ---
 
-<style>
-    p {
-        margin: 0.25em 0em;
-    }
-</style>
-
 {% for course in site.courses %}
 
-<div>
+<div id="{{ course.prefix_number }}">
 
     <!-------------------- Course prefix & title --------------------------------------->
     <h4><b>{{ course.prefix_number }} - {{ course.title }}</b></h4>
@@ -40,15 +34,15 @@ title: Courses
     {% assign tag_people = course.instructors | split: "," %}
     {% assign all_peop = "" | split: ',' %}
     {% for peop in site.people %}
-        {% assign all_peop = all_peop | push: peop.name %}
+        {% assign all_peop = all_peop | push: peop.key %}
     {% endfor %}
     <p>Instructors: </p>
     <ul class="noBullets">
     {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
-            {% if tag == peop.name %}
-                <li>{{ tag }} &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}

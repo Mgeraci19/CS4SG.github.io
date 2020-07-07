@@ -10,21 +10,20 @@ title: Code
       width: 80%;
       border: 1px solid #ccc;
       border-radius: 10px;
-      align:center;
       text-align:center;
       word-wrap: break-word;
       margin: 20px 0;
     }
     
-#menu{
+.menu{
     list-style: none;
 }
-#menu li{
+.menu li{
     display: inline;
     padding: 0 10px;
     border-left: solid 1px black;
 }
-#menu li:first-child{
+.menu li:first-child{
     border-left: none;
 }
 </style>
@@ -80,10 +79,10 @@ function findHostname(url){
         <li>
           <b>Related Projects:</b>
           {% assign proj_array = codes.tagged_projects | split: "," %}
-          <ul id="menu">
+          <ul class="menu">
             {% for tag in proj_array %}
               {% for project in site.research_projects %}
-                      {% if tag == project.title %}
+                      {% if tag == project.key %}
                         <li><a href="{{ project.url }}">{{ project.title }}</a></li>
                     {% endif %}
               {% endfor %}
@@ -97,7 +96,7 @@ function findHostname(url){
         <li>
         {% assign auth_array = codes.code_authors | split: "," %}
           <b>Authors:</b>
-            <ul id="menu">
+            <ul class="menu">
               {% for peop in auth_array %}
                 <li>{{ peop }}</li>
               {% endfor %}
@@ -107,13 +106,13 @@ function findHostname(url){
 	      
 
 <!-- -----------------Related Publications----------------- -->
-        <li>
+    <li>
 	<b>Related Publications:</b>
 	{% assign publish_array = codes.tagged_publications | split: "," %}
-	  <ul id="menu">
+	  <ul class="menu">
 	    {% for tag in publish_array %}
 	       {% for publications in site.publications %}
-		  {% if tag == publications.title %}
+		  {% if tag == publications.key %}
 		     <li><a href="{{ publications.url }}">{{ publications.title }}</a></li>
 		  {% endif %}
 	       {% endfor %}
@@ -126,7 +125,7 @@ function findHostname(url){
         <li>
         {% assign people_array = codes.tagged_people | split: "," %}
           <b>Related People:</b>
-            <ul id="menu">
+            <ul class="menu">
               {% for peop in people_array %}
                 <li>{{ peop }}</li>
               {% endfor %}
@@ -136,14 +135,28 @@ function findHostname(url){
 	      
 	      
 	      
-<!-- -----------------Related Education----------------- -->
-	      
-<!-- ----------------------------------------------- -->
-	      
-	      
-
-<!-- -----------------Related Courses----------------- -->
-
+<!-- -----------------Related Education & Courses----------------- -->
+    <li>
+	<b>Related Education and Courses:</b>
+	{% assign edu_array = codes.tagged_education | split: "," %}
+    {% assign courses_array = codes.tagged_courses | split: "," %}
+	  <ul class="menu">
+	    {% for tag in edu_array %}
+	       {% for edu in site.education %}
+		  {% if tag == edu.key %}
+		     <li><a href="{{ edu.url }}">{{ edu.title }}</a></li>
+		  {% endif %}
+	       {% endfor %}
+	    {% endfor %}
+        {% for tag in courses_array %}
+	       {% for course in site.courses %}
+		  {% if tag == course.key %}
+		     <li><a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a></li>
+		  {% endif %}
+	       {% endfor %}
+	    {% endfor %}
+	  </ul>
+	</li>          
 <!-- ----------------------------------------------- -->
 	      
       </ul>
