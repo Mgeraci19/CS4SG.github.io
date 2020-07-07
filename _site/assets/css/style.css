@@ -49,9 +49,30 @@ ul.noBullets {
 }
 
 .tagLine {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px -15px 0px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 0px 15px;
+}
+
+.tagSpace {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 5px 0px 15px;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    display: inline;
+    margin: 0px 50px 0px -50px;
+    padding: 0px 10px;
+    border-left: solid 1px black;
+}
+
+.menu li:first-child{
+    border-left: none;
 }
 
 /*--------------------------------------------------------------
