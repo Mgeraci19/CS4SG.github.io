@@ -3,6 +3,12 @@ layout: default
 title: Courses
 ---
 
+<style>
+p {
+  margin: 5px 0px 5px 0px;
+}
+</style>
+
 {% for course in site.courses %}
 
 <div id="{{ course.prefix_number }}">
@@ -11,12 +17,12 @@ title: Courses
     <h4><b>{{ course.prefix_number }} - {{ course.title }}</b></h4>
     
     <!-------------------- Course catalog link ----------------------------------------->
-    <p><a href="{{ course.catalog_link }}">UB Course Catalog page</a></p>
+    <p><a href="{{ course.catalog_link }}">UB Course Catalog page</a> |
 
     <!-------------------- Past website links ------------------------------------------>
     {% capture link_string %}{{ course.course_webpages }}{% endcapture %}
     {% assign link_array = link_string | split: "," %}
-            <p>See course webpages from past semesters
+            See course webpages from past semesters
                 {% for link in link_array %}
                     {% if forloop.last == true and forloop.length > 1 %}
                         and 
@@ -36,8 +42,8 @@ title: Courses
     {% for peop in site.people %}
         {% assign all_peop = all_peop | push: peop.key %}
     {% endfor %}
-    <p>Instructors: </p>
-    <ul class="noBullets">
+    <p><b>Instructors: </b></p>
+    <p><ul class="noBullets">
     {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
@@ -49,13 +55,13 @@ title: Courses
         <li>{{ tag }}</li>
     {% endif %}
     {% endfor %}
-    </ul>
+    </ul></p>
     
     <!-------------------- Typical semesters ------------------------------------------>
-    <p>Typical semesters offered: {{ course.semesters }}</p>
+    <p><b>Typical semesters offered: </b>{{ course.semesters }}</p>
     
     <!-------------------- Course description ----------------------------------------->
-    <p>{{ course.description }}</p>
+    <p><b>Description: </b>{{ course.description }}</p>
 
 </div>
 
