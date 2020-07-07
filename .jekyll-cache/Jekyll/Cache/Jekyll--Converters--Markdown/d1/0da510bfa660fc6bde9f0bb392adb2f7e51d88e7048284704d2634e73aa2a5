@@ -1,0 +1,163 @@
+I"R<!-- -----------------Scripts & Styles----------------- -->
+<style>
+.container {
+  max-width: 100%;
+  margin: 0rem auto;
+  padding: 0 2rem;
+}
+
+.tabs {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  border: 1px solid #efefef;
+}
+
+.tabs li {
+  text-align: center;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out;
+}
+
+.tabs li.active {
+  background-color: #eee;
+}
+
+.tabs li > a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.tabs-content {
+  border: 0px solid #eee;
+  border-top: 0;
+}
+
+.tabs-panel {
+  padding: 2rem 1rem;
+  display: none;
+}
+
+.tabs-panel.active {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+  function find_status(datess){
+    var date = new Date();
+    mydate=new Date(datess);
+    if(date < mydate)
+    {
+      return true
+    }
+    else
+    {
+      return false
+    }
+  }
+</script>
+
+<!-- -------------------------------------------- -->
+
+<div class="container">
+  <ul class="tabs">
+    <li class="active" data-target="panel-1">
+      Current
+    </li>
+    <li data-target="panel-2">
+      Past
+    </li>
+  </ul>
+  <div class="tabs-content">
+    <div class="tabs-panel active" id="panel-1">
+      <ol>
+        
+        <script>if (find_status("06-23-2020")){
+          document.write(
+            '<li>\
+              <a href="/funding/The%20best%20gift%20ever.html"><b>The best gift ever</b></a>\
+            <ul>\
+            <li>\
+                <b>Funding organization: </b>CS4SG\
+            </li>\
+            <li>\
+              <b>Grant amount: </b>$100000\
+            </li>\
+            <li>\
+              <b>Grant date (range): </b> April 23, 2020 - June 23, 2020\
+            </li>\
+            </ul>\
+            </li>\
+            <hr />'
+          )
+        }
+        </script>
+        
+      </ol>
+    </div>
+
+    
+    <div class="tabs-panel" id="panel-2">
+    <ol>
+      
+      <script>if (!(find_status("06-23-2020"))){
+        document.write(
+          '<li>\
+            <a href="/funding/The%20best%20gift%20ever.html"><b>The best gift ever</b></a>\
+          <ul>\
+          <li>\
+              <b>Funding organization: </b>CS4SG\
+          </li>\
+          <li>\
+            <b>Grant amount: </b>$100000\
+          </li>\
+          <li>\
+            <b>Grant date (range): </b> April 23, 2020 - June 23, 2020\
+          </li>\
+          </ul>\
+          </li>\
+          <hr />'
+        )
+      }
+      </script>
+      
+    </ol>
+    </div>
+  </div>
+</div>
+
+<script>
+const [tabs, tabsPanels] = [
+	Array.from(document.querySelectorAll(".tabs li")),
+	Array.from(document.querySelectorAll(".tabs-panel"))
+];
+
+tabs.forEach((tab) => {
+	tab.addEventListener("click", () => {
+		const target = document.querySelector(`#${tab.dataset.target}`);
+		removeActiveClass([tabs, tabsPanels]);
+		tab.classList.add("active");
+		target.classList.add("active");
+	});
+});
+
+const removeActiveClass = (el) => {
+	el.forEach((item) => {
+		item.find((e) => e.classList.contains("active")).classList.remove("active");
+	});
+};
+
+</script>
+
+:ET

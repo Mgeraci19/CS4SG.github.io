@@ -1,0 +1,252 @@
+I"<script>
+    function findHostname(url){
+        var hostname = (new URL(url)).hostname;
+        document.write(hostname)
+    }
+</script>
+
+<div id="speak_content">
+<h3 id="ub-receives-800000-nsfamazon-grant-to-improve-ai-fairness-in-foster-care">UB receives $800,000 NSF/Amazon grant to improve AI fairness in foster care</h3>
+<p>Some text</p>
+
+<hr />
+
+
+
+
+<h6><b>Related People</b></h6>
+<ul class="noBullets">
+
+    
+        
+            
+            <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" target="_blank">Atri Rudra</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html" target="_blank">Kenneth Joseph</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+</ul>
+<hr />
+
+<!---------------------------->
+
+<h6><b>Education and Courses</b></h6>
+<ul class="menu">
+
+    
+        <li>
+            <a href="/education/Education%201.html">Education 1</a>
+        </li>
+    
+
+    
+
+    
+        <li>
+            <a href="/education/Education%203.html">Education 3</a>
+        </li>
+    
+
+</ul>
+<ul class="menu">
+
+    
+        <li>
+            <a href="\courses.html#AAA101">AAA101 - Course 1</a>
+        </li>
+    
+
+    
+  
+</ul>
+<hr />
+  
+<!---------------------------->
+<h6><b>Related Publications</b></h6>
+
+<ul class="menu">
+
+    
+        <li>
+            <a href="/publications/Publication%201.html">Publication 1</a>
+        </li>
+    
+
+    
+        <li>
+            <a href="/publications/Paper3.html">Paper3</a>
+        </li>
+    
+
+</ul>
+<hr />
+
+<!---------------------------->
+<h6><b>Code Resources</b></h6>
+<ul class="menu">
+
+    
+        <li>
+            <a href="\code.html#Code 1">Code 1</a>
+        </li>
+    
+
+    
+
+</ul>
+<hr />
+<!---------------------------->
+
+<h6><b>Related Funding</b></h6>
+<ul class="menu">
+
+    
+        <li>
+            <a href="/funding/The%20best%20gift%20ever.html">CS4SG</a>: US$ 100000
+        </li>
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6><b>Related Talks</b></h6>
+<ul class="menu">
+
+    
+        <li>
+            <a href="/talks/Latest%20changes%20in%20ML.html">Latest changes in ML</a>
+        </li>
+    
+
+    
+        <li>
+            <a href="/talks/Impacts%20of%20AI.html">Impacts of AI</a>
+        </li>
+    
+
+    
+        <li>
+            <a href="/talks/4wefsdzcx.html">4wefsdzcx</a>
+        </li>
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6><b>Related Resources</b></h6>
+<ul class="noBullets">
+
+    
+    
+          
+          <li><a href="http://www-student.cse.buffalo.edu/~atri/algo-and-society/support/refs/index.html" target="_blank"><script>findHostname("http://www-student.cse.buffalo.edu/~atri/algo-and-society/support/refs/index.html")</script></a></li>
+          
+          <li><a href="https://www.w3schools.com/howto/howto_js_copy_clipboard.asp" target="_blank"><script>findHostname("https://www.w3schools.com/howto/howto_js_copy_clipboard.asp")</script></a></li>
+        
+    
+
+    
+    
+          
+          <li><a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" target="_blank"><script>findHostname("https://www.youtube.com/watch?v=vLnPwxZdW4Y")</script></a></li>
+        
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6><b>Related Events</b></h6>
+<ul class="menu">
+
+</ul>
+<ul class="menu">
+
+    
+        <li>
+            <a href="/talks/Latest%20changes%20in%20ML.html">Latest changes in ML</a>
+        </li>
+    
+
+    
+        <li>
+            <a href="/talks/Impacts%20of%20AI.html">Impacts of AI</a>
+        </li>
+    
+
+    
+
+</ul>
+<hr />
+<!---------------------------->
+
+
+<h6><b>Related Blog Posts</b></h6>
+<ul class="menu">
+
+</ul>
+<hr />
+<!---------------------------->
+</div>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div>
+<p><br /></p>
+:ET

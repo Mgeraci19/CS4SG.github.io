@@ -1,0 +1,73 @@
+I"Y	<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<p><select onchange="location = this.value;">
+    <option selected="" value="">-- Select a method to search --</option>
+    <option value="javascript:javascript:decide(0)">Search by Publication Title</option>
+    <option value="javascript:decide(1)">Search by Author name</option>
+    <option value="javascript:decide(2)">Search by Date</option>
+</select></p>
+<div id="embed"></div>
+<hr />
+
+<ol id="myUL">
+
+    <li>
+        <h4><b><a href="/publications/Publication%201.html">Publication 1</a></b></h4>
+    <b>Author(s): </b><a>Person 1</a><br />
+    <b>Abstract: </b><div id="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.</div>
+    <b>Date: </b><a>May 28, 2020</a>
+    </li>
+    <hr />
+
+    <li>
+        <h4><b><a href="/publications/Paper3.html">Paper3</a></b></h4>
+    <b>Author(s): </b><a>Author1,Author 2</a><br />
+    <b>Abstract: </b><div id="desc">This is a sample abstract</div>
+    <b>Date: </b><a>June 08, 2020</a>
+    </li>
+    <hr />
+
+</ol>
+<script>
+
+</script>
+
+<script>
+var myDiv = $('#desc');
+myDiv.text(myDiv.text().substring(0,250)+'...')
+</script>
+
+<script>
+    function myFunction(num) {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[num];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+        function decide(n){
+            var l = ["Publication Title", "Author name", "Date"]
+            document.getElementById("embed").innerHTML = '<input type="text" id="myInput" onkeyup="myFunction('+n+')" placeholder="Enter '+l[n]+'" title="Type in a name">'
+        }
+</script>
+
+:ET

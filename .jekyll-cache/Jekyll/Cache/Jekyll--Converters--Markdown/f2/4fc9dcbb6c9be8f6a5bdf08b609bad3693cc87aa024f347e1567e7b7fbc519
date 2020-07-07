@@ -1,0 +1,220 @@
+I"!<style>
+#talks_content{
+	padding: 9px;
+	font: 17px Calibri;
+	width: 80%;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	align:center;
+	word-wrap: break-word;
+	margin: 20px 0;
+}
+    
+#menu{
+    list-style: none;
+}
+#menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+#menu li:first-child{
+    border-left: none;
+}
+</style>
+
+<center>
+
+
+	
+<div id="talks_content">
+<center><h3><a href="/talks/Latest%20changes%20in%20ML.html">Latest changes in ML</a></h3></center>
+<table>
+<tr>
+<td style="width:50%;">
+
+    
+        <img src="/assets/img/team/team-3.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</td>
+<td>
+<div style="text-align:left; display:inline;">	
+<ul class="noBullets">
+<li>
+<i class="icofont-ui-calendar"></i> June 17, 2020</li>
+<li><b>Speaker: </b>Atri Rudra</li>
+<li><b>Related Projects:</b>
+
+<ul id="menu">
+
+  
+          
+  
+          
+            <li><a href="/research_projects/bias-in-nlp.html">Bias in NLP</a></li>
+        
+  
+          
+  
+
+  
+          
+  
+          
+  
+          
+            <li><a href="/research_projects/fai.html">FAI</a></li>
+        
+  
+
+</ul>
+</li>
+</ul>
+</div></td></tr></table>
+</div>
+
+
+
+	
+<div id="talks_content">
+<center><h3><a href="/talks/Impacts%20of%20AI.html">Impacts of AI</a></h3></center>
+<table>
+<tr>
+<td style="width:50%;">
+
+    
+
+    
+
+    
+
+    
+
+    
+        <img src="/assets/img/team/team-1.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</td>
+<td>
+<div style="text-align:left; display:inline;">	
+<ul class="noBullets">
+<li>
+<i class="icofont-ui-calendar"></i> June 25, 2020</li>
+<li><b>Speaker: </b>Kenneth Joseph</li>
+<li><b>Related Projects:</b>
+
+<ul id="menu">
+
+  
+          
+  
+          
+            <li><a href="/research_projects/bias-in-nlp.html">Bias in NLP</a></li>
+        
+  
+          
+  
+
+  
+          
+  
+          
+  
+          
+            <li><a href="/research_projects/fai.html">FAI</a></li>
+        
+  
+
+</ul>
+</li>
+</ul>
+</div></td></tr></table>
+</div>
+
+
+
+	
+<div id="talks_content">
+<center><h3><a href="/talks/4wefsdzcx.html">4wefsdzcx</a></h3></center>
+<table>
+<tr>
+<td style="width:50%;">
+
+    
+
+    
+
+    
+
+    
+
+    
+        <img src="/assets/img/team/team-1.jpg" style="border-radius: 50%; width:100px; margin-right:60px;" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</td>
+<td>
+<div style="text-align:left; display:inline;">	
+<ul class="noBullets">
+<li>
+<i class="icofont-ui-calendar"></i> June 27, 2020</li>
+<li><b>Speaker: </b>Kenneth Joseph</li>
+<li><b>Related Projects:</b>
+
+<ul id="menu">
+
+  
+          
+  
+          
+            <li><a href="/research_projects/bias-in-nlp.html">Bias in NLP</a></li>
+        
+  
+          
+  
+
+</ul>
+</li>
+</ul>
+</div></td></tr></table>
+</div>
+
+
+</center>
+:ET

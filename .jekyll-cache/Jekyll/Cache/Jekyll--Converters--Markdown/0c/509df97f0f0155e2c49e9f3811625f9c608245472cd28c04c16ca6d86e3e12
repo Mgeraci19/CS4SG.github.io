@@ -1,0 +1,246 @@
+I"@/<header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Foster</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="\"><img src="/assets/img/logo2.png" alt="" class="img-fluid" /></a>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="\index.html">Home</a></li>
+          <li><a href="\education.html">Education</a></li>
+          <li><a href="\research.html">Research</a></li>
+          <li><a href="\#testimonials">Events</a></li>
+          <li><a href="\people.html">People</a></li>
+          <li><a href="\resources.html">Resources</a></li>
+          <li><a href="\#contact">Join us</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header>
+<!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Welcome to CS4SG@UB</h1>
+      <h2>Computing for Social Good</h2>
+      <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+  </section>
+<!-- End Hero -->
+
+<!-- ======= Research Section ======= -->
+<style>
+.scrollTemplate {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  background-color: #67b0d1;
+  color:white;
+  font-weight: bold;
+  z-index: 1;
+  margin: 5px;
+  display:inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Research</h2>
+        </div>
+        <center>
+        <div style="padding-bottom: 6px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</div> 
+        <br />
+        <div class="owl-carousel testimonials-carousel">
+            
+                <div class="scrollTemplate" onclick="window.open('/research_projects/Machine%20Learning.html', '_self');" style="cursor: pointer;">Machine Learning</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/research_projects/bias-in-nlp.html', '_self');" style="cursor: pointer;">Bias in NLP</div>
+            
+                <div class="scrollTemplate" onclick="window.open('/research_projects/fai.html', '_self');" style="cursor: pointer;">FAI</div>
+            
+        </div><br />
+        <a href="\research.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All Research Projects <i class="icofont-circled-right"></i></a>
+        </center>
+    </div>
+</section>
+
+<!-- ======= Education Section ======= -->
+<section id="educate" class="educate">
+    <div class="container">
+        <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+            <h3>Education</h3>
+            <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Addressing retention, diversity, and persistence in computing through educational approaches are targeted. Overall, the objective is developing a skilled and diverse workforce in computing for Social Good for the future.
+            </p><p><a href="https://engineering.buffalo.edu/computer-science-engineering/research/research-areas/computing-education.html" style="text-decoration:none;" target="_blank">~ Department of Computer Science and Engineering, UB</a></p><br />
+            <a href="\education.html" class="educate-btn">Learn more <i class="bx bx-chevron-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/education/Education%201.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Education 1</h4>
+                <p class="description"><p>short description</p>
+</p>
+                </div>
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/education/Education%202.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Education 2</h4>
+                <p class="description"><p>desc desc desc</p>
+</p>
+                </div>
+                
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('/education/Education%203.html', '_self');" style="cursor: pointer;">
+                <i class="icofont-book"></i>
+                <h4>Education 3</h4>
+                <p class="description"><p>desc desc desc</p>
+</p>
+                </div>
+                
+            </div>
+            </div><!-- End .content-->
+        </div>
+        </div>
+
+    </div>
+    </section>
+<!-- End Education Section -->
+
+<!-- ======= Events Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Events</h2>
+        Display the latest event information with the link to all events...
+      </div>
+    </div>
+</section>
+
+<!-- ======= People Section ======= -->
+
+<style>
+    .polaroid {
+      width: 210px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      display:inline-block;
+      margin: 10px;
+    }
+    
+    .container {
+      padding: 4px;
+    }
+</style>
+
+<section id="testimonials" class="testimonials section-bg" style="background-color:white;">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>People</h2>
+        </div>
+        <center>
+    <div class="owl-carousel testimonials-carousel">
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html', '_blank');">
+        <img src="/assets/img/team/team-3.jpg" alt="Atri Rudra" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Atri Rudra</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html', '_blank');">
+        <img src="/assets/img/team/team-9.jpg" alt="David Doermann" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>David Doermann</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/chen-huei-yen-winnie.html', '_blank');">
+        &lt;img src="/assets/img/team/team-2.jpg" alt="Huei-Yen "Winnie" Chen" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;"&gt;
+        <div class="container">
+            <b>Huei-Yen "Winnie" Chen</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html', '_blank');">
+        <img src="/assets/img/team/team-8.jpg" alt="Jonathan Manes" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Jonathan Manes</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html', '_blank');">
+        <img src="/assets/img/team/team-1.jpg" alt="Kenneth Joseph" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Kenneth Joseph</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://ap.buffalo.edu/People/faculty/department-of-architecture-faculty.host.html/content/shared/ap/students-faculty-alumni/faculty/Shepard.detail.html', '_blank');">
+        <img src="/assets/img/team/team6.jpg" alt="Mark Shepard" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Mark Shepard</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/bolton-matthew.html', '_blank');">
+        <img src="/assets/img/team/team-7.jpg" alt="Matthew Bolton" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Matthew Bolton</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('http://socialwork.buffalo.edu/faculty-research/full-time-faculty/melanie-sage.html', '_blank');">
+        <img src="/assets/img/team/team-5.png" alt="Melanie Sage" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Melanie Sage</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('', '_blank');">
+        <img src="/assets/img/team/Team-10.jpg" alt="Prakshal Jain" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Prakshal Jain</b>
+            <p>internal student</p>
+        </div>
+    </div>
+    
+    <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;" onclick="window.open('https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/varun-chandola.html', '_blank');">
+        <img src="/assets/img/team/team-4.png" alt="Varun Chandola" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+        <div class="container">
+            <b>Varun Chandola</b>
+            <p>internal faculty</p>
+        </div>
+    </div>
+    
+    </div><br />
+    <a href="\people.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All People <i class="icofont-circled-right"></i></a>
+        </center>
+    </div>
+</section>
+:ET

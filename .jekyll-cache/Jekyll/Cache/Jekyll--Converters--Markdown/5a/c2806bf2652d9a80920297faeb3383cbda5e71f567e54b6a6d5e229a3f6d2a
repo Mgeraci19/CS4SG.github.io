@@ -1,0 +1,139 @@
+I"<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="assets/js/cropper.js"></script>
+
+<script>
+    recrop("speaker_picture", 30, 30);
+</script>
+
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<div id="speak_content">
+<center>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <img src="/assets/img/team/team-1.jpg" class="speaker_picture" style="border-radius: 50%; width:140px;" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <br />
+<b>Speaker: </b>Kenneth Joseph<br />
+
+    
+
+    
+
+    
+
+    
+
+    
+	Assistant Professor, Computer Science and Engineering<br />(internal faculty)
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</center><br /><br />
+
+<p>rsDcdscdScSDCX</p>
+<p>dsv</p>
+<p><strong>xcv</strong></p>
+<p>dscxvxvcxc</p>
+
+<hr />
+
+<b>Date:</b> June 25, 2020
+<hr />
+
+<h6><b>Location: </b></h6>UB, Buffalo, New York, US
+<hr />
+
+
+
+<h6><b>Resource Links</b></h6>
+<ul class="noBullets">
+
+    <li class="noBullets"><a href="https://www.youtube.com/watch?v=BfDQNrVphLQ" target="_blank"><script>findHostname("https://www.youtube.com/watch?v=BfDQNrVphLQ")</script></a></li>
+
+    <li class="noBullets"><a href="https://i.ytimg.com/an_webp/-aNW08ahM68/mqdefault_6s.webp?du=3000&amp;sqp=CNqoz_cF&amp;rs=AOn4CLCeDM0iuuOALEM-XJiRDmcKGD6vUA" target="_blank"><script>findHostname("https://i.ytimg.com/an_webp/-aNW08ahM68/mqdefault_6s.webp?du=3000&sqp=CNqoz_cF&rs=AOn4CLCeDM0iuuOALEM-XJiRDmcKGD6vUA")</script></a></li>
+
+</ul>
+<hr />
+
+
+<h6><b>Related Research Projects</b></h6>
+
+<ul class="menu">
+
+    
+        
+    
+        
+            <li>
+		      <a href="/research_projects/bias-in-nlp.html">Bias in NLP</a>
+	       </li>
+        
+    
+        
+    
+
+    
+        
+    
+        
+    
+        
+            <li>
+		      <a href="/research_projects/fai.html">FAI</a>
+	       </li>
+        
+    
+
+</ul>
+<hr />
+
+
+</div>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div>
+<p><br /></p>
+:ET

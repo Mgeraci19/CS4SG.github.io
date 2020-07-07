@@ -1,0 +1,369 @@
+I"ž<style>
+	#codes_content{
+      padding: 9px;
+      font: 17px Calibri;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align:center;
+      word-wrap: break-word;
+      margin: 20px 0;
+    }
+    
+.menu{
+    list-style: none;
+}
+.menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+.menu li:first-child{
+    border-left: none;
+}
+</style>
+
+<style>
+.collapsible {
+  background-color: transparent;
+  color: #999999;
+  cursor: pointer;
+  padding: 3px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  color: #000000;
+  outline: none;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+</style>
+
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<center>
+
+<div id="Code 1">
+  <div id="codes_content">
+    <h3>Code 1</h3>
+    <div style="text-align:left;">
+    
+    <h6><b>Code Links</b></h6>
+    <ul>
+	    
+	    <li><a href="https://www.w3schools.com/" target="_blank"><script>findHostname("https://www.w3schools.com/")</script></a></li>
+    	    
+	    <li><a href="https://www.mozilla.org/en-US/exp/" target="_blank"><script>findHostname("https://www.mozilla.org/en-US/exp/")</script></a></li>
+    	  
+    </ul>
+    <button type="button" class="collapsible">Learn more <i class="bx bxs-chevron-down"></i></button>
+    <div class="content">
+      <ul>
+<!-- -----------------Related Projects----------------- -->
+        <li>
+          <b>Related Projects:</b>
+          
+          <ul class="menu">
+            
+              
+                      
+              
+                      
+              
+                      
+                        <li><a href="/research_projects/fai.html">FAI</a></li>
+                    
+              
+            
+              
+                      
+              
+                      
+                        <li><a href="/research_projects/bias-in-nlp.html">Bias in NLP</a></li>
+                    
+              
+                      
+              
+            
+          </ul>
+        </li>
+<!-- ----------------------------------------------- -->	      
+
+	      
+<!-- -----------------Related Authors----------------- -->
+        <li>
+        
+          <b>Authors:</b>
+            <ul class="menu">
+              
+                <li>Kenneth Joseph</li>
+              
+            </ul>
+        </li>
+<!-- ----------------------------------------------- -->
+	      
+
+<!-- -----------------Related Publications----------------- -->
+    <li>
+	<b>Related Publications:</b>
+	
+	  <ul class="menu">
+	    
+	       
+		  
+	       
+		  
+		     <li><a href="/publications/Paper3.html">Paper3</a></li>
+		  
+	       
+	    
+	       
+		  
+	       
+		  
+	       
+	    
+	  </ul>
+	</li>
+<!-- ----------------------------------------------- -->
+	      
+<!-- -----------------Related People----------------- -->
+        <li>
+        
+          <b>Related People:</b>
+            <ul class="menu">
+              
+                <li>Atri Rudra</li>
+              
+            </ul>
+        </li>
+<!-- ----------------------------------------------- -->
+	      
+	      
+	      
+<!-- -----------------Related Education & Courses----------------- -->
+    <li>
+	<b>Related Education and Courses:</b>
+	
+    
+	  <ul class="menu">
+	    
+	       
+		  
+		     <li><a href="/education/Education%201.html">Education 1</a></li>
+		  
+	       
+		  
+	       
+		  
+	       
+	    
+	       
+		  
+	       
+		  
+	       
+		  
+	       
+	    
+        
+	       
+		  
+		     <li><a href="\courses.html#AAA101">AAA101 - Course 1</a></li>
+		  
+	       
+		  
+	       
+	    
+	       
+		  
+	       
+		  
+		     <li><a href="\courses.html#CSE331">CSE331 - Algorithms and Complexity</a></li>
+		  
+	       
+	    
+	  </ul>
+	</li>          
+<!-- ----------------------------------------------- -->
+	      
+      </ul>
+  <p>This is the second code. Just a sample.</p>
+
+   </div>
+  </div>
+  </div>
+</div>
+
+<div id="Second Code">
+  <div id="codes_content">
+    <h3>Second Code</h3>
+    <div style="text-align:left;">
+    
+    <h6><b>Code Links</b></h6>
+    <ul>
+	    
+	    <li><a href="https://www.w3schools.com/" target="_blank"><script>findHostname("https://www.w3schools.com/")</script></a></li>
+    	    
+	    <li><a href="https://www.mozilla.org/en-US/exp/" target="_blank"><script>findHostname("https://www.mozilla.org/en-US/exp/")</script></a></li>
+    	  
+    </ul>
+    <button type="button" class="collapsible">Learn more <i class="bx bxs-chevron-down"></i></button>
+    <div class="content">
+      <ul>
+<!-- -----------------Related Projects----------------- -->
+        <li>
+          <b>Related Projects:</b>
+          
+          <ul class="menu">
+            
+              
+                      
+              
+                      
+              
+                      
+                        <li><a href="/research_projects/fai.html">FAI</a></li>
+                    
+              
+            
+          </ul>
+        </li>
+<!-- ----------------------------------------------- -->	      
+
+	      
+<!-- -----------------Related Authors----------------- -->
+        <li>
+        
+          <b>Authors:</b>
+            <ul class="menu">
+              
+                <li>Kenneth Joseph</li>
+              
+                <li>John Smith</li>
+              
+            </ul>
+        </li>
+<!-- ----------------------------------------------- -->
+	      
+
+<!-- -----------------Related Publications----------------- -->
+    <li>
+	<b>Related Publications:</b>
+	
+	  <ul class="menu">
+	    
+	       
+		  
+	       
+		  
+		     <li><a href="/publications/Paper3.html">Paper3</a></li>
+		  
+	       
+	    
+	       
+		  
+	       
+		  
+	       
+	    
+	  </ul>
+	</li>
+<!-- ----------------------------------------------- -->
+	      
+<!-- -----------------Related People----------------- -->
+        <li>
+        
+          <b>Related People:</b>
+            <ul class="menu">
+              
+                <li>Atri Rudra</li>
+              
+                <li>Kenneth Joseph</li>
+              
+            </ul>
+        </li>
+<!-- ----------------------------------------------- -->
+	      
+	      
+	      
+<!-- -----------------Related Education & Courses----------------- -->
+    <li>
+	<b>Related Education and Courses:</b>
+	
+    
+	  <ul class="menu">
+	    
+	       
+		  
+		     <li><a href="/education/Education%201.html">Education 1</a></li>
+		  
+	       
+		  
+	       
+		  
+	       
+	    
+	       
+		  
+	       
+		  
+	       
+		  
+	       
+	    
+        
+	       
+		  
+		     <li><a href="\courses.html#AAA101">AAA101 - Course 1</a></li>
+		  
+	       
+		  
+	       
+	    
+	  </ul>
+	</li>          
+<!-- ----------------------------------------------- -->
+	      
+      </ul>
+  <p>This is the second code. Just a sample.</p>
+
+   </div>
+  </div>
+  </div>
+</div>
+
+</center>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+:ET

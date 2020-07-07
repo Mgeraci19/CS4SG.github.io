@@ -1,0 +1,46 @@
+I"”<html lang="en">
+
+<body>
+
+<!-- ----------------Projects---------------- -->
+<center><h3><b>Projects</b></h3>
+<p style="padding-bottom: 8px;">Education Projects description</p> 
+</center>
+
+<div class="row">
+    <div class="d-flex flex-wrap">
+        
+            <div class="gridObj" data-aos="fade-up">
+                <h4 class="title"><a href="/education/Education%201.html">Education 1</a></h4>
+                <p class="description"><p>short description</p>
+</p>
+            </div>
+        
+            <div class="gridObj" data-aos="fade-up">
+                <h4 class="title"><a href="/education/Education%202.html">Education 2</a></h4>
+                <p class="description"><p>desc desc desc</p>
+</p>
+            </div>
+        
+            <div class="gridObj" data-aos="fade-up">
+                <h4 class="title"><a href="/education/Education%203.html">Education 3</a></h4>
+                <p class="description"><p>desc desc desc</p>
+</p>
+            </div>
+        
+    </div>
+</div>
+<br />
+<hr />
+
+
+<!-- ----------------Courses Page---------------- -->
+<center><h3><b>Courses</b></h3>
+<p style="padding-bottom: 8px;">Courses description</p>
+<a href="\courses.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">See Courses <i class="bx bx-chevron-right"></i></a></center><br />
+<hr />
+
+</body>
+
+</html>
+:ET

@@ -1,0 +1,360 @@
+I"¡-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="assets/js/cropper.js"></script>
+
+<script>
+    recrop("team_picture", 600, 600);
+</script>
+
+<section id="team" class="team">
+  <div class="container">
+
+    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+      <style>
+        #subhead {
+          width: 100%; 
+          text-align: center; 
+          border-bottom: 1px solid #000; 
+          line-height: 0.1em;
+          margin: 10px 0 20px; 
+        } 
+
+        #subhead span { 
+            background:#fff; 
+            padding:0 10px; 
+        }
+      </style>
+      <h3 id="subhead"><span><strong>Internal Faculty</strong></span></h3>
+    </div>
+
+<div class="row">
+
+<!-- -------------Internal Faculty Section--------------- -->
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-3.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" style="text-decoration:none; color:black;" target="_blank">Atri Rudra</a></h4>
+      <span>Associate Professor, Computer Science and Engineering</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/atri-rudra-b14289120/" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://cse.buffalo.edu/faculty/atri/" target="_blank"><i class="icofont-web"></i></a><a href="mailto:atri@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-9.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html" style="text-decoration:none; color:black;" target="_blank">David Doermann</a></h4>
+      <span>Professor, Computer Science and Engineering</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/david-doermann-bb7757/" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://cse.buffalo.edu/~doermann/" target="_blank"><i class="icofont-web"></i></a><a href="mailto:doermann@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-2.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/chen-huei-yen-winnie.html" style="text-decoration:none; color:black;" target="_blank">Huei-Yen "Winnie" Chen</a></h4>
+      <span>Assistant Professor, Industrial and Systems Engineering</span><br />
+      <div class="social">
+        <a href="http://acel.eng.buffalo.edu/" target="_blank"><i class="icofont-web"></i></a><a href="mailto:winchen@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-8.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html" style="text-decoration:none; color:black;" target="_blank">Jonathan Manes</a></h4>
+      <span>Assistant Clinical Professor, School of Law</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/jonathan-manes-48526220/" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2111536" target="_blank"><i class="icofont-web"></i></a><a href="mailto:jmmanes@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-1.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html" style="text-decoration:none; color:black;" target="_blank">Kenneth Joseph</a></h4>
+      <span>Assistant Professor, Computer Science and Engineering</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/kenneth-joseph-96ab78b6/" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://twitter.com/_kenny_joseph?lang=en" target="_blank"><i class="icofont-twitter"></i></a><a href="https://kennyjoseph.github.io/" target="_blank"><i class="icofont-web"></i></a><a href="mailto:kjoseph@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team6.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="http://ap.buffalo.edu/People/faculty/department-of-architecture-faculty.host.html/content/shared/ap/students-faculty-alumni/faculty/Shepard.detail.html" style="text-decoration:none; color:black;" target="_blank">Mark Shepard</a></h4>
+      <span>Associate Professor, Architecture and Media Study</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/mark-shepard/" target="_blank"><i class="icofont-linkedin"></i></a><a href="http://www.andinc.org/v4/" target="_blank"><i class="icofont-web"></i></a><a href="mailto:shepard6@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-7.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/bolton-matthew.html" style="text-decoration:none; color:black;" target="_blank">Matthew Bolton</a></h4>
+      <span>Assistant Professor, Industrial and Systems Engineering</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/matthew-bolton-a3840018/" target="_blank"><i class="icofont-linkedin"></i></a><a href="http://fhsl.eng.buffalo.edu/index.html" target="_blank"><i class="icofont-web"></i></a><a href="mailto:mbolton@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-5.png" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="http://socialwork.buffalo.edu/faculty-research/full-time-faculty/melanie-sage.html" style="text-decoration:none; color:black;" target="_blank">Melanie Sage</a></h4>
+      <span>Assistant Professor, School of Social Work</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/melaniesage/" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://twitter.com/melaniesage?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="icofont-twitter"></i></a><a href="mailto:msage@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/team-4.png" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/varun-chandola.html" style="text-decoration:none; color:black;" target="_blank">Varun Chandola</a></h4>
+      <span>Associate Professor, Computer Science and Engineering</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/varun-chandola-9886104" target="_blank"><i class="icofont-linkedin"></i></a><a href="https://twitter.com/ChandolaVarun" target="_blank"><i class="icofont-twitter"></i></a><a href="https://cse.buffalo.edu/~chandola" target="_blank"><i class="icofont-web"></i></a><a href="mailto:chandola@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+<br /><br />
+
+
+    
+<h3 id="subhead"><span><strong>External Faculty</strong></span></h3>
+<!-- -------------External Faculty Section--------------- -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<br /><br />
+    
+
+
+    
+<h3 id="subhead"><span><strong>Internal Students</strong></span></h3>
+<!-- -------------Students Section--------------- -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  <div class="col-lg-4 col-md-6">
+  <div class="member" data-aos="fade-up">
+    <div class="pic"><img src="/assets/img/team/Team-10.jpg" class="img-fluid team_picture" alt="" /></div>
+    <div class="member-info">
+      <h4><a href="" style="text-decoration:none; color:black;" target="_blank">Prakshal Jain</a></h4>
+      <span>Student, Computer Science</span><br />
+      <div class="social">
+        <a href="https://www.linkedin.com/in/prakshal-jain-profile/" target="_blank"><i class="icofont-linkedin"></i></a><a href="mailto:prakshal@buffalo.edu" target="_blank"><i class="icofont-email"></i></a><br />active
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- create string with all titles -->
+
+
+<!-- -------------------------------->
+
+
+    
+
+<br /><br />
+    
+    
+
+
+    
+<h3 id="subhead"><span><strong>External Students</strong></span></h3>
+<!-- -------------Students Section--------------- -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<br /><br />
+
+    
+
+    
+<h3 id="subhead"><span><strong>Collaborators</strong></span></h3>
+<!-- -------------Collaborator Section--------------- -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<br /><br />
+    
+    
+</div>
+
+  </div>
+</section>
+<h3 style="display:none;">Atri Rudra,David Doermann,Huei-Yen "Winnie" Chen,Jonathan Manes,Kenneth Joseph,Mark Shepard,Matthew Bolton,Melanie Sage,Varun Chandola,,Prakshal Jain,,,</h3>
+
+<script>
+    var title_string = "Atri Rudra,David Doermann,Huei-Yen "Winnie" Chen,Jonathan Manes,Kenneth Joseph,Mark Shepard,Matthew Bolton,Melanie Sage,Varun Chandola,,Prakshal Jain,,,";
+    localStorage.setItem("people_string", title_string);
+</script>
+
+:ET

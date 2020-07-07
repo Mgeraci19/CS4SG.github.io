@@ -1,0 +1,46 @@
+I"ê<html lang="en">
+
+<body>
+<center><h3><b>News</b></h3></center>
+<div class="container">
+  <div class="row mt-5 mb-5">
+
+
+    
+    <div class="col-xs-12 col-sm-12 col-md-4 d-flex align-items-stretch mb-3">
+          <div class="card">
+      
+        <img class="card-img" src="" alt="news two" />
+      
+            <div class="card-content">
+              <h4><a href="/event/second_code.html">news two</a></h4>
+              <div id="textbox"><p class="description"><p>This is a sample news for testing the website.</p>
+</p></div><br />
+              <a href="http://www.buffalo.edu/news.html" class="bttn" target="_blank">Full News Article</a>
+            </div>
+          </div>
+        </div>
+    
+
+    
+    <div class="col-xs-12 col-sm-12 col-md-4 d-flex align-items-stretch mb-3">
+          <div class="card">
+      
+        <img class="card-img" src="http://www.buffalo.edu/content/www/reporter/campus/jcr:content/par/image.img.894.auto.q65.jpg/1594034299222.jpg" alt="news 1" />
+      
+            <div class="card-content">
+              <h4><a href="/event/news%201.html">news 1</a></h4>
+              <div id="textbox"><p class="description"><p>This is a sample news for testing the website.</p>
+</p></div><br />
+              <a href="http://www.buffalo.edu/news.html" class="bttn" target="_blank">Full News Article</a>
+            </div>
+          </div>
+        </div>
+    
+
+</div>
+</div>
+<hr />
+</body>
+</html>
+:ET

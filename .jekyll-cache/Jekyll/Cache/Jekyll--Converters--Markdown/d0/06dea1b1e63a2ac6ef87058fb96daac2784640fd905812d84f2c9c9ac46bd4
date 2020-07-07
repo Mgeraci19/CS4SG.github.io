@@ -1,0 +1,166 @@
+I"<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<div id="contne">
+<h1 style="display:none;"><div id="publish_title">Publication 1</div></h1>
+<div id="speak_content">
+<h6><b>Author(s)</b></h6>
+
+
+
+<ul class="noBullets">
+
+    
+        <li>Person 1</li>
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6 style="display:inline"><b>Published in: </b></h6><p style="display:inline">Publisher 1, Publisher 2</p>
+<hr />
+
+<!---------------------------->
+
+<b>Date: </b>May 28, 2020
+<hr />
+
+<!---------------------------->
+
+
+
+
+
+<h6><b>Links</b></h6>
+
+<ul class="noBullets">
+
+    <li><a href="https://scholar.google.com/" target="_blank"><script>findHostname("https://scholar.google.com/")</script></a></li>
+
+</ul>
+<hr />
+
+<!---------------------------->
+<h6><b>Abstract</b></h6>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.
+<hr />
+    
+
+<!---------------------------->
+<h6><b>Related People</b></h6>
+
+
+
+<ul class="noBullets">
+
+    
+        <li>Person 2</li>
+    
+
+</ul>
+<hr />
+<!---------------------------->
+
+
+<h6><b>Related Research Projects</b></h6>
+
+<ul class="menu">
+
+    
+        
+        
+    
+        
+        
+    
+        
+            <li>
+                <a href="/research_projects/fai.html">FAI</a>
+            </li>
+        
+        
+    
+
+    
+        
+        
+    
+        
+            <li>
+                <a href="/research_projects/bias-in-nlp.html">Bias in NLP</a>
+            </li>
+        
+        
+    
+        
+        
+    
+
+</ul>
+
+<hr />
+
+<!---------------------------->
+
+<h6><b>Education and Courses</b></h6>
+<ul class="menu">
+
+    
+        
+        <li>
+            <a href="/education/Education%201.html">Education 1</a>
+        </li>
+        
+    
+        
+    
+        
+    
+
+    
+        
+    
+        
+        <li>
+            <a href="/education/Education%202.html">Education 2</a>
+        </li>
+        
+    
+        
+    
+
+</ul>
+<hr />
+
+<h6><b>Code Resources</b></h6>
+<ul class="menu">
+
+    
+
+    
+
+</ul>
+<hr />
+
+</div>
+<!---------------------------->
+
+<script src="/assets/js/pdf_gen.js"></script><script src="/assets/js/pdf_gen2.js"></script>
+<div id="elementH"></div>
+<input type="button" onclick="convert_HTML_To_PDF('Publication 1')" value="Download Paper as PDF" /><script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div><br />
+</div>
+:ET

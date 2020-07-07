@@ -1,0 +1,174 @@
+I"÷
+<div id="AAA101">
+
+    <!-------------------- Course prefix & title --------------------------------------->
+    <h4><b>AAA101 - Course 1</b></h4>
+    
+    <!-------------------- Course catalog link ----------------------------------------->
+    <p><a href="https://scholar.google.com/">UB Course Catalog page</a></p>
+
+    <!-------------------- Past website links ------------------------------------------>
+    
+    
+            <p>See course webpages from past semesters
+                
+                    
+                    <a href="https://www.google.com/" target="_blank"> here</a>
+                    
+                        .
+                    
+                
+            </p>
+        
+    <!-------------------- Instructors ------------------------------------------------->
+    
+    
+    
+    <p>Instructors: </p>
+    <ul class="noBullets">
+    
+    
+        
+            
+        
+            
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html" target="_blank">David Doermann</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    
+    
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><a href="https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html" target="_blank">Jonathan Manes</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    
+    </ul>
+    
+    <!-------------------- Typical semesters ------------------------------------------>
+    <p>Typical semesters offered: Fall, Spring</p>
+    
+    <!-------------------- Course description ----------------------------------------->
+    <p>short description</p>
+
+</div>
+
+<p><br /></p>
+
+<div id="CSE331">
+
+    <!-------------------- Course prefix & title --------------------------------------->
+    <h4><b>CSE331 - Algorithms and Complexity</b></h4>
+    
+    <!-------------------- Course catalog link ----------------------------------------->
+    <p><a href="https://catalog.buffalo.edu/courses/?abbr=CSE&amp;num=331">UB Course Catalog page</a></p>
+
+    <!-------------------- Past website links ------------------------------------------>
+    
+    
+            <p>See course webpages from past semesters
+                
+                    
+                    <a href="http://www-student.cse.buffalo.edu/~atri/cse331/fall19/index.html" target="_blank"> here</a>
+                    
+                        , 
+                    
+                
+                    
+                    <a href="https://cse.buffalo.edu/~erdem/cse331/spring20/policies/syllabus.html" target="_blank"> here</a>
+                    
+                        , 
+                    
+                
+                    
+                        and 
+                    
+                    <a href="https://cs4sg.github.io/index.html" target="_blank"> here</a>
+                    
+                        .
+                    
+                
+            </p>
+        
+    <!-------------------- Instructors ------------------------------------------------->
+    
+    
+    
+    <p>Instructors: </p>
+    <ul class="noBullets">
+    
+    
+        
+            
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" target="_blank">Atri Rudra</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    
+    </ul>
+    
+    <!-------------------- Typical semesters ------------------------------------------>
+    <p>Typical semesters offered: Spring</p>
+    
+    <!-------------------- Course description ----------------------------------------->
+    <p>Introduces paradigms for designing algorithms and fundamental limitations to what algorithms can do. Covers basic algorithm design paradigms of greedy algorithms, divide and conquer algorithms and dynamic programming, as well as a selection of advanced algorithmic topics, such as randomized algorithms, algorithms for distributed systems and basic algorithms for machine learning. Topics related to limitations of algorithms include NP-completeness and undecidability. Coverage includes analyzing algorithms via proofs and programming assignments to implement algorithms.</p>
+
+</div>
+
+<p><br /></p>
+
+:ET

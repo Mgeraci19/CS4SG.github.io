@@ -1,0 +1,234 @@
+I"Á<script>
+    function findHostname(url){
+        var hostname = (new URL(url)).hostname;
+        document.write(hostname)
+    }
+</script>
+
+<div id="speak_content">
+<h1 id="mheabskjfsdfmkasd">mheabskjf,sdfm.ka/sd</h1>
+<p>Impacts of ML on society!</p>
+
+<hr />
+
+
+
+
+<h6><b>Related People</b></h6>
+<ul class="noBullets">
+
+    
+        
+            
+        
+            
+        
+            
+            <li><a href="http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/chen-huei-yen-winnie.html" target="_blank">Huei-Yen "Winnie" Chen</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+    
+        
+            
+            <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" target="_blank">Atri Rudra</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html" target="_blank">Kenneth Joseph</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+    
+        <li>Peter Parker</li>
+    
+
+</ul>
+<hr />
+
+<!---------------------------->
+
+<h6><b>Education and Courses</b></h6>
+<ul class="menu">
+
+    
+        <li>
+            <a href="/education/Education%201.html">Education 1</a>
+        </li>
+    
+
+    
+
+    
+
+</ul>
+<ul class="menu">
+
+    
+        <li>
+            <a href="\courses.html#AAA101">AAA101 - Course 1</a>
+        </li>
+    
+
+    
+        <li>
+            <a href="\courses.html#CSE331">CSE331 - Algorithms and Complexity</a>
+        </li>
+    
+  
+</ul>
+<hr />
+  
+<!---------------------------->
+<h6><b>Related Publications</b></h6>
+
+<ul class="menu">
+
+    
+
+    
+
+</ul>
+<hr />
+
+<!---------------------------->
+<h6><b>Code Resources</b></h6>
+<ul class="menu">
+
+    
+
+    
+
+</ul>
+<hr />
+<!---------------------------->
+
+<h6><b>Related Funding</b></h6>
+<ul class="menu">
+
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6><b>Related Talks</b></h6>
+<ul class="menu">
+
+    
+
+    
+
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6><b>Related Resources</b></h6>
+<ul class="noBullets">
+
+    
+
+    
+
+</ul>
+<hr />
+    
+<!---------------------------->
+
+<h6><b>Related Events</b></h6>
+<ul class="menu">
+
+</ul>
+<ul class="menu">
+
+    
+
+    
+
+    
+
+</ul>
+<hr />
+<!---------------------------->
+
+
+<h6><b>Related Blog Posts</b></h6>
+<ul class="menu">
+
+</ul>
+<hr />
+<!---------------------------->
+</div>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div>
+<p><br /></p>
+:ET

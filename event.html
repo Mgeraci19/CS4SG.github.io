@@ -1,0 +1,34 @@
+---
+layout: default
+title: News and Events
+---
+<html lang="en">
+
+<body>
+<center><h3><b>News</b></h3></center>
+<div class="container">
+  <div class="row mt-5 mb-5">
+{% assign sorted = (site.event | sort: 'date') %}
+{% for news in sorted limit:3 %}
+    {% if news.layout == 'news' %}
+    <div class="col-xs-12 col-sm-12 col-md-4 d-flex align-items-stretch mb-3">
+          <div class="card">
+      {% if news.image != "" %}
+        <img class="card-img" src="{{ news.image }}" alt="{{ news.title }}">
+      {% else %}
+        <img class="card-img" src="/assets/img/default_news.png" alt="{{ news.title }}"> 
+      {% endif %}
+            <div class="card-content">
+              <h4><a href="{{ news.url }}">{{ news.title }}</a></h4>
+              <div id="textbox"><p class="description">{{ news.description | markdownify }}</p></div><br/>
+              <a href="{{ news.article_url }}" class="bttn" target="_blank">Full News Article</a>
+            </div>
+          </div>
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
+</div>
+<hr/>
+</body>
+</html>

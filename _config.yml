@@ -8,6 +8,8 @@ collections:
         output: true
     courses:
         output: false
+    event:
+        output: false
     publications:
         output: true
     funding:

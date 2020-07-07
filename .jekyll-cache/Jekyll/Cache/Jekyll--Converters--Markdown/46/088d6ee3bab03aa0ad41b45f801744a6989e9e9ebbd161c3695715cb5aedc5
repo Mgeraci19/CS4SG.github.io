@@ -1,0 +1,188 @@
+I"<style>
+	#codes_content{
+      padding: 9px;
+      font: 17px Calibri;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      align:center;
+      text-align:center;
+      word-wrap: break-word;
+      margin: 20px 0;
+    }
+    
+#menu{
+    list-style: none;
+}
+#menu li{
+    display: inline;
+    padding: 0 10px;
+    border-left: solid 1px black;
+}
+#menu li:first-child{
+    border-left: none;
+}
+</style>
+
+<style>
+.collapsible {
+  background-color: transparent;
+  color: #999999;
+  cursor: pointer;
+  padding: 3px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  color: #000000;
+  outline: none;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+</style>
+
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<center>
+
+  <input type="text" value="Links: http://www-student.cse.buffalo.edu/~atri/algo-and-society/support/refs/index.html,https://www.w3schools.com/howto/howto_js_copy_clipboard.asp &amp; Description: Click on the button to copy the text from the text field." id="link2" style="position:absolute;left:-1000px;top:-1000px;" />
+    <div id="codes_content">
+      <h3>link2<label class="icofont-ui-copy" onclick="copyFunc('link2')" style="float:right; cursor: pointer;" title="Click to copy contents of this resource and share"></label></h3>
+      <div style="text-align:left;">
+        
+        <h6><b>Resource Links</b></h6>
+        <ul>
+            
+            <li><a href="http://www-student.cse.buffalo.edu/~atri/algo-and-society/support/refs/index.html" target="_blank"><script>findHostname("http://www-student.cse.buffalo.edu/~atri/algo-and-society/support/refs/index.html")</script></a></li>
+            
+            <li><a href="https://www.w3schools.com/howto/howto_js_copy_clipboard.asp" target="_blank"><script>findHostname("https://www.w3schools.com/howto/howto_js_copy_clipboard.asp")</script></a></li>
+          
+      </ul>
+      <button type="button" class="collapsible">Resource Details <i class="bx bxs-chevron-down"></i></button>
+        <div class="content">
+          <h6><b>Related Project(s)</b></h6>
+          
+          <div class="row">
+          
+            
+                    
+            
+                    
+            
+                    
+                    <div class="tagLine">
+			    <a href="/research_projects/fai.html">FAI</a>
+</div>
+                  
+            
+          
+            
+                    
+            
+                    
+                    <div class="tagLine">
+			    <a href="/research_projects/bias-in-nlp.html">Bias in NLP</a>
+    <span style="margin: 0px 8px">|</span>
+
+</div>
+                  
+            
+                    
+            
+          
+          </div>
+          <hr />
+          Click on the button to copy the text from the text field.
+        </div>
+    </div>
+  </div>
+
+  <input type="text" value="Links: https://www.youtube.com/watch?v=vLnPwxZdW4Y &amp; Description: This course will give you a full introduction into all of the core concepts in C++. Follow along with the videos and you'll be a C++ programmer in no time!" id="samplelink" style="position:absolute;left:-1000px;top:-1000px;" />
+    <div id="codes_content">
+      <h3>samplelink<label class="icofont-ui-copy" onclick="copyFunc('samplelink')" style="float:right; cursor: pointer;" title="Click to copy contents of this resource and share"></label></h3>
+      <div style="text-align:left;">
+        
+        <h6><b>Resource Links</b></h6>
+        <ul>
+            
+            <li><a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" target="_blank"><script>findHostname("https://www.youtube.com/watch?v=vLnPwxZdW4Y")</script></a></li>
+          
+      </ul>
+      <button type="button" class="collapsible">Resource Details <i class="bx bxs-chevron-down"></i></button>
+        <div class="content">
+          <h6><b>Related Project(s)</b></h6>
+          
+          <div class="row">
+          
+            
+                    
+            
+                    
+            
+                    
+                    <div class="tagLine">
+			    <a href="/research_projects/fai.html">FAI</a>
+</div>
+                  
+            
+          
+            
+                    
+            
+                    
+                    <div class="tagLine">
+			    <a href="/research_projects/bias-in-nlp.html">Bias in NLP</a>
+    <span style="margin: 0px 8px">|</span>
+
+</div>
+                  
+            
+                    
+            
+          
+          </div>
+          <hr />
+          This course will give you a full introduction into all of the core concepts in C++. Follow along with the videos and you'll be a C++ programmer in no time!
+        </div>
+    </div>
+  </div>
+
+</center>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+	
+function copyFunc(id) {
+  var copyText = document.getElementById(id);
+  copyText.select();
+  document.execCommand("copy");
+}
+</script>
+
+:ET

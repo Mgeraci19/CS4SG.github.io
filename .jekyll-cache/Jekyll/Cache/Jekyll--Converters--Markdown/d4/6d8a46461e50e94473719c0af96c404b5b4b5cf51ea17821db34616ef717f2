@@ -1,0 +1,93 @@
+I"4<html lang="en">
+
+<body>
+
+<!-- ----------------Projects---------------- -->
+<center><h3><b>Projects</b></h3>
+<p style="padding-bottom: 8px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</p> 
+</center>
+ <!-- ======= Research Section ======= -->
+    
+    <div class="row">
+        
+            <!-- create boxes to display on research page -->
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up">
+                <div class="icon"><i class="bx bxs-network-chart"></i></div>
+                    <h4 class="title"><a href="/research_projects/Machine%20Learning.html">Machine Learning</a></h4>
+                    <div id="textbox"><p class="description"><p>Innovating Breakthrough Solutions to Simplify Lives</p>
+</p></div>
+                </div>
+            </div>
+
+            <!-- create string with all titles -->
+            
+            
+            <!-- -------------------------------->
+        
+            <!-- create boxes to display on research page -->
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up">
+                <div class="icon"><i class="bx bxs-network-chart"></i></div>
+                    <h4 class="title"><a href="/research_projects/bias-in-nlp.html">Bias in NLP</a></h4>
+                    <div id="textbox"><p class="description"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</p></div>
+                </div>
+            </div>
+
+            <!-- create string with all titles -->
+            
+            
+            <!-- -------------------------------->
+        
+            <!-- create boxes to display on research page -->
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" data-aos="fade-up">
+                <div class="icon"><i class="bx bxs-home-heart"></i></div>
+                    <h4 class="title"><a href="/research_projects/fai.html">FAI</a></h4>
+                    <div id="textbox"><p class="description"><p>Short<!--<ul><li>Details</li><li>People</li><li>Values and Ethics Statement</li></ul>--></p>
+</p></div>
+                </div>
+            </div>
+
+            <!-- create string with all titles -->
+            
+            
+            <!-- -------------------------------->
+        
+        <h3 style="display:none;">Machine Learning,Bias in NLP,FAI</h3>
+    </div>
+    <script>
+        var title_string = "Machine Learning,Bias in NLP,FAI";
+        localStorage.setItem("title_string", title_string);
+    </script>
+<hr />
+ 
+<!-- ----------------Publications---------------- -->
+<center><h3><b>Publications</b></h3>
+<p style="padding-bottom: 8px;">To publish is to make content available to the general public. We try our best to keep everyone updated with the help of our publications page. Click on the button below for more information.</p>
+<a href="\publications.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">Publications <i class="bx bx-chevron-right"></i></a></center><br />
+<hr />
+ 
+<!-- ----------------Funding---------------- -->
+<center><h3><b>Funding</b></h3>
+<p style="padding-bottom: 8px;">To know more about the funding/grants we've received, please click the button below.</p>
+<a href="\funding.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">Funding <i class="bx bx-chevron-right"></i></a></center><br />
+<hr />
+ 
+<!-- ----------------Talks---------------- -->
+<center><h3><b>Talks</b></h3>
+<p style="padding-bottom: 8px;">Keep yourself updated with the latest discussions. To access all the talks, please click the button below.</p>
+<a href="\talks.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">Talks <i class="bx bx-chevron-right"></i></a></center><br />
+<hr />
+ 
+<!-- ----------------Code---------------- -->
+<center><h3><b>Code</b></h3>
+<p style="padding-bottom: 8px;">Please click the button below to access all code resources utilized by the organization.</p>
+<a href="\code.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">Code <i class="bx bx-chevron-right"></i></a></center><br />
+<hr />
+
+</body>
+
+</html>
+:ET

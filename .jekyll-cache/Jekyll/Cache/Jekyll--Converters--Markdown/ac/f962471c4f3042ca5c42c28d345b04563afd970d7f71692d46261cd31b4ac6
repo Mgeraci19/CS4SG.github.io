@@ -1,0 +1,134 @@
+I"K<script>
+  function findHostname(url){
+    var hostname = (new URL(url)).hostname;
+    document.write(hostname)
+  }
+</script>
+
+<div id="speak_content">
+<b>Funding organization: </b><a href="https://cs4sg.github.io/" target="_blank">CS4SG <i class="icofont-external-link"></i></a>
+<hr />
+
+<b>Grant award notice: </b><a href="https://www.grants.gov/support/grants-gov-notices.html" target="_blank">Click here to see CS4SG grant notice <i class="icofont-external-link"></i></a>
+<hr />
+
+
+<h6><b>Press release / News</b></h6>
+
+
+<ul class="noBullets">
+  
+      <li><a href="https://www.buffalo.edu/news/ub-in-the-news/2010/06/11515.html" target="_blank"><script>findHostname("https://www.buffalo.edu/news/ub-in-the-news/2010/06/11515.html")</script></a></li>
+  
+      <li><a href="https://www.buffalo.edu/content/dam/www/news/imported/pdf/June10/NYTimesSiddiquiMS.pdf" target="_blank"><script>findHostname("https://www.buffalo.edu/content/dam/www/news/imported/pdf/June10/NYTimesSiddiquiMS.pdf")</script></a></li>
+  
+  </ul>
+<hr />
+
+
+<b>Grant amount: </b>$100000
+<hr />
+
+
+<h6><b>Project(s) Title</b></h6>
+<div class="row">
+
+  
+          
+  
+          
+          <div class="tagSpace">
+            <a href="/research_projects/bias-in-nlp.html">Bias in NLP</a>
+          </div>
+        
+  
+          
+  
+
+</div>
+<hr />
+
+<b>Grant date (range): </b> April 23, 2020 - June 23, 2020
+<hr />
+
+
+
+
+<h6><b>Related People</b></h6>
+<ul class="noBullets">
+
+    
+        
+            
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/atri-rudra.html" target="_blank">Atri Rudra</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><a href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html" target="_blank">Kenneth Joseph</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">internal faculty</label></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+
+</ul>
+<hr />
+
+<p>This gift is for CS4SG provided by CS4SG.</p>
+<pre class="ql-syntax" spellcheck="false">and this is a sample code...
+</pre>
+<h2>A Heading as well!!!</h2>
+
+
+</div>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=lVdzB2jO"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div id="speech_options" style="float:right; border: 1px solid #67b0d1; border-radius: 8px; padding: 8px;">
+    <center><b>Narration Options</b></center>
+    <a onclick="responsiveVoice.speak($('#speak_content').text());" style="cursor: pointer;"><i class="icofont-play-alt-1"></i> Play</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.pause();" style="cursor: pointer;"><i class="icofont-pause"></i> Pause</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.resume();" style="cursor: pointer;"><i class="icofont-play-pause"></i> Resume</a>  <font color="#67b0d1">|</font>  
+    <a onclick="responsiveVoice.cancel();" style="cursor: pointer;"><i class="icofont-ui-close"></i> Cancel</a> 
+</div>
+<p><br /></p>
+:ET
