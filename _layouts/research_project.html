@@ -74,11 +74,12 @@ layout: default
 <!---------------------------->
 <h6><b>Code Resources</b></h6>
 <ul class="menu">
-{% for code in site.code %}
-    {% if code.tagged_projects contains page.key %}
-        <li>
-            <a href="\code.html#{{ code.code_title }}">{{ code.code_title }}</a>
-        </li>
+{% for res in site.code %}
+    {% if res.tagged_projects contains page.key %}
+    {% assign res_links_array = res.code_links | split: "," %}
+        {% for lin in res_links_array %}  
+          <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+        {% endfor %}
     {% endif %}
 {% endfor %}
 </ul>
