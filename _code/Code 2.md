@@ -7,7 +7,7 @@ tagged_projects: FAI
 tagged_people: Atri Rudra,Kenneth Joseph
 tagged_publications: Paper3,PaperA
 tagged_education: Education 1, Education 2
-tagged_courses:
+tagged_courses: AAA101
 key: Second Code
 ---
 This is the second code. Just a sample.

@@ -7,7 +7,7 @@ tagged_projects: FAI,Bias in NLP
 tagged_people: Atri Rudra
 tagged_publications: Paper3,PaperA
 tagged_education: Education 1, Education 2
-tagged_courses:
+tagged_courses: AAA101,CSE331
 key: Code 1
 ---
 This is a sample code which need to be implemented into the research project. We can tag projects!
