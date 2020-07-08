@@ -1,4 +1,82 @@
 ---
 layout: default
 ---
-{{ page.title }}
+<html>
+    <body>
+        {% if page.image %}
+            <center><a href="{{ page.image }}" target="_blank"><img src="{{ page.image }}"  style="border-radius: 10%; width:200px;" /></a></center>
+            <hr/>
+        {% endif %}
+
+<b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
+<hr/>
+
+{{ page.description }}
+<hr/>
+
+<b>Location: </b>{{ page.location }}
+<hr/>
+
+{% assign tag_people = page.tagged_people | split: "," %}
+{% assign all_peop = "" | split: ',' %}
+{% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.key %}
+{% endfor %}
+<h6><b>Related People</b></h6>
+<ul class="noBullets">
+{% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.name %}
+            <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
+{% assign tag_array = page.tagged_projects | split: "," %}
+<h6><b>Related Research Projects</b></h6>
+
+<ul class="menu">
+{% for tag in tag_array %}
+    {% for project in site.research_projects %}
+        {% if tag == project.key %}
+            <li>
+                <a href="{{ project.url }}">{{ project.title }}</a>
+            </li>
+        {% endif %}
+        
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr/>
+
+
+
+<b>Related Education and Courses:</b>
+{% assign edu_array = page.tagged_education | split: "," %}
+{% assign courses_array = page.tagged_courses | split: "," %}
+    <ul class="menu">
+    {% for tag in edu_array %}
+        {% for edu in site.education %}
+        {% if tag == edu.key %}
+            <li><a href="{{ edu.url }}">{{ edu.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% for tag in courses_array %}
+        {% for course in site.courses %}
+        {% if tag == course.key %}
+            <li><a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </ul>    
+<hr/>
+
+</body>
+</html>
