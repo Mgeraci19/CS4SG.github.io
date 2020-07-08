@@ -32,6 +32,24 @@ layout: home
   min-width: 125px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 74ch;
+}
+
+#event_content{
+    padding: 9px;
+    font: 17px Calibri;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align:center;
+    word-wrap: break-word;
+    margin: 20px 0;
+    }
 </style>
 <section id="about" class="about">
     <div class="container">
@@ -70,13 +88,21 @@ layout: home
         <div class="col-xl-7 d-flex align-items-stretch">
             <div class="icon-boxes d-flex flex-column justify-content-center">
             <div class="row">
-                {% for education_project in site.education limit: 4 %}
+                {% for education_project in site.education limit: 2 %}
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ education_project.url }}', '_self');" style="cursor: pointer;">
                 <i class="icofont-book"></i>
                 <h4>{{ education_project.title }}</h4>
-                <p class="description">{{ education_project.description | markdownify }}</p>
+                <p class="description">{{ education_project.description }}</p>
                 </div>
                 {% endfor %}
+                {% for course in site.courses limit: 2 %}
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" onclick="window.open('{{ course.url }}', '_self');" style="cursor: pointer;">
+                <i class="icofont-read-book-alt"></i>
+                <h4>{{ course.title }}</h4>
+                <p class="description">{{ course.description }}</p>
+                </div>
+                {% endfor %}
+
             </div>
             </div><!-- End .content-->
         </div>
@@ -95,11 +121,38 @@ layout: home
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Events</h2>
-        Display the latest event information with the link to all events...
+        {% assign sorted = (site.event | sort: 'date') %}
+        <center>
+            <div class="owl-carousel testimonials-carousel">
+            {% for event in sorted %}
+            <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;"  onclick="window.open('{{ event.url }}', '_self');">
+                {% if event.image %}
+                <img src="{{ event.image }}" alt='{{ event.title }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                {% else %}
+                <img src="/assets/img/default_news.png" alt='{{ event.title }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                {% endif %}
+                <div class="container">
+                    <b>{{ event.title }}</b>
+                    <p>{{ event.date | date: '%B %d, %Y' }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+            <div id="event_content">
+            <h3>Latest Event</h3>
+            {% for event in sorted limit:1 %}
+            <h4><b><a href="{{ event.url }}">{{ event.title }}</a></b></h4>
+            <p style="text-align: left;">{{ event.date | date: '%B %d, %Y' }}<hr/>
+                <div id="desc" style="text-align: left; margin-bottom: 5px;">{{ event.description }}</div>
+            </p>
+            {% endfor %}
+            </div>
+            <br/>
+            <a href="\event.html" style="border: 1px solid #67b0d1; border-radius: 8px; padding: 6px;">All Events <i class="icofont-circled-right"></i></a>
+        </center>
       </div>
     </div>
 </section>
-
 
 
 <!-- ======= People Section ======= -->
@@ -140,3 +193,8 @@ layout: home
         </center>
     </div>
 </section>
+
+<script>
+    var myDiv = $('#desc');
+    myDiv.text(myDiv.text().substring(0,200)+'...')
+</script>
