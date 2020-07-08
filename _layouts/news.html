@@ -78,5 +78,18 @@ layout: default
     </ul>    
 <hr/>
 
+<b>Related Publications:</b>
+{% assign publish_array = page.tagged_publications | split: "," %}
+  <ul class="menu">
+    {% for tag in publish_array %}
+       {% for publications in site.publications %}
+      {% if tag == publications.key %}
+         <li><a href="{{ publications.url }}">{{ publications.title }}</a></li>
+      {% endif %}
+       {% endfor %}
+    {% endfor %}
+  </ul>
+<hr/>
+
 </body>
 </html>
