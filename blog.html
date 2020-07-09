@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+---
+<!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
+
+<section class="blog" data-scroll-index="4">
+    <div class="container">
+        <div class="row">
+        
+        {% for post in site.posts %}
+            <div class="col-md-6 col-lg-4">
+              <div class="item">
+                <div class="img">
+                  <img src="{% if post.image %}{{ post.image }}{% else %}assets/img/default_blog_post.png{% endif %}" alt="{{ post.image_description }}">
+                </div>
+                <div class="info">
+                  <div class="date">
+                    <span>{{ post.date | date: '%b %d' }}</span>
+                  </div>
+                  <a href="{{ post.url }}"><h5><b>{{ post.title }}</b></h5></a>
+                  <p>{{ post.excerpt }}</p>
+                  <a href="#0" class="user"><i class='bx bxs-user'></i>{{ post.authors | replace: ",", ", " }}</a>
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+        
+        </div>
+    </div>
+</section>
