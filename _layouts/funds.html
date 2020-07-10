@@ -109,7 +109,7 @@ layout: default
 {% for blog in site.posts %}
     {% if blog.tagged_funding contains page.key %}
         <li>
-            <a href="{{ event.url }}">{{ blog.title }}</a>
+            <a href="{{ blog.url }}">{{ blog.title }}</a>
         </li>
     {% endif %}
 {% endfor %}
