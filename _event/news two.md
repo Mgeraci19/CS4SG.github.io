@@ -12,5 +12,5 @@ tagged_funding: The best gift ever
 image:
 article_url: http://www.buffalo.edu/news.html
 description: This is a sample news for testing the website.
-key: news 1
+key: news two
 ---
