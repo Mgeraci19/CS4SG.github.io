@@ -4,6 +4,13 @@ title: Blog
 ---
 <!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
 
+<style>
+span, a {
+    display: inline-block;
+    color: inherit;
+}
+</style>
+
 <section class="blog" data-scroll-index="4">
     <div class="container">
         <div class="row">
@@ -20,7 +27,28 @@ title: Blog
                   </div>
                   <a href="{{ post.url }}"><h5><b>{{ post.title }}</b></h5></a>
                   <p>{{ post.excerpt }}</p>
-                  <a href="#0" class="user"><i class='bx bxs-user'></i>{{ post.authors | replace: ",", ", " }}</a>
+                  <a class="user"><i class='bx bxs-user'></i></a>
+
+                {% assign tag_people = post.authors | split: "," %}
+                {% assign all_peop = "" | split: ',' %}
+                {% for peop in site.people %}
+                    {% assign all_peop = all_peop | push: peop.key %}
+                {% endfor %}
+                <div class="tagLine" style="margin: 25px -15px -20px 15px">
+                    {% for tag in tag_people %}
+                        {% if all_peop contains tag %}
+                            {% for peop in site.people %}
+                                {% if tag == peop.key %}
+                                    <p><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <p>{{ tag }}</p>
+                        {% endif %}
+                        {% if forloop.last == false %},&nbsp;{% endif %}
+                    {% endfor %}
+                </div>
+                
                 </div>
               </div>
             </div>
