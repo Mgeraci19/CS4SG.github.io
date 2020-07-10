@@ -95,7 +95,7 @@ function findHostname(url){
 	      
 <!-- -----------------Related Authors----------------- -->
         <li>
-	<h6><b>Author(s)</b></h6>
+	<b>Author(s)</b>
 	   {% assign tag_people = codes.code_authors | split: "," %}
 	   {% assign all_peop = "" | split: ',' %}
 	   {% for peop in site.people %}
@@ -138,7 +138,7 @@ function findHostname(url){
 	      
 <!-- -----------------Related People----------------- -->
         <li>
-		<h6><b>Related People</b></h6>
+		<b>Related People</b>
 		{% assign people_tag = codes.tagged_people | split: "," %}
 		{% assign peopLis = "" | split: ',' %}
 		{% for peop in site.people %}
