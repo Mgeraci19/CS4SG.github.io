@@ -8,13 +8,12 @@ title: Research
 <body>
 
 <!-- ----------------Projects---------------- -->
-<center><h3><b>Projects</b></h3>
-<p style="padding-bottom: 8px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</p> 
-</center>
+<center><h3><b>Projects</b></h3></center>
+<p style="padding-bottom: 8px;">Our faculty and students actively work on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</p>
  <!-- ======= Research Section ======= -->
-    {% assign title_string = "" %}
     <div class="row">
-        {% for research_project in site.research_projects %}
+        {% assign sorted = (site.research_projects | sort: 'date') %}
+        {% for research_project in sorted limit:4  %}
             <!-- create boxes to display on research page -->
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up">
@@ -23,20 +22,10 @@ title: Research
                     <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
                 </div>
             </div>
-
-            <!-- create string with all titles -->
-            {% capture title_string %}{{ title_string | append: research_project.title }}{% endcapture %}
-            {% if forloop.last == false %}
-                {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-            {% endif %}
             <!-- -------------------------------->
         {% endfor %}
-        <h3 style="display:none;">{{ title_string }}</h3>
     </div>
-    <script>
-        var title_string = "{{ title_string }}";
-        localStorage.setItem("title_string", title_string);
-    </script>
+    <center><a href="\research_project.html" style="text-decoration:none; border-radius: 10px; background-color:#67b0d1; border:0px; color:#ffffff; font-weight: bold; padding:15px; text-align: center;">All Research Projects <i class="bx bx-chevron-right"></i></a></center><br />
 <hr />
  
 <!-- ----------------Publications---------------- -->
