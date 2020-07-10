@@ -67,7 +67,7 @@ function findHostname(url){
       <div style="text-align:left;">
         {% assign links_array = res.link | split: "," %}
         <h6><b>Resource Links</b></h6>
-        <ul>
+        <ul class="noBullets">
           {% for lin in links_array %}  
             <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
           {% endfor %}
