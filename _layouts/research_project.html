@@ -140,9 +140,7 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
-<hr/>
 
-<h6><b>Related Talks</b></h6>
 <ul class="menu">
 {% for talk in site.talks %}
     {% if talk.tagged_projects contains page.key and talk.category == "External" %}
