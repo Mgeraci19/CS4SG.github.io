@@ -1,0 +1,65 @@
+---
+layout: default
+title: Research Projects
+---
+
+<style>
+    input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by entering Research Title" title="Type in Research Title">
+ <!-- ======= Research Section ======= -->
+ <div id="myUL">
+ {% assign title_string = "" %}
+ <div class="row">
+     {% assign sorted = (site.research_projects | sort: 'date') %}
+     {% for research_project in sorted %}
+     <label>
+         <!-- create boxes to display on research page -->
+         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+             <div class="icon-box" data-aos="fade-up">
+             <div class="icon">{{ research_project.icon }}</div>
+                 <h4 class="title"><a href="{{ research_project.url }}">{{ research_project.title }}</a></h4>
+                 <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
+             </div>
+         </div>
+
+         <!-- create string with all titles -->
+         {% capture title_string %}{{ title_string | append: research_project.title }}{% endcapture %}
+         {% if forloop.last == false %}
+             {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
+         {% endif %}
+         <!-- -------------------------------->
+     </label>
+     {% endfor %}
+     <h3 style="display:none;">{{ title_string }}</h3>
+ </div>
+</div>
+ <script>
+     var title_string = "{{ title_string }}";
+     localStorage.setItem("title_string", title_string);
+ </script>
+
+ <script>
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("label");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+ </script>
