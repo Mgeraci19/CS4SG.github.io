@@ -76,18 +76,15 @@ function findHostname(url){
         <div class="content">
           <h6><b>Related Project(s)</b></h6>
           {% assign tag_proj = res.tagged_projects | split: "," %}
-          <div class="row">
+          <ul class="menu">
           {% for tag in tag_proj %}
             {% for project in site.research_projects %}
                     {% if tag == project.title %}
-                    <div class="tagLine">
-			    <a href="{{ project.url }}">{{ project.title }}</a>
-			    {%- include tag_separator.html -%}
-		    </div>
+			    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
                   {% endif %}
             {% endfor %}
           {% endfor %}
-          </div>
+          </ul>
           <hr/>
           {{ res.description }}
         </div>
