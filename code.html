@@ -67,14 +67,14 @@ function findHostname(url){
     <div style="text-align:left;">
     {% assign codelink_array = codes.code_links | split: "," %}
     <h6><b>Code Links</b></h6>
-    <ul>
+    <ul class="noBullets">
 	  {% for lin in codelink_array %}  
 	    <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
     	  {% endfor %}
     </ul>
     <button type="button" class="collapsible">Learn more <i class='bx bxs-chevron-down' ></i></button>
     <div class="content">
-      <ul>
+      <ul class="noBullets">
 <!-- -----------------Related Projects----------------- -->
         <li>
           <b>Related Projects:</b>
@@ -94,13 +94,25 @@ function findHostname(url){
 	      
 <!-- -----------------Related Authors----------------- -->
         <li>
-        {% assign auth_array = codes.code_authors | split: "," %}
-          <b>Authors:</b>
-            <ul class="menu">
-              {% for peop in auth_array %}
-                <li>{{ peop }}</li>
-              {% endfor %}
-            </ul>
+	<h6><b>Author(s)</b></h6>
+	   {% assign tag_people = codes.code_authors | split: "," %}
+	   {% assign all_peop = "" | split: ',' %}
+	   {% for peop in site.people %}
+		   {% assign all_peop = all_peop | push: peop.key %}
+           {% endfor %}
+	<ul class="noBullets">
+	{% for tag in tag_people %}
+	    {% if all_peop contains tag %}
+		{% for peop in site.people %}
+		    {% if tag == peop.key %}
+			<li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+		    {% endif %}
+		{% endfor %}
+	    {% else %}
+		<li>{{ tag }}</li>
+	    {% endif %}
+	{% endfor %}
+	</ul>
         </li>
 <!-- ----------------------------------------------- -->
 	      
@@ -123,13 +135,25 @@ function findHostname(url){
 	      
 <!-- -----------------Related People----------------- -->
         <li>
-        {% assign people_array = codes.tagged_people | split: "," %}
-          <b>Related People:</b>
-            <ul class="menu">
-              {% for peop in people_array %}
-                <li>{{ peop }}</li>
-              {% endfor %}
-            </ul>
+		<h6><b>Related People</b></h6>
+		{% assign people_tag = codes.tagged_people | split: "," %}
+		{% assign peopLis = "" | split: ',' %}
+		{% for peop in site.people %}
+		{% assign peopLis = peopLis | push: peop.key %}
+		{% endfor %}
+		<ul class="menu">
+		{% for tag in people_tag %}
+		    {% if peopLis contains tag %}
+			{% for peop in site.people %}
+			    {% if tag == peop.key %}
+				<li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+			    {% endif %}
+			{% endfor %}
+		    {% else %}
+			<li>{{ tag }}</li>
+		    {% endif %}
+		{% endfor %}
+		</ul>
         </li>
 <!-- ----------------------------------------------- -->
 	      
