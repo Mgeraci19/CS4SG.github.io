@@ -8,6 +8,6 @@ tagged_people: Atri Rudra,Kenneth Joseph
 tagged_publications: Paper3,PaperA
 tagged_education: Education 1, Education 2
 tagged_courses: AAA101
+description: This is the second code. Just a sample.
 key: Second Code
 ---
-This is the second code. Just a sample.
