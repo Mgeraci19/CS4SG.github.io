@@ -7,6 +7,7 @@ date: 2020-06-17T13:04
 locus: University at Buffalo
 resource_links: https://www.youtube.com/watch?v=VwVg9jCtqaU&t=2s,https://www.youtube.com/watch?v=GwIo3gDZCVQ&t=1s
 tagged_projects: Bias in NLP,FAI
+tagged_funding: The best gift ever
 key: Latest changes in ML
 ---
 
