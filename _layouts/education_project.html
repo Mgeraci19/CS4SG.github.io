@@ -98,7 +98,7 @@ layout: default
 
 <ul class="menu">
 {% for talk in site.talks %}
-    {% if talk.tagged_education contains page.key %}
+    {% if talk.tagged_education contains page.key and talk.category == "Internal" %}
         <li>
             <a href="{{ talk.url }}">{{ talk.title }}</a>
         </li>
@@ -111,17 +111,24 @@ layout: default
 <!---------------------------->
 
 <h6><b>Related Events</b></h6>
-
 <ul class="menu">
-{% for event in site.events %}
-    {% if event.tagged_education contains page.key %}
+{% for event in site.event %}
+    {% if event.tagged_projects contains page.key %}
         <li>
             <a href="{{ event.url }}">{{ event.title }}</a>
         </li>
     {% endif %}
 {% endfor %}
 </ul>
-
+<ul class="menu">
+{% for talk in site.talks %}
+    {% if talk.tagged_projects contains page.key and talk.category == "External" %}
+        <li>
+            <a href="{{ talk.url }}">{{ talk.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
 <hr/>
 
 <!---------------------------->
