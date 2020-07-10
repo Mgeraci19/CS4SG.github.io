@@ -1,0 +1,212 @@
+---
+layout: default
+---
+
+<script>
+function findHostname(url){
+	var hostname = (new URL(url)).hostname;
+	document.write(hostname)
+}
+</script>
+
+<center>
+    <img src="{{ "https://cs4sg.github.io/" | append: page.image }}" alt="{{ page.image_description }}" class="responsive">
+</center>
+<br>
+<br>
+
+<!---------------------------->
+<p><b>Date: </b>{{ page.date | date: '%B %d, %Y' }}</p>
+
+<!---------------------------->
+<h6><b>Authors:</b></h6>
+{% assign tag_people = page.authors | split: "," %}
+{% assign all_peop = "" | split: ',' %}
+{% for peop in site.people %}
+    {% assign all_peop = all_peop | push: peop.key %}
+{% endfor %}
+<ul class="noBullets">
+{% for tag in tag_people %}
+    {% if all_peop contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+<p>{{ page.content | markdownify }}</p>
+<hr>
+
+<!---------------------------->
+<h6><b>Related People</b></h6>
+{% assign people_tag = page.tagged_people | split: "," %}
+{% assign peopLis = "" | split: ',' %}
+{% for peop in site.people %}
+{% assign peopLis = peopLis | push: peop.key %}
+{% endfor %}
+<ul class="noBullets">
+{% for tag in people_tag %}
+    {% if peopLis contains tag %}
+        {% for peop in site.people %}
+            {% if tag == peop.key %}
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <li>{{ tag }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+
+{% assign tag_array = page.tagged_projects | split: "," %}
+<h6><b>Related Research Projects</b></h6>
+
+<ul class="menu">
+{% for tag in tag_array %}
+    {% for project in site.research_projects %}
+        {% if tag == project.key %}
+            <li>
+                <a href="{{ project.url }}">{{ project.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+{% assign edu_tag_array = page.tagged_education | split: "," %}
+{% assign course_tag_array = page.tagged_courses | split: "," %}
+
+<h6><b> Related Education and Courses</b></h6>
+<ul class="menu">
+{% for tag in edu_tag_array %}
+    {% for education_project in site.education %}
+        {% if tag == education_project.key %}
+        <li>
+            <a href="{{ education_project.url }}">{{ education_project.title }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<ul class="menu">
+{% for tag in course_tag_array %}
+    {% for course in site.courses %}
+        {% if tag == course.key %}
+        <li>
+            <a href="\courses.html#{{ course.prefix_number }}">{{ course.prefix_number }} - {{ course.title }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+{% assign pub_array = page.tagged_publications | split: "," %}
+<h6><b>Related Publications</b></h6>
+
+<ul class="menu">
+{% for tag in pub_array %}
+    {% for pub in site.publications %}
+        {% if tag == pub.key %}
+            <li>
+                <a href="{{ pub.url }}">{{ pub.title }}</a>
+            </li>
+        {% endif %}    
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+{% assign code_array = page.tagged_code | split: "," %}
+<h6><b>Code Resources</b></h6>
+
+<ul class="menu">
+{% for tag in code_array %}
+    {% for code_entry in site.code %}
+        {% if tag == code_entry.key %}
+            {% assign res_links_array = code_entry.code_links | split: "," %}
+            {% for lin in res_links_array %}  
+                <li><a href="{{ lin }}" target="_blank"><script>findHostname("{{ lin }}")</script></a></li>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+{% assign funding_array = page.tagged_funding | split: "," %}
+<h6><b>Related Funding</b></h6>
+
+<ul class="menu">
+{% for tag in funding_array %}
+    {% for grant in site.funding %}
+        {% if tag == grant.key %}
+            <li>
+                <a href="{{ grant.url }}">{{ grant.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+{% assign talks_array = page.tagged_talks | split: "," %}
+<h6><b>Related Talks</b></h6>
+
+<ul class="menu">
+{% for tag in talks_array %}
+    {% for talk in site.talks %}
+        {% if tag == talk.key and talk.category == "Internal" %}
+            <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
+<!---------------------------->
+{% assign events_array = page.tagged_events | split: "," %}
+<h6><b>Related Events</b></h6>
+
+<ul class="menu">
+{% for tag in events_array %}
+    {% for event in site.event %}
+        {% if tag == event.key %}
+            <li>
+                <a href="{{ event.url }}">{{ event.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<ul class="menu">
+{% for tag in talks_array %}
+    {% for talk in site.talks %}
+        {% if tag == talk.key and talk.category == "External" %}
+            <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
+<hr>
+
