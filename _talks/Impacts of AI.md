@@ -7,6 +7,7 @@ resource_links: https://www.youtube.com/watch?v=BfDQNrVphLQ,https://i.ytimg.com/
 talk_by: Kenneth Joseph
 date: 2020-06-25T19:27
 tagged_projects: Bias in NLP,FAI
+tagged_funding: The best gift ever
 key: Impacts of AI
 ---
 
