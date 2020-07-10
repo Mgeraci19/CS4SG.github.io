@@ -68,6 +68,54 @@ layout: default
 </ul>
 <hr/>
 
+<h6><b>Related Talks</b></h6>
+<ul class="menu">
+{% for talk in site.talks %}
+    {% if talk.tagged_funding contains page.key %}
+        <li>
+            <a href="{{ talk.url }}">{{ talk.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
+<h6><b>Related Code Resources</b></h6>
+<ul class="menu">
+{% for code in site.code %}
+    {% if code.tagged_funding contains page.key %}
+        <li>
+            <a href="\code.html#{{ code.code_title }}">{{ code.code_title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
+<h6><b>Related Events</b></h6>
+<ul class="menu">
+{% for event in site.event %}
+    {% if event.tagged_funding contains page.key %}
+        <li>
+            <a href="{{ event.url }}">{{ event.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
+<h6><b>Related Blogs</b></h6>
+<ul class="menu">
+{% for blog in site.posts %}
+    {% if blog.tagged_funding contains page.key %}
+        <li>
+            <a href="{{ event.url }}">{{ blog.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+<hr/>
+
 {{ content | markdownify }}
 
 </div>
