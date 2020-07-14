@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Mark Shepard
-category: internal faculty
+category: UB faculty
 designation: Associate Professor, Architecture and Media Study
 status: active
 link: http://ap.buffalo.edu/People/faculty/department-of-architecture-faculty.host.html/content/shared/ap/students-faculty-alumni/faculty/Shepard.detail.html
