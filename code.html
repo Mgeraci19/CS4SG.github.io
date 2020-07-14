@@ -76,8 +76,9 @@ function findHostname(url){
     <div class="content">
       <ul class="noBullets">
 <!-- -----------------Related Projects----------------- -->
+      {% if codes.tagged_projects %}
         <li>
-          <b>Related Projects:</b>
+          <b>Projects:</b>
           {% assign proj_array = codes.tagged_projects | split: "," %}
           <ul class="menu">
             {% for tag in proj_array %}
@@ -90,11 +91,13 @@ function findHostname(url){
           </ul>
         </li>
       <hr/>
+      {% endif %}
 <!-- ----------------------------------------------- -->	      
 
 	      
 <!-- -----------------Related Authors----------------- -->
-        <li>
+  {% if codes.code_authors %}
+  <li>
 	<b>Author(s)</b>
 	   {% assign tag_people = codes.code_authors | split: "," %}
 	   {% assign all_peop = "" | split: ',' %}
@@ -116,12 +119,14 @@ function findHostname(url){
 	</ul>
         </li>
     <hr/>
+    {% endif %}
 <!-- ----------------------------------------------- -->
 	      
 
 <!-- -----------------Related Publications----------------- -->
+{% if codes.tagged_publications %}
     <li>
-	<b>Related Publications:</b>
+	<b>Publications:</b>
 	{% assign publish_array = codes.tagged_publications | split: "," %}
 	  <ul class="menu">
 	    {% for tag in publish_array %}
@@ -134,38 +139,15 @@ function findHostname(url){
 	  </ul>
 	</li>
     <hr/>
-<!-- ----------------------------------------------- -->
-	      
-<!-- -----------------Related People----------------- -->
-        <li>
-		<b>Related People</b>
-		{% assign people_tag = codes.tagged_people | split: "," %}
-		{% assign peopLis = "" | split: ',' %}
-		{% for peop in site.people %}
-		{% assign peopLis = peopLis | push: peop.key %}
-		{% endfor %}
-		<ul class="menu">
-		{% for tag in people_tag %}
-		    {% if peopLis contains tag %}
-			{% for peop in site.people %}
-			    {% if tag == peop.key %}
-				<li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
-			    {% endif %}
-			{% endfor %}
-		    {% else %}
-			<li>{{ tag }}</li>
-		    {% endif %}
-		{% endfor %}
-		</ul>
-        </li>
-      <hr/>
+{% endif %}
 <!-- ----------------------------------------------- -->
 	      
 	      
 	      
 <!-- -----------------Related Education & Courses----------------- -->
+  {% if codes.tagged_education or codes.tagged_courses %}
     <li>
-	<b>Related Education and Courses:</b>
+	<b>Education and Courses:</b>
 	{% assign edu_array = codes.tagged_education | split: "," %}
     {% assign courses_array = codes.tagged_courses | split: "," %}
 	  <ul class="menu">
@@ -186,6 +168,7 @@ function findHostname(url){
 	  </ul>
 	</li>     
       <hr/>
+  {% endif %}
 <!-- ----------------------------------------------- -->
 	      
       </ul><br/>
