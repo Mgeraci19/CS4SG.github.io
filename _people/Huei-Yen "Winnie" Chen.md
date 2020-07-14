@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Huei-Yen "Winnie" Chen
-category: internal faculty
+category: UB faculty
 designation: Assistant Professor, Industrial and Systems Engineering
 status: active
 link: http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/chen-huei-yen-winnie.html
