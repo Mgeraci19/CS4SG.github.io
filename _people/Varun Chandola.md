@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Varun Chandola
-category: internal faculty
+category: UB faculty
 designation: Associate Professor, Computer Science and Engineering
 status: active
 link: https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/varun-chandola.html
