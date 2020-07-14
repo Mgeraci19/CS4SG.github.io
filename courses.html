@@ -48,7 +48,7 @@ p {
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
