@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Hannah Wilcox
-category: UB faculty
+category: Current student
 designation: Computer Science
 degrees: 
 courses: 
