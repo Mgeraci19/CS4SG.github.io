@@ -21,7 +21,7 @@ function findHostname(url){
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -63,7 +63,7 @@ function findHostname(url){
     
 
 <!---------------------------->
-<h6><b>Related People</b></h6>
+<h6><b>People</b></h6>
 {% assign people_tag = page.tagged_people | split: "," %}
 {% assign peopLis = "" | split: ',' %}
 {% for peop in site.people %}
@@ -86,7 +86,7 @@ function findHostname(url){
 <!---------------------------->
 
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h6><b>Related Research Projects</b></h6>
+<h6><b>Research Projects</b></h6>
 
 <ul class="menu">
 {% for tag in tag_array %}
@@ -107,7 +107,7 @@ function findHostname(url){
 {% assign edu_tag_array = page.tagged_education | split: "," %}
 {% assign course_tag_array = page.tagged_courses | split: "," %}
 
-<h6><b> Related Education and Courses</b></h6>
+<h6><b>Education and Courses</b></h6>
 <ul class="menu">
 {% for tag in edu_tag_array %}
     {% for education_project in site.education %}
@@ -149,7 +149,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign funding_array = page.tagged_funding | split: "," %}
-<h6><b>Related Funding</b></h6>
+<h6><b>Funding</b></h6>
 
 <ul class="menu">
 {% for tag in funding_array %}
@@ -166,7 +166,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign talks_array = page.tagged_talks | split: "," %}
-<h6><b>Related Talks</b></h6>
+<h6><b>Talks</b></h6>
 
 <ul class="menu">
 {% for tag in talks_array %}
@@ -183,7 +183,7 @@ function findHostname(url){
 
 <!---------------------------->
 {% assign events_array = page.tagged_events | split: "," %}
-<h6><b>Related Events</b></h6>
+<h6><b>Events</b></h6>
 
 <ul class="menu">
 {% for tag in events_array %}
@@ -211,7 +211,7 @@ function findHostname(url){
 
 <!---------------------------->
 
-<h6><b>Related Blog Posts</b></h6>
+<h6><b>Blog Posts</b></h6>
 <ul class="menu">
 {% for post in site.posts %}
     {% if post.tagged_projects contains page.key %}
