@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Kenneth Joseph
-category: internal faculty
+category: UB faculty
 designation: Assistant Professor, Computer Science and Engineering
 status: active
 link: https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/kenny-joseph.html
