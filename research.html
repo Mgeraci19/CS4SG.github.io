@@ -15,10 +15,10 @@ title: Research
         {% assign sorted = (site.research_projects | sort: 'date') %}
         {% for research_project in sorted limit:4  %}
             <!-- create boxes to display on research page -->
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
                 <div class="icon-box" data-aos="fade-up">
                 <div class="icon"><i class='bx bxs-report'></i></div>
-                    <h4 class="title"><a href="{{ research_project.url }}">{{ research_project.title }}</a></h4>
+                    <h4 class="title"><a>{{ research_project.title }}</a></h4>
                     <div id="textbox"><p class="description">{{ research_project.description | markdownify }}</p></div>
                 </div>
             </div>
