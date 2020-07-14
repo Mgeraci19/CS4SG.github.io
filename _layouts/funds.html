@@ -52,13 +52,13 @@ layout: default
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>Related People</b></h6>
+<h6><b>People</b></h6>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.key %}
-                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+                <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -68,7 +68,7 @@ layout: default
 </ul>
 <hr/>
 
-<h6><b>Related Talks</b></h6>
+<h6><b>Talks</b></h6>
 <ul class="menu">
 {% for talk in site.talks %}
     {% if talk.tagged_funding contains page.key %}
@@ -80,7 +80,7 @@ layout: default
 </ul>
 <hr/>
 
-<h6><b>Related Code Resources</b></h6>
+<h6><b>Code Resources</b></h6>
 <ul class="menu">
 {% for code in site.code %}
     {% if code.tagged_funding contains page.key %}
@@ -92,7 +92,7 @@ layout: default
 </ul>
 <hr/>
 
-<h6><b>Related Events</b></h6>
+<h6><b>Events</b></h6>
 <ul class="menu">
 {% for event in site.event %}
     {% if event.tagged_funding contains page.key %}
@@ -104,7 +104,7 @@ layout: default
 </ul>
 <hr/>
 
-<h6><b>Related Blogs</b></h6>
+<h6><b>Blogs</b></h6>
 <ul class="menu">
 {% for blog in site.posts %}
     {% if blog.tagged_funding contains page.key %}
