@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Matthew Bolton
-category: internal faculty
+category: UB faculty
 designation: Assistant Professor, Industrial and Systems Engineering
 status: active
 link: http://engineering.buffalo.edu/industrial-systems/people/faculty-directory/bolton-matthew.html
