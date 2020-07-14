@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Melanie Sage
-category: internal faculty
+category: UB faculty
 designation: Assistant Professor, School of Social Work
 status: active
 link: http://socialwork.buffalo.edu/faculty-research/full-time-faculty/melanie-sage.html
