@@ -1,7 +1,7 @@
 ---
 layout: people
 name: David Doermann
-category: internal faculty
+category: UB faculty
 designation: Professor, Computer Science and Engineering
 status: active
 link: https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory/david-doermann.html
