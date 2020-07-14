@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Hannah Wilcox
-category: internal student
+category: UB faculty
 designation: Computer Science
 degrees: 
 courses: 
