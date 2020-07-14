@@ -25,14 +25,22 @@ title: People
             padding:0 10px; 
         }
       </style>
+      {% assign status_array = "" %}
+      {% for peop in site.people %}
+        {% capture status_array %}{{ status_array | append: peop.category }}{% endcapture %}
+        {% if forloop.last == false %}
+            {% capture status_array %}{{ status_array | append: "," }}{% endcapture %}
+        {% endif %}
+      {% endfor %}
+
+      {% if status_array contains "UB faculty" %}
       <h3 id="subhead"><span><strong>Internal Faculty</strong></span></h3>
     </div>
-
 <div class="row">
 {% assign title_string = "" %}
 <!-- -------------Internal Faculty Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.category == "internal faculty" %}
+    {% if peop.category == "UB faculty" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -55,13 +63,15 @@ title: People
 {% endif %}
 {% endfor %}
 <br/><br/>
-
 {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-    
-<h3 id="subhead"><span><strong>External Faculty</strong></span></h3>
+{% endif %}
+
+
+{% if status_array contains "External collaborator" %}
+<h3 id="subhead"><span><strong>External Collaborators</strong></span></h3>
 <!-- -------------External Faculty Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.category == "external faculty" %}
+    {% if peop.category == "External collaborator" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -84,14 +94,15 @@ title: People
 {% endif %}
 {% endfor %}
 <br/><br/>
-    
-
+{% endif %}
 {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-    
-<h3 id="subhead"><span><strong>Internal Students</strong></span></h3>
+
+
+{% if status_array contains "Current student" %}
+<h3 id="subhead"><span><strong>Current Students</strong></span></h3>
 <!-- -------------Students Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.category == "internal student" %}
+    {% if peop.category == "Current student" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -114,15 +125,16 @@ title: People
 {% endif %}
 {% endfor %}
 <br/><br/>
-    
-    
+{% endif %}
 
 {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
     
-<h3 id="subhead"><span><strong>External Students</strong></span></h3>
+
+{% if status_array contains "Former student" %}
+<h3 id="subhead"><span><strong>Former Students</strong></span></h3>
 <!-- -------------Students Section--------------- -->
 {% for peop in site.people %}
-    {% if peop.category == "external student" %}
+    {% if peop.category == "Former student" %}
   <div class="col-lg-4 col-md-6">
   <div class="member" data-aos="fade-up">
     <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
@@ -145,43 +157,16 @@ title: People
 {% endif %}
 {% endfor %}
 <br/><br/>
-
-    
-{% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
-    
-<h3 id="subhead"><span><strong>Collaborators</strong></span></h3>
-<!-- -------------Collaborator Section--------------- -->
-{% for peop in site.people %}
-    {% if peop.category == "collaborator" %}
-  <div class="col-lg-4 col-md-6">
-  <div class="member" data-aos="fade-up">
-    <div class="pic"><img src="{{ peop.image }}" class="img-fluid team_picture" alt=""></div>
-    <div class="member-info">
-      <h4><a href="{{ peop.link }}" style="text-decoration:none; color:black;" target="_blank">{{ peop.name }}</a></h4>
-      <span>{{ peop.designation }}</span><br>
-      <div class="social">
-        {{ peop.social }}<br/>{{ peop.status }}
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- create string with all titles -->
-{% capture title_string %}{{ title_string | append: peop.name }}{% endcapture %}
-{% if forloop.last == false %}
-    {% capture title_string %}{{ title_string | append: "," }}{% endcapture %}
 {% endif %}
-<!-- -------------------------------->
-{% endif %}
-{% endfor %}
-<br/><br/>
     
-    
+{% capture title_string %}{{ title_string | replace: ",,", "," }}{% endcapture %}
+{% assign num = title_string | size | minus: 1 %}
+{% capture title_string %}{{ title_string | slice: 0, num }}{% endcapture %}
 </div>
 
   </div>
 </section>
-<h3 style="display:none;">{{ title_string }}</h3>
+<h6 style="display:none;">{{ title_string }}</h6>
 
 <script>
     var title_string = "{{ title_string }}";
