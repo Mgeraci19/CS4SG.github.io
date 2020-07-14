@@ -48,7 +48,7 @@ title: Talks
 <li>
 <i class="icofont-ui-calendar"></i> {{ talk.date | date: '%B %d, %Y' }}</li>
 <li><b>Speaker: </b>{{ talk.talk_by }}</li>
-<li><b>Related Projects:</b>
+<li><b>Projects:</b>
 {% assign tag_array = talk.tagged_projects | split: "," %}
 <ul id="menu">
 {% for tag in tag_array %}
