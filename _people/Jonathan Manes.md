@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Jonathan Manes
-category: internal faculty
+category: UB faculty
 designation: Assistant Clinical Professor, School of Law
 status: active
 link: https://www.law.buffalo.edu/faculty/facultyDirectory/manes-jonathan.html
