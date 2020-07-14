@@ -22,13 +22,13 @@ layout: default
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>Related People</b></h6>
+<h6><b>People</b></h6>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.name %}
-            <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -39,7 +39,7 @@ layout: default
 <hr/>
 
 {% assign tag_array = page.tagged_projects | split: "," %}
-<h6><b>Related Research Projects</b></h6>
+<h6><b>Research Projects</b></h6>
 
 <ul class="menu">
 {% for tag in tag_array %}
@@ -57,7 +57,7 @@ layout: default
 
 
 
-<b>Related Education and Courses:</b>
+<b>Education and Courses:</b>
 {% assign edu_array = page.tagged_education | split: "," %}
 {% assign courses_array = page.tagged_courses | split: "," %}
     <ul class="menu">
@@ -78,7 +78,7 @@ layout: default
     </ul>    
 <hr/>
 
-<b>Related Publications:</b>
+<b>Publications:</b>
 {% assign publish_array = page.tagged_publications | split: "," %}
   <ul class="menu">
     {% for tag in publish_array %}
