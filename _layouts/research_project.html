@@ -19,13 +19,13 @@ layout: default
 {% for peop in site.people %}
     {% assign all_peop = all_peop | push: peop.key %}
 {% endfor %}
-<h6><b>Related People</b></h6>
+<h6><b>People</b></h6>
 <ul class="noBullets">
 {% for tag in tag_people %}
     {% if all_peop contains tag %}
         {% for peop in site.people %}
             {% if tag == peop.name %}
-            <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label style="background-color:gray; padding:4px; border-radius:5px; color:white; font-size: small;">{{ peop.category }}</label></li>
+            <li><a href="{{ peop.link }}" target="_blank">{{ tag }}</a> &nbsp; <label class="peopleTag">{{ peop.category }}</label></li>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -59,7 +59,7 @@ layout: default
 <hr/>
   
 <!---------------------------->
-<h6><b>Related Publications</b></h6>
+<h6><b>Publications</b></h6>
 
 <ul class="menu">
 {% for pub in site.publications %}
@@ -87,7 +87,7 @@ layout: default
 <hr/>
 <!---------------------------->
 
-<h6><b>Related Funding</b></h6>
+<h6><b>Funding</b></h6>
 <ul class="menu">
 {% for fund in site.funding %}
     {% if fund.tagged_projects contains page.key %}
@@ -101,7 +101,7 @@ layout: default
     
 <!---------------------------->
 
-<h6><b>Related Talks</b></h6>
+<h6><b>Talks</b></h6>
 <ul class="menu">
 {% for talk in site.talks %}
     {% if talk.tagged_projects contains page.key and talk.category == "Internal" %}
@@ -115,7 +115,7 @@ layout: default
     
 <!---------------------------->
 
-<h6><b>Related Resources</b></h6>
+<h6><b>Resources</b></h6>
 <ul class="noBullets">
 {% for res in site.resource_links %}
     {% if res.tagged_projects contains page.title %}
@@ -130,7 +130,7 @@ layout: default
     
 <!---------------------------->
 
-<h6><b>Related Events</b></h6>
+<h6><b>Events</b></h6>
 <ul class="menu">
 {% for event in site.event %}
     {% if event.tagged_projects contains page.key %}
@@ -153,7 +153,7 @@ layout: default
 <hr/>
 <!---------------------------->
 
-<h6><b>Related Blog Posts</b></h6>
+<h6><b>Blog Posts</b></h6>
 <ul class="menu">
 {% for post in site.posts %}
     {% if post.tagged_projects contains page.key %}
