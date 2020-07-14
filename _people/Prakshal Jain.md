@@ -1,7 +1,7 @@
 ---
 layout: people
 name: Prakshal Jain
-category: internal student
+category: Current student
 designation: Computer Science
 status: active
 link: 
