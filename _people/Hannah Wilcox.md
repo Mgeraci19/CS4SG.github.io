@@ -2,7 +2,7 @@
 layout: people
 name: Hannah Wilcox
 category: Current student
-designation: Computer Science
+designation: Student, Computer Science
 degrees: 
 courses: 
 status: active
