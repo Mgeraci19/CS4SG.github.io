@@ -1,6 +1,9 @@
 ---
 layout: home
 ---
+<script>
+    recrop("team_picture", 600, 600);
+</script>
 
 {%- include header.html -%}
 
@@ -181,7 +184,7 @@ layout: home
     <div class="owl-carousel testimonials-carousel">
     {% for peop in site.people %}
     <div class="polaroid" style="border-top-left-radius: 10px; border-top-right-radius: 10px; cursor: pointer; margin-bottom: 30px;"  onclick="window.open('{{ peop.link }}', '_blank');">
-        <img src="{{ peop.image }}" alt='{{ peop.name }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+        <img src="{{ peop.image }}" alt='{{ peop.name }}' style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="team_picture">
         <div class="container">
             <b>{{ peop.name }}</b>
             <p>{{ peop.category }}</p>
