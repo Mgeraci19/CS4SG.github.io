@@ -2,7 +2,7 @@
 layout: people
 name: Jacqueline Hannan
 category: Current student
-designation: Biomedical Engineering (Minor: Human Factors)
+designation: Biomedical Engineering (Minor in Human Factors)
 degrees: 
 courses: 
 status: active
