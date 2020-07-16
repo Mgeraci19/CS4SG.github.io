@@ -5,6 +5,7 @@ layout: default
 {{ content | markdownify }}
 <hr/>
 
+{% if page.tagged_people %}
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -24,10 +25,12 @@ layout: default
     {% endif %}
 {% endfor %}
 </ul>
+{% endif %}
 <hr/>
 
 <!---------------------------->
 
+{% if page.tagged_projects %}
 {% assign tag_array = page.tagged_projects | split: "," %}
 <h6><b>Research Projects</b></h6>
 
@@ -43,7 +46,7 @@ layout: default
     {% endfor %}
 {% endfor %}
 </ul>
-
+{% endif %}
 <hr>
 
 <!---------------------------->
