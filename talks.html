@@ -46,8 +46,15 @@ title: Talks
 <div style="text-align:left; display:inline;">	
 <ul class="noBullets">
 <li>
+{% if talk.date %}
 <i class="icofont-ui-calendar"></i> {{ talk.date | date: '%B %d, %Y' }}</li>
+{% endif %}
+
+{% if talk.talk_by %}
 <li><b>Speaker: </b>{{ talk.talk_by }}</li>
+{% endif %}
+
+{% if talk.tagged_projects %}
 <li><b>Projects:</b>
 {% assign tag_array = talk.tagged_projects | split: "," %}
 <ul id="menu">
@@ -60,6 +67,8 @@ title: Talks
 {% endfor %}
 </ul>
 </li>
+{% endif %}
+	
 </ul>
 </div></td></tr></table>
 </div>
