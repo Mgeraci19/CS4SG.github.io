@@ -15,8 +15,8 @@ title: Education
 <div class="row">
     <div class="d-flex flex-wrap">
         {% for education_project in site.education %}
-            <div class="gridObj" data-aos="fade-up">
-                <h4 class="title"><a href="{{ education_project.url }}">{{ education_project.title }}</a></h4>
+            <div class="gridObj" data-aos="fade-up" onclick="window.location.href = '{{ education_project.url }}';" style="cursor: pointer;">
+                <h4 class="title"><a>{{ education_project.title }}</a></h4>
                 <p class="description">{{ education_project.description | markdownify }}</p>
             </div>
         {% endfor %}
