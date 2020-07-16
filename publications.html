@@ -23,6 +23,7 @@ title: Publications
 {% for pub in site.publications %}
     <li>
     <h4><b><a href="{{ pub.url }}">{{ pub.title }}</a></b></h4>
+        
     {% if pub.authors %}
     <b>Author(s): </b>
       {% assign tag_people = pub.authors | split: "," %}
@@ -35,16 +36,15 @@ title: Publications
               {% if all_peop contains tag %}
                   {% for peop in site.people %}
                       {% if tag == peop.key %}
-                          <p><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+                          <a href="{{ peop.link }}" target="_blank">{{ tag }}</a>
                       {% endif %}
                   {% endfor %}
               {% else %}
-                  <p>{{ tag }}</p>
+                  {{ tag }}
               {% endif %}
               {% if forloop.last == false %},&nbsp;{% endif %}
           {% endfor %}
       </div>
-    
     {% endif %}
     {% if pub.abstract %}
     <b>Abstract: </b><div id="desc">{{  pub.abstract }}</div>
