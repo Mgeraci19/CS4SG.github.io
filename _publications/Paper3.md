@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: Paper3
-authors: Author1,Author 2
+authors: Author1,Atri Rudra
 published_in: University at Buffalo
 date: 2020-06-08
 links: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjr3_Df9vLpAhVTCc0KHRlIAkgQPAgH,http://www.buffalo.edu/,https://github.com/
