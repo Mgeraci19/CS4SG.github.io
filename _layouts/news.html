@@ -8,6 +8,7 @@ layout: default
             <hr/>
         {% endif %}
 
+<div id="speak_content">
 {% if page.date %}
 <b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
 <hr/>
@@ -103,6 +104,9 @@ layout: default
   </ul>
 <hr/>
 {% endif %}
+
+</div>
+{%- include narration.html -%}
 
 </body>
 </html>
