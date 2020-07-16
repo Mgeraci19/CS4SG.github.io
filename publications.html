@@ -36,11 +36,11 @@ title: Publications
               {% if all_peop contains tag %}
                   {% for peop in site.people %}
                       {% if tag == peop.key %}
-                          <a href="{{ peop.link }}" target="_blank">{{ tag }}</a>
+                          <a><i onclick="window.open('{{ peop.link }}', '_blank')" style="cursor: pointer;">{{ tag }}</i>
                       {% endif %}
                   {% endfor %}
               {% else %}
-                  <a>{{ tag }}</a>
+                  {{ tag }}</a>
               {% endif %}
               {% if forloop.last == false %},&nbsp;{% endif %}
           {% endfor %}
