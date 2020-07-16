@@ -3,64 +3,85 @@ layout: default
 title: NEWS
 ---
 <html>
+<!-- template from https://codepen.io/anupkumar92/pen/bOvYYm -->
   <body>
 <style>
-    #talks_content{
-        padding: 9px;
-        font: 17px Calibri;
-        width: 100%;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        align-content:center;
-        word-wrap: break-word;
-        margin: 7px 0px;
-    }
     input[type=text], select {
         width: 80%;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 4px;
     }
+    span, a {
+    display: inline-block;
+    color: inherit;
+    }
 </style>
+
 <center>
-<select onchange= "location = this.value;">
-  <option selected value="">-- Select a method to search --</option>
-  <option value="javascript:javascript:decide(0)">Search by News Title</option>
-  <option value="javascript:decide(1)">Search by Date</option>
-</select>
-<br/><br/>
-<div id="embed"></div>
-<hr/>
+  <select onchange= "location = this.value;">
+    <option selected value="">-- Select a method to search --</option>
+    <option value="javascript:javascript:decide(1)">Search by News Title</option>
+    <option value="javascript:decide(0)">Search by Date</option>
+  </select>
+  <br/><br/>
+  <div id="embed"></div>
+  <hr/>
 </center>
-<div id="myUL">
-{% assign sorted = (site.event | sort: 'date') %}
-{% for news in sorted %}
-    {% if news.layout == 'news' %}
-    <center>
-      <label>
-    <div id="talks_content">
-        <table>
-            <tr>
-            <td style="width:30%;">
-              {% if news.image %}
-                <img src="{{ news.image }}"  style="border-radius: 10%; width:100px; margin-right:60px;"/>
-              {% else %}
-                <img src="/assets/img/default_news.png"  style="border-radius: 10%; width:100px; margin-right:60px;"/>
+
+
+<section class="blog" data-scroll-index="4">
+  <div class="container" id="myUL">
+      <div class="row">
+      {% assign sorted = (site.event | sort: 'date') %}
+      {% for post in sorted %}
+      {% if post.layout == 'news' %}
+      
+          <div class="col-md-6 col-lg-4">
+            <div class="item">
+              <label>
+              <div class="img">
+                <img src="{% if post.image %}{{ post.image }}{% else %}/assets/img/default_news.png{% endif %}" alt="{{ news.title }}">
+              </div>
+              <div class="info">
+                <div class="date">
+                  <span><a>{{ post.date | date: '%b %d' }}</a></span>
+                </div>
+                <h5><b><a href="{{ post.url }}">{{ post.title }}</a></b></h5>
+                <a class="user"><i class='bx bxs-user'></i></a>
+                  
+              {% if post.tagged_people %}
+              {% assign tag_people = post.tagged_people | split: "," %}
+              {% assign all_peop = "" | split: ',' %}
+              {% for peop in site.people %}
+                  {% assign all_peop = all_peop | push: peop.key %}
+              {% endfor %}
+              <div class="tagLine" style="margin: 25px -15px -20px 15px">
+                  {% for tag in tag_people %}
+                      {% if all_peop contains tag %}
+                          {% for peop in site.people %}
+                              {% if tag == peop.key %}
+                                  <p><a href="{{ peop.link }}" target="_blank">{{ tag }}</a></p>
+                              {% endif %}
+                          {% endfor %}
+                      {% else %}
+                          <p>{{ tag }}</p>
+                      {% endif %}
+                      {% if forloop.last == false %},&nbsp;{% endif %}
+                  {% endfor %}
+              </div>
               {% endif %}
-            </td>
-            <td>
-              <h6><b><a href="{{ news.url }}">{{ news.title }}</a></b></h6>
-              <b><a>{{ news.date | date: '%B %d, %Y' }}</a></b><br/>
-              <b>Source: </b><a href="{{ news.article_url }}" target="_blank">Link to full news article <i class="icofont-external-link"></i></a>
-            </td>
-            </tr>
-            </table>
-    </div>
-    </label>
-    </center>
-    {% endif %}
-{% endfor %}
-</div>
+              
+              </div>
+              </label>
+            </div>
+          </div>
+          {% endif %}
+      {% endfor %}
+      
+      </div>
+  </div>
+</section>
 
 
 <script>
@@ -82,7 +103,7 @@ title: NEWS
   }
 
       function decide(n){
-          var l = ["News Title", "Date"]
+          var l = ["Date","News Title"]
           document.getElementById("embed").innerHTML = '<input type="text" id="myInput" onkeyup="myFunction('+n+')" placeholder="Enter '+l[n]+'" title="Type in a name">'
       }
 </script>
