@@ -23,28 +23,8 @@ title: Publications
 {% for pub in site.publications %}
     <li>
     <h4><b><a href="{{ pub.url }}">{{ pub.title }}</a></b></h4>
-        
     {% if pub.authors %}
-    <b>Author(s): </b>
-      {% assign tag_people = pub.authors | split: "," %}
-      {% assign all_peop = "" | split: ',' %}
-      {% for peop in site.people %}
-          {% assign all_peop = all_peop | push: peop.key %}
-      {% endfor %}
-      <div class="tagLine">
-          {% for tag in tag_people %}
-              {% if all_peop contains tag %}
-                  {% for peop in site.people %}
-                      {% if tag == peop.key %}
-                          <a><i onclick="window.open('{{ peop.link }}', '_blank')" style="cursor: pointer;">{{ tag }}</i>
-                      {% endif %}
-                  {% endfor %}
-              {% else %}
-                  {{ tag }}</a>
-              {% endif %}
-              {% if forloop.last == false %},&nbsp;{% endif %}
-          {% endfor %}
-      </div>
+    <b>Author(s): </b><a>{{ pub.authors }}</a><br/>
     {% endif %}
     {% if pub.abstract %}
     <b>Abstract: </b><div id="desc">{{  pub.abstract }}</div>
