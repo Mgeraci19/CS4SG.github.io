@@ -8,13 +8,18 @@ layout: default
   }
 </script>
 <div id="speak_content">
+
+{% if page.organization %}
 <b>Funding organization: </b><a href="{{ page.org_link }}" target="_blank">{{ page.organization }} <i class="icofont-external-link"></i></a>
 <hr/>
-
+{% endif %}
+  
+{% if page.grant_notice %}
 <b>Grant award notice: </b><a href="{{ page.grant_notice }}" target="_blank">Click here to see {{ page.organization }} grant notice <i class="icofont-external-link"></i></a>
 <hr/>
+{% endif %}
 
-
+{% if page.news_links %}
 <h6><b>Press release / News</b></h6>
 {% capture news_link %}{{ page.news_links }}{% endcapture %}
 {% assign news_array = news_link | split: "," %}
@@ -24,11 +29,14 @@ layout: default
   {% endfor %}
   </ul>
 <hr/>
+{% endif %}
 
-
+{% if page.grants %}
 <b>Grant amount: </b>${{  page.grants }}
 <hr/>
-
+{% endif %}
+  
+{% if page.tagged_projects %}
 {% assign tag_proj = page.tagged_projects | split: "," %}
 <h6><b>Project(s) Title</b></h6>
 <div class="row">
@@ -43,10 +51,14 @@ layout: default
 {% endfor %}
 </div>
 <hr/>
-
+{% endif %}
+  
+{% if page.start or page.duration %}
 <b>Grant date (range): </b> {{ page.start | date: '%B %d, %Y' }} - {{ page.duration | date: '%B %d, %Y' }}
 <hr/>
+{% endif %}
 
+{% if page.tagged_people %}
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -67,6 +79,7 @@ layout: default
 {% endfor %}
 </ul>
 <hr/>
+{% endif %}
 
 <h6><b>Talks</b></h6>
 <ul class="menu">
