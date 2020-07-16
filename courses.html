@@ -37,6 +37,7 @@ p {
             </p>
         
     <!-------------------- Instructors ------------------------------------------------->
+    {% if course.instructors %}
     {% assign tag_people = course.instructors | split: "," %}
     {% assign all_peop = "" | split: ',' %}
     {% for peop in site.people %}
@@ -56,12 +57,17 @@ p {
     {% endif %}
     {% endfor %}
     </ul></p>
+    {% endif %}
     
     <!-------------------- Typical semesters ------------------------------------------>
+    {% if course.semesters %}
     <p><b>Typical semesters offered: </b>{{ course.semesters }}</p>
+    {% endif %}
     
     <!-------------------- Course description ----------------------------------------->
+    {% if course.description %}
     <p><b>Description: </b>{{ course.description }}</p>
+    {% endif %}
 
 </div>
 
