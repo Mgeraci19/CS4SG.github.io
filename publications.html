@@ -30,7 +30,7 @@ title: Publications
       {% for peop in site.people %}
           {% assign all_peop = all_peop | push: peop.key %}
       {% endfor %}
-      <div class="tagLine" style="margin: 25px -15px -20px 15px">
+      <div class="tagLine">
           {% for tag in tag_people %}
               {% if all_peop contains tag %}
                   {% for peop in site.people %}
