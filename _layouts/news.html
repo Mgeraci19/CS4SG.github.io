@@ -8,15 +8,22 @@ layout: default
             <hr/>
         {% endif %}
 
+{% if page.date %}
 <b>Date: </b>{{ page.date | date: '%B %d, %Y' }}
 <hr/>
+{% endif %}
 
+{% if page.description %}
 {{ page.description }}
 <hr/>
+{% endif %}
 
+{% if page.location %}
 <b>Location: </b>{{ page.location }}
 <hr/>
+{% endif %}
 
+{% if page.tagged_people %}
 {% assign tag_people = page.tagged_people | split: "," %}
 {% assign all_peop = "" | split: ',' %}
 {% for peop in site.people %}
@@ -37,7 +44,10 @@ layout: default
 {% endfor %}
 </ul>
 <hr/>
+{% endif %}
+        
 
+{% if page.tagged_projects %}
 {% assign tag_array = page.tagged_projects | split: "," %}
 <h6><b>Research Projects</b></h6>
 
@@ -54,9 +64,9 @@ layout: default
 {% endfor %}
 </ul>
 <hr/>
+{% endif %}
 
-
-
+{% if page.tagged_education or page.tagged_courses %}
 <b>Education and Courses:</b>
 {% assign edu_array = page.tagged_education | split: "," %}
 {% assign courses_array = page.tagged_courses | split: "," %}
@@ -77,7 +87,9 @@ layout: default
     {% endfor %}
     </ul>    
 <hr/>
+{% endif %}
 
+{% if page.tagged_publications %}
 <b>Publications:</b>
 {% assign publish_array = page.tagged_publications | split: "," %}
   <ul class="menu">
@@ -90,6 +102,7 @@ layout: default
     {% endfor %}
   </ul>
 <hr/>
+{% endif %}
 
 </body>
 </html>
