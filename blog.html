@@ -28,7 +28,8 @@ span, a {
                   <a href="{{ post.url }}"><h5><b>{{ post.title }}</b></h5></a>
                   <p>{{ post.excerpt }}</p>
                   <a class="user"><i class='bx bxs-user'></i></a>
-
+                    
+                {% if post.authors %}
                 {% assign tag_people = post.authors | split: "," %}
                 {% assign all_peop = "" | split: ',' %}
                 {% for peop in site.people %}
@@ -48,6 +49,7 @@ span, a {
                         {% if forloop.last == false %},&nbsp;{% endif %}
                     {% endfor %}
                 </div>
+                {% endif %}
                 
                 </div>
               </div>
