@@ -8,7 +8,7 @@ title: News and Events
 <center><h3><b>News</b></h3></center>
 <div class="container">
   <div class="row mt-5 mb-5">
-{% assign sorted = (site.event | sort: 'date') %}
+{% assign sorted = site.event | sort: 'date' | reverse %}
 {% for news in sorted limit:3 %}
     {% if news.layout == 'news' %}
     <div class="col-xs-12 col-sm-12 col-md-4 d-flex align-items-stretch mb-3">
