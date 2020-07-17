@@ -17,7 +17,7 @@ title: Research Projects
  <div id="myUL">
  {% assign title_string = "" %}
  <div class="row">
-     {% assign sorted = (site.research_projects | sort: 'date') %}
+     {% assign sorted = site.research_projects | sort: 'date' | reverse %}
      {% for research_project in sorted %}
      <label>
          <!-- create boxes to display on research page -->
