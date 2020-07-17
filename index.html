@@ -126,7 +126,7 @@ layout: home
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Events</h2>
-        {% assign sorted = (site.event | sort: 'date') %}
+        {% assign sorted = site.event | sort: 'date' | reverse %}
         <center>
             <div class="owl-carousel testimonials-carousel">
             {% for event in sorted %}
