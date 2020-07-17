@@ -1,7 +1,7 @@
 ---
 layout: news
-title: news two
-date: 2020-07-07
+title: news two 
+date: 2020-07-08
 location: University at Buffalo
 tagged_people: Atri Rudra,Kenneth Joseph
 tagged_projects: Bias in NLP,FAI
