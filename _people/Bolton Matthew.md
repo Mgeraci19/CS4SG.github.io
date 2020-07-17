@@ -1,5 +1,5 @@
 ---
-layout: people
+layout: default
 name: Matthew Bolton
 category: UB faculty
 designation: Assistant Professor, Industrial and Systems Engineering
