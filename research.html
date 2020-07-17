@@ -12,7 +12,7 @@ title: Research
 <p style="padding-bottom: 8px;">Our group actively works on projects covering a broad range of exciting, cutting-edge topics including AI, big data, bioinformatics, cloud services, computing research, crypto-currency, cyber security, machine learning, Internet of Things, self-driving cars, smartphones, and 5G wireless.</p>
  <!-- ======= Research Section ======= -->
     <div class="row">
-        {% assign sorted = (site.research_projects | sort: 'date') %}
+        {% assign sorted = site.research_projects | sort: 'date' | reverse %}
         {% for research_project in sorted limit:4  %}
             <!-- create boxes to display on research page -->
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" onclick="window.location.href = '{{ research_project.url }}';" style="cursor: pointer;">
