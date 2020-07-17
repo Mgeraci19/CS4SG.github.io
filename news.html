@@ -33,7 +33,7 @@ title: NEWS
 <section class="blog" data-scroll-index="4">
   <div class="container" id="myUL">
       <div class="row">
-      {% assign sorted = (site.event | sort: 'date') %}
+      {% assign sorted = site.event | sort: 'date' | reverse %}
       {% for post in sorted %}
       {% if post.layout == 'news' %}
       
